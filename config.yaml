@@ -1,0 +1,9 @@
+baseURL: /
+title: "My First Blog"
+defaultContentLanguage: en
+languages:
+  en:
+    lang: en
+    languageName: English
+    weight: 1
+MetaDataFormat: "yaml"
