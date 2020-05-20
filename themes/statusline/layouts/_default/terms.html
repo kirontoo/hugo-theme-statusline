@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+	{{ $baseurl := .Site.BaseURL }}
+
+	<h1>{{ .Title }}</h1>
+
+	{{ $plural := .Data.Terms }}
+
+	{{ with .Data.Terms }}
+		{{ range $key, $value := . }}
+			<a href="{{ $baseurl  }}/{{ $plural }}/{{ $key }}">{{ $key }}</a>
+			<br>
+		{{ end }}
+	{{ else }}
+		<p>Whoops! There aren't any!</p>
+	{{ end }}
+{{ end }}
