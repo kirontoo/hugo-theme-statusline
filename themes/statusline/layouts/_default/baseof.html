@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en.us{{ end }}">
-	<head>
 		{{ partial "head.html" . }}
-	</head>
 	<body>
 		<div class="container">
 			{{ partial "header.html" . }}
@@ -11,6 +9,11 @@
 				{{ block "main" . }}
 				{{ end }}
 			</main>
+
+			<aside>
+				{{ block "sidebar" . }}
+				{{ end }}
+			</aside>
 
 			{{ partial "footer.html" . }}
 		</div>
