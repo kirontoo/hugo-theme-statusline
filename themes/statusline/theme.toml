@@ -8,7 +8,7 @@ description = ""
 homepage = "http://example.com/"
 tags = [ "blog", "portfolio", "dark", "personal" ]
 features = []
-min_version = "0.41.0"
+min_version = "0.40.0"
 
 [author]
   name = "kirontoo"
