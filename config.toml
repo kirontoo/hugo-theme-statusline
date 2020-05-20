@@ -1,3 +1,10 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+defaultContentLanguage = "en-us"
+title = "hugo statusline theme"
+theme = "statusline"
+
+[taxonomies]
+	tags = "tags"
+	categories = "categories"
+

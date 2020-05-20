@@ -6,4 +6,5 @@ languages:
     lang: en
     languageName: English
     weight: 1
+theme: "statusline"
 MetaDataFormat: "yaml"
