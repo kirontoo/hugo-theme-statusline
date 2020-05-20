@@ -5,6 +5,7 @@ title = "hugo statusline theme"
 theme = "statusline"
 
 [taxonomies]
-	tags = "tags"
-	categories = "categories"
+	category = "categories"
+	series = "series"
+	tag = "tags"
 
