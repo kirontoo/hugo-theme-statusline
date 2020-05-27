@@ -1,0 +1,69 @@
+// base colors
+$gray1     : #1b202a;
+$gray2     : #232936;
+$gray3     : #323c4d;
+$gray4     : #51617d;
+$gray5     : #9aa7bd;
+$red       : #b15e7c;
+$orange    : #b3785d;
+$yellow    : #b5a262;
+$green     : #709d6c;
+$cyan      : #56adb7;
+$blue      : #608cc3;
+$purple    : #8f72bf;
+$pink      : #c47ebd;
+
+$colors: () !default;
+$colors: map-merge(
+	(
+		"red": $red,
+		"orange": $orange,
+		"yellow": $yellow,
+		"green": $green,
+		"blue": $blue,
+		"purple": $purple,
+		"cyan": $cyan,
+		"pink": $pink,
+		"white": $gray5,
+		"gray": $gray4,
+		"gray-dark": $gray2
+	),
+	$colors
+);
+
+// background
+$background-color-dark: $gray2;
+$background-color-light: null;
+$background-color: $background-color-dark;
+
+// Typography
+//
+// font, color, headers, etc..
+$base-font-size: 12px;
+$base-font-family: FiraCode, Iosevka, SourceCodePro !default;
+
+$text-color-light: $gray3; 
+$text-color-dark: $gray5;
+$text-color: $text-color-dark;
+
+$border-color-dark: $gray4;
+$border-color-light: null;
+$border-base-size: 2px !default;
+$border-thin: $border-base-size;
+$border-thick: $border-base-size * 2;
+
+$h1-color: $green;
+$h2-color: $blue;
+$h3-color: $pink;
+$h4-color: $red;
+$h5-color: $orange;
+$h6-color: $yellow;
+
+// Links
+//
+// Style anchor elements
+
+$link-color: $yellow;
+$link-decoration: none !default;
+$link-hover-color: darken( $link-color, 15% ) !default;
+$link-hover-decoration: underline !default;

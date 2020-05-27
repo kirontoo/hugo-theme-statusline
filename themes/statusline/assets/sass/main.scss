@@ -1,5 +1,8 @@
+@import '_variables';
+@import '_fonts';
+
 html {
-	background: #1b202a;
-	color: #9aa7ba;
+	background-color: $background-color-dark;
+	color: $text-color;
 }
 
