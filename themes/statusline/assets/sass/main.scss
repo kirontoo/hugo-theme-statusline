@@ -1,8 +1,20 @@
-@import '_variables';
-@import '_fonts';
+@import 'fonts';
+@import 'variables';
+@import 'container';
 
 html {
 	background-color: $background-color-dark;
 	color: $text-color;
+	font-size: $base-font-size;
 }
 
+body {
+	font-feature-settings: "liga";
+	font-variant-ligatures: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
