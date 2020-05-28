@@ -1,0 +1,32 @@
+nav {
+	margin: 0;
+	background: $background-color-dark;
+	font-size: 1rem;
+
+	&.navbar {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.mobile-nav {
+		cursor: pointer;
+	}
+
+	a {
+		text-decoration: none;
+		padding: 0 1rem;
+	}
+}
+
+.nav-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+
+	li {
+		list-style: none;
+		margin: 0 1px;
+	}
+}

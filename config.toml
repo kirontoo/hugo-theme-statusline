@@ -1,11 +1,37 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-defaultContentLanguage = "en-us"
-title = "hugo statusline theme"
+title = "hugo-statusline-theme"
 theme = "statusline"
 
 [taxonomies]
 	category = "categories"
 	series = "series"
 	tag = "tags"
+
+[params]
+	logoText = "statusline"
+	logoHomeLink = "/"
+	logoColor = "red"
+
+[languages]
+	[languages.en]
+		title = "statusline"
+		[languages.en.menu]
+			[[languages.en.menu.main]]
+				identifier = "about"
+				name = "about"
+				url = "/about"
+				pre = "purple"
+			[[languages.en.menu.main]]
+				identifier = "projects"
+				name = "projects"
+				url = "/projects"
+				pre = "cyan"
+			[[languages.en.menu.main]]
+				identifier = "blog"
+				name = "blog"
+				url = "/blog"
+				pre = "yellow"
+
+
 

@@ -1,3 +1,28 @@
-<header>
-	<p>this is the header</p>
+<header aria-role="header">
+	<nav class="navbar">
+
+		<div class="logo bracket">
+			<div class="bracket-left"></div>
+			<a 
+				class="{{ with $.Site.Params.LogoColor }}{{ . }}{{ end }}"
+				href="{{ if $.Site.Params.LogoHomeLink }}{{ $.Site.Params.LogoHomeLink }}{{ else }}{{ $.Site.BaseURL }}{{ end }}"
+			>
+				{{ with $.Site.Params.LogoText }}{{ . }}{{ else }}Statusline_Theme{{ end }}
+			</a>
+				<div class="bracket-right"></div>
+		</div>
+
+			<ul class="nav-links">
+				{{ if len $.Site.Menus }}
+					{{ range $.Site.Menus.main }}
+					<li class="bracket">
+						<div class="bracket-left"></div>
+						<a class="{{ .Pre }}" href="{{ .URL }}">{{ .Name }}</a>
+						<div class="bracket-right"></div>
+					</li>
+					{{ end }}
+				{{ end }}
+			</ul>
+
+	</nav>
 </header>

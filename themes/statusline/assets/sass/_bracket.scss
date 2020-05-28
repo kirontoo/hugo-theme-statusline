@@ -1,0 +1,23 @@
+.bracket {
+	display: flex;
+	align-items: center;
+}
+
+.bracket-left {
+	border-left: $border-size-thin solid $border-color-dark;
+	border-top: $border-size-thin solid $border-color-dark;
+	border-bottom: $border-size-thin solid $border-color-dark;
+
+	height: $base-font-size;
+	width: $border-size-thick;
+}
+
+.bracket-right {
+	border-right: $border-size-thin solid $border-color-dark;
+	border-top: $border-size-thin solid $border-color-dark;
+	border-bottom: $border-size-thin solid $border-color-dark;
+
+	height: $base-font-size;
+	width: $border-size-thick;
+}
+
