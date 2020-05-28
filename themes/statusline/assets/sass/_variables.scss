@@ -16,41 +16,52 @@ $pink      : #c47ebd;
 $colors: () !default;
 $colors: map-merge(
 	(
-		"red": $red,
-		"orange": $orange,
-		"yellow": $yellow,
-		"green": $green,
-		"blue": $blue,
-		"purple": $purple,
-		"cyan": $cyan,
-		"pink": $pink,
-		"white": $gray5,
-		"gray": $gray4,
-		"gray-dark": $gray2
+		"red"       : $red,
+		"orange"    : $orange,
+		"yellow"    : $yellow,
+		"green"     : $green,
+		"blue"      : $blue,
+		"purple"    : $purple,
+		"cyan"      : $cyan,
+		"pink"      : $pink,
+		"white"     : $gray5,
+		"gray"      : $gray4,
+		"gray-dark" : $gray2
 	),
 	$colors
 );
 
+
 // background
+$background-color-darker: $gray1;
 $background-color-dark: $gray2;
 $background-color-light: null;
 $background-color: $background-color-dark;
 
+
 // Typography
 //
 // font, color, headers, etc..
-$base-font-size: 12px;
-$base-font-family: FiraCode, Iosevka, SourceCodePro !default;
+$base-font-size     : 22px;
+$base-font-size-big : 20px;
 
-$text-color-light: $gray3; 
-$text-color-dark: $gray5;
-$text-color: $text-color-dark;
+$text-color-light : $gray3;
+$text-color-dark  : $gray5;
+$text-color       : $text-color-dark;
 
-$border-color-dark: $gray4;
-$border-color-light: null;
-$border-base-size: 2px !default;
-$border-thin: $border-base-size;
-$border-thick: $border-base-size * 2;
+$h1-text-size: $base-font-size * 2;
+$h2-text-size: $base-font-size * 1.8;
+$h3-text-size: $base-font-size * 1.6;
+$h4-text-size: $base-font-size * 1.4;
+$h5-text-size: $base-font-size * 1.2;
+$h6-text-size: $base-font-size;
+
+h1 { font-size: $h1-text-size; }
+h2 { font-size: $h2-text-size; }
+h3 { font-size: $h3-text-size; }
+h4 { font-size: $h4-text-size; }
+h5 { font-size: $h5-text-size; }
+h6 { font-size: $h6-text-size; }
 
 $h1-color: $green;
 $h2-color: $blue;
@@ -59,11 +70,30 @@ $h4-color: $red;
 $h5-color: $orange;
 $h6-color: $yellow;
 
+.blue   {  color: $blue;   }
+.red    {  color: $red;    }
+.yellow {  color: $yellow; }
+.green  {  color: $green;  }
+.cyan   {  color: $cyan;   }
+.orange {  color: $orange; }
+.purple {  color: $purple; }
+.pink   {  color: $pink;   }
+
+
 // Links
 //
 // Style anchor elements
+$link-color            : $yellow;
+$link-decoration       : none !default;
+$link-hover-color      : darken( $link-color, 15% ) !default;
+$link-hover-decoration : underline !default;
 
-$link-color: $yellow;
-$link-decoration: none !default;
-$link-hover-color: darken( $link-color, 15% ) !default;
-$link-hover-decoration: underline !default;
+
+// Borders
+//
+// Style borders
+$border-color-dark  : $gray4;
+$border-color-light : null;
+$border-base-size   : 2px !default;
+$border-size-thin   : $border-base-size;
+$border-size-thick  : $border-base-size * 2;
