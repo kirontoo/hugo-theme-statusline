@@ -31,6 +31,8 @@ $colors: map-merge(
 	$colors
 );
 
+// Separator
+$separator-color: $gray4;
 
 // background
 $background-color-darker: $gray1;
@@ -38,12 +40,12 @@ $background-color-dark: $gray2;
 $background-color-light: null;
 $background-color: $background-color-dark;
 
-
 // Typography
 //
 // font, color, headers, etc..
 $base-font-size     : 22px;
 $base-font-size-big : 20px;
+$base-text-size     : 16px;
 
 $text-color-light : $gray3;
 $text-color-dark  : $gray5;
@@ -62,6 +64,7 @@ h3 { font-size: $h3-text-size; }
 h4 { font-size: $h4-text-size; }
 h5 { font-size: $h5-text-size; }
 h6 { font-size: $h6-text-size; }
+p  { font-size: $base-text-size; }
 
 $h1-color: $green;
 $h2-color: $blue;

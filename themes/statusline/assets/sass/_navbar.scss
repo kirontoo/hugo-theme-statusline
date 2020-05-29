@@ -1,6 +1,6 @@
 nav {
 	margin: 0;
-	background: $background-color-dark;
+	background: $background-color;
 	font-size: 1rem;
 
 	&.navbar {
@@ -16,7 +16,6 @@ nav {
 
 	a {
 		text-decoration: none;
-		padding: 0 1rem;
 	}
 }
 
@@ -28,5 +27,9 @@ nav {
 	li {
 		list-style: none;
 		margin: 0 1px;
+	}
+
+	a:hover {
+		background: $background-color-darker;
 	}
 }
