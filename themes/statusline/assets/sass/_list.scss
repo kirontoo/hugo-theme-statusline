@@ -1,0 +1,63 @@
+.list-item-title {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+	a {
+		color: $green;
+		text-decoration: none;
+	}
+}
+
+.list-item {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+
+	.list-item-subtitle {
+		font-size: 0.8rem;
+	}
+
+	.list-item-separator {
+		margin: 0 0.2rem;
+		color: $separator-color;
+	}
+
+	.list-item-author {
+		color: $red;
+	}
+
+	.list-item-date {
+		color: $blue;
+	}
+
+	.list-item-content {
+		width: 100%;
+		padding-left: 1rem;
+		padding-right: 2rem;
+
+		p {
+			text-align: justify;
+		}
+	}
+
+	hr {
+		margin: 1rem 0;
+	}
+}
+
+div.main {
+	display: flex;
+	flex-flow: row;
+	width: 100%;
+
+	section {
+		width: 75%;
+	}
+
+	aside {
+		margin-left: 1rem;
+		width: 25%;
+	}
+}
+

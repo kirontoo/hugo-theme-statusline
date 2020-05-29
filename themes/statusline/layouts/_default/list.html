@@ -1,6 +1,43 @@
 {{ define "main" }}
-	{{ range .Site.RegularPages }}
-		<a href="{{ .Permalink }}">{{ .Title }}</a>
-		<br>
-	{{ end }}
+
+	<div class="main">
+		<section>
+			{{ range .Pages }}
+				<div class="list-item">
+					<div class="bracket list-item-title">
+						<div class="bracket-left"></div>
+						<a href="{{ .Permalink }}">{{ humanize .Title }}</a>
+						<div class="bracket-right"></div>
+					</div>
+
+					<div class="bracket list-item-subtitle">
+						<div class="bracket-left"></div>
+						{{ with .Params.Author }}
+							<p class="list-item-author">{{ humanize . }}</p>
+							<span class="list-item-separator">::</span>
+						{{ end }}
+						<p class="list-item-date">{{ .Date.Format "01-02-2006" }}</p>
+						<div class="bracket-right"></div>
+					</div>
+
+					<section class="list-item-content">
+						{{ .Summary | markdownify }}
+					</section>
+
+					{{ if .Truncated }}
+					<p>Read More >> </p>
+					{{ end }}
+
+					<hr>
+				</div>
+			{{ end }}
+		</section>
+
+		<aside>
+			<!-- {{ block "sidebar" . }} -->
+			<!-- {{ end }} -->
+			side column
+		</aside>
+
+	</div>
 {{ end }}
