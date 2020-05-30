@@ -1,14 +1,14 @@
 {{ define "main" }}
 
-	<div class="main">
+	<div class="list">
 		<section>
-			{{ range .Pages }}
+			{{ range .Pages.ByDate }}
 				<div class="list-item">
-					<div class="bracket list-item-title">
+					<a href="{{ .Permalink }}" class="bracket list-item-title">
 						<div class="bracket-left"></div>
-						<a href="{{ .Permalink }}">{{ humanize .Title }}</a>
+						{{ humanize .Title }}
 						<div class="bracket-right"></div>
-					</div>
+					</a>
 
 					<div class="bracket list-item-subtitle">
 						<div class="bracket-left"></div>
@@ -25,7 +25,7 @@
 					</section>
 
 					{{ if .Truncated }}
-					<p>Read More >> </p>
+					<a href="{{ .Permalink }}"class="list-item-read-more">Read More >> </a>
 					{{ end }}
 
 					<hr>
@@ -34,9 +34,9 @@
 		</section>
 
 		<aside>
-			<!-- {{ block "sidebar" . }} -->
-			<!-- {{ end }} -->
-			side column
+			{{ block "sidebar" . }}
+			sidebar
+			{{ end }}
 		</aside>
 
 	</div>

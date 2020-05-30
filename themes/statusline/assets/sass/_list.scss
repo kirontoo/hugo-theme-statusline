@@ -2,10 +2,12 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	color: $green;
+	text-decoration: none;
+	font-weight: bold;
 
-	a {
-		color: $green;
-		text-decoration: none;
+	&:hover {
+		background: $background-color-darker;
 	}
 }
 
@@ -33,11 +35,21 @@
 
 	.list-item-content {
 		width: 100%;
-		padding-left: 1rem;
-		padding-right: 2rem;
+		padding: 0.5rem 1rem 0 1rem;
+		font-size: $base-font-size-small;
+		text-align: justify;
+	}
 
-		p {
-			text-align: justify;
+	.list-item-read-more {
+		margin-left: 1rem;
+		margin-top: 0.5rem;
+		text-decoration: none;
+		color: $text-color;
+		font-size: $base-font-size-small;
+		font-weight: bold;
+
+		&:hover {
+			color: $yellow;
 		}
 	}
 
@@ -46,7 +58,7 @@
 	}
 }
 
-div.main {
+div.list {
 	display: flex;
 	flex-flow: row;
 	width: 100%;
