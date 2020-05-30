@@ -4,6 +4,7 @@
 @import 'navbar';
 @import 'bracket';
 @import 'list';
+@import 'notfound';
 
 html {
 	background-color: $background-color-dark;
@@ -28,4 +29,8 @@ main {
 
 hr {
 	border-color: $separator-color;
+}
+
+a {
+	text-decoration: none;
 }
