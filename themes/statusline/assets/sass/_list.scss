@@ -1,9 +1,7 @@
 .list-item-title {
-	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	color: $green;
-	text-decoration: none;
 	font-weight: bold;
 
 	&:hover {
@@ -43,7 +41,6 @@
 	.list-item-read-more {
 		margin-left: 1rem;
 		margin-top: 0.5rem;
-		text-decoration: none;
 		color: $text-color;
 		font-size: $base-font-size-small;
 		font-weight: bold;
@@ -65,10 +62,10 @@ div.list {
 
 	section {
 		width: 75%;
+		margin-right: 1rem;
 	}
 
 	aside {
-		margin-left: 1rem;
 		width: 25%;
 	}
 }
