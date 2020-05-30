@@ -8,7 +8,7 @@
 	border-top: $border-size-thin solid $border-color-dark;
 	border-bottom: $border-size-thin solid $border-color-dark;
 
-	height: $base-font-size;
+	min-height: $base-font-size;
 	width: $border-size-thick;
 	margin-right: 1rem;
 }
@@ -18,7 +18,7 @@
 	border-top: $border-size-thin solid $border-color-dark;
 	border-bottom: $border-size-thin solid $border-color-dark;
 
-	height: $base-font-size;
+	min-height: $base-font-size;
 	width: $border-size-thick;
 	margin-left: 1rem;
 }
