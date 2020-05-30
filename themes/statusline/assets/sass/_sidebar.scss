@@ -1,0 +1,17 @@
+div .sidebar {
+	height: 100%;
+
+	.bracket {
+		justify-content: space-between;
+	}
+
+	.taxonomies {
+		display: flex;
+		flex-flow: row wrap;
+		flex-direction: row;
+	}
+
+	.sidebar-taxonomy {
+		margin: 0.5rem 0;
+	}
+}

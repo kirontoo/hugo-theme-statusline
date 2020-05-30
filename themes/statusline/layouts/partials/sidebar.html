@@ -1,0 +1,43 @@
+{{ define "sidebar" }}
+<div class="sidebar">
+	<div class="bracket sidebar-title">
+		<div class="bracket-left"></div>
+			{{ .Site.Title }}
+		<div class="bracket-right"></div>
+	</div>
+
+	<!-- photo -->
+
+	<!-- info -->
+	<div class="bracket sidebar-info">
+		<div class="bracket-left"></div>
+			<ul>
+				<li>email</li>
+				<li>website</li>
+			</ul>
+		<div class="bracket-right"></div>
+	</div>
+
+	{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+		{{ if $taxonomy }}
+			<div class="sidebar-taxonomy {{ $taxonomyname }}">
+				<div class="bracket">
+					<div class="bracket-left"></div>
+						{{ $taxonomyname | upper }}
+					<div class="bracket-right"></div>
+				</div>
+				
+				<div class="taxonomies">
+					{{ range $key, $value := $taxonomy }}
+					<div class="taxonomy-tag {{ $taxonomyname }}">
+						<a href="{{ $value.Page.RelPermalink }}"><span class="taxonomy-hashtag">#</span>{{ $key }}</a>
+					</div>
+					{{ end  }}
+				</div>
+
+			</div>
+			{{ end }}
+	{{ end }}
+</div>
+
+{{ end }}
