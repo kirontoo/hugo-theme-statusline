@@ -12,10 +12,14 @@
 
 					<div class="bracket list-item-subtitle">
 						<div class="bracket-left"></div>
-						{{ with .Params.Author }}
-							<p class="list-item-author">{{ humanize . }}</p>
+							<p class="list-item-author">
+								{{ if .Params.Author }}
+									{{ humanize .Params.Author}}
+								{{ else }}
+									{{  humanize .Site.Params.Author }}
+								{{ end }}
+							</p>
 							<span class="list-item-separator">::</span>
-						{{ end }}
 						<p class="list-item-date">{{ .Date.Format "01-02-2006" }}</p>
 						<div class="bracket-right"></div>
 					</div>

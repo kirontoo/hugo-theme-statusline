@@ -12,6 +12,7 @@ theme = "statusline"
 	logoText = "statusline"
 	logoHomeLink = "/"
 	logoColor = "red"
+	author = "amy dang"
 
 [languages]
 	[languages.en]
