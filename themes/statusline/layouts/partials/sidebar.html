@@ -18,6 +18,7 @@
 		<div class="bracket-right"></div>
 	</div>
 
+	<!-- taxonomies -->
 	{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
 		{{ if $taxonomy }}
 			<div class="sidebar-taxonomy {{ $taxonomyname }}">
@@ -29,8 +30,8 @@
 				
 				<div class="taxonomies">
 					{{ range $key, $value := $taxonomy }}
-					<div class="taxonomy-tag {{ $taxonomyname }}">
-						<a href="{{ $value.Page.RelPermalink }}"><span class="taxonomy-hashtag">#</span>{{ $key }}</a>
+					<div class="taxonomy-tags {{ $taxonomyname }}">
+						<a href="{{ $value.Page.RelPermalink }}" class="taxonomy-tag {{ $taxonomyname }}-box"><span class="taxonomy-hashtag">#</span>{{ $key }}</a>
 					</div>
 					{{ end  }}
 				</div>

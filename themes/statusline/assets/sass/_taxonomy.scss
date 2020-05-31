@@ -3,28 +3,25 @@ $taxonomy-categories-color: $orange;
 $taxonomy-series-color: $purple;
 $taxonomy-tags-color: $yellow;
 
-.taxonomy-tag {
+a.taxonomy-tag {
 	border: 1px solid $border-color-dark;
 	text-align: center;
 	text-overflow: none;
-	margin: 0.2rem 0.2rem 0 0.2rem;
 	padding: 0.1rem 0.2rem;
 	font-size: $base-font-size-small;
+	color: inherit;
 
 	.taxonomy-hashtag {
 		color: $border-color-dark;
-	}
-
-	a {
-		color: inherit;
 	}
 }
 
 .categories {
 	color: $taxonomy-categories-color;
-	&:hover {
-		border-color: $taxonomy-categories-color;
-		a {
+	.categories-box {
+
+		&:hover {
+			border-color: $taxonomy-categories-color;
 			color: $text-color;
 		}
 	}
@@ -32,9 +29,10 @@ $taxonomy-tags-color: $yellow;
 
 .series {
 	color: $taxonomy-series-color;
-	&:hover {
-		border-color: $taxonomy-series-color;
-		a {
+	.series-box {
+
+		&:hover {
+			border-color: $taxonomy-series-color;
 			color: $text-color;
 		}
 	}
@@ -43,9 +41,9 @@ $taxonomy-tags-color: $yellow;
 .tags {
 	color: $taxonomy-tags-color;
 
-	&:hover {
-		border-color: $taxonomy-tags-color;
-		a {
+	.tags-box {
+		&:hover {
+			border-color: $taxonomy-tags-color;
 			color: $text-color;
 		}
 	}

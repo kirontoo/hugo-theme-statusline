@@ -9,6 +9,11 @@ div .sidebar {
 		display: flex;
 		flex-flow: row wrap;
 		flex-direction: row;
+		margin: 0.2rem 0.4rem;
+
+		.taxonomy-tags {
+			margin: 0.1rem ;
+		}
 	}
 
 	.sidebar-taxonomy {
