@@ -3,12 +3,18 @@ div .sidebar {
 
 	.bracket {
 		justify-content: space-between;
+
+		ul {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	.taxonomies {
 		display: flex;
 		flex-flow: row wrap;
 		flex-direction: row;
+		justify-content: flex-start;
 		margin: 0.2rem 0.4rem;
 
 		.taxonomy-tags {
@@ -16,7 +22,52 @@ div .sidebar {
 		}
 	}
 
+	.sidebar-profile {
+		font-size: $base-font-size-small;
+
+		#profile-occupation {
+			font-size: $base-font-size-big;
+			color: $h2-color;
+			margin-bottom: 0.4rem;
+		}
+
+		ul {
+			width: 100%;
+			justify-content: flex-start;
+			flex-flow: column;
+			flex-direction: column;
+			list-style: none;
+
+			i {
+				color: $text-color;
+				margin-right: 0.4rem;
+			}
+
+			a {
+				color: $pink;
+			}
+
+			.sidebar-profile-about {
+				color: $pink;
+				margin-bottom: 0.4rem;
+			}
+
+			.sidebar-profile-links {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+			}
+		}
+	}
+
 	.sidebar-taxonomy {
 		margin: 0.5rem 0;
 	}
+
+	.sidebar-info {
+		li {
+			list-style: none;
+		}
+	}
+
 }
