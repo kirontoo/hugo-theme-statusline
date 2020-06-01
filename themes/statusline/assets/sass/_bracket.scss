@@ -1,25 +1,26 @@
+@mixin bracket-border {
+	border-top: $border-size-thin solid $border-color-dark;
+	border-bottom: $border-size-thin solid $border-color-dark;
+	min-height: $base-font-size;
+	width: $border-size-thick * 1.5;
+}
+
 .bracket {
 	display: flex;
-	align-items: center;
+	align-items: stretch;
+	align-content: center;
+	margin-bottom: 0.3rem;
 }
 
 .bracket-left {
+	@include bracket-border;
 	border-left: $border-size-thin solid $border-color-dark;
-	border-top: $border-size-thin solid $border-color-dark;
-	border-bottom: $border-size-thin solid $border-color-dark;
-
-	min-height: $base-font-size;
-	width: $border-size-thick;
 	margin-right: 1rem;
 }
 
 .bracket-right {
+	@include bracket-border;
 	border-right: $border-size-thin solid $border-color-dark;
-	border-top: $border-size-thin solid $border-color-dark;
-	border-bottom: $border-size-thin solid $border-color-dark;
-
-	min-height: $base-font-size;
-	width: $border-size-thick;
 	margin-left: 1rem;
 }
 
