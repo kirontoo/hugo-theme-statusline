@@ -4,19 +4,19 @@
 		<section>
 			{{ range .Pages.ByDate }}
 				<div class="list-item">
-					<a href="{{ .Permalink }}" class="bracket list-item-title">
+					<a href="{{ .Permalink }}" class="bracket capitalize list-item-title">
 						<div class="bracket-left"></div>
-						{{ humanize .Title }}
+						{{ .Title }}
 						<div class="bracket-right"></div>
 					</a>
 
 					<div class="bracket list-item-subtitle">
 						<div class="bracket-left"></div>
-							<p class="list-item-author">
+							<p class="list-item-author capitalize">
 								{{ if .Params.Author }}
-									{{ humanize .Params.Author}}
+									{{ .Params.Author}}
 								{{ else }}
-									{{  humanize .Site.Params.Author }}
+									{{  .Site.Params.Author }}
 								{{ end }}
 							</p>
 							<span class="list-item-separator">::</span>
