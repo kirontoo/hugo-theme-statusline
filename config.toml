@@ -12,7 +12,17 @@ theme = "statusline"
 	logoText = "statusline"
 	logoHomeLink = "/"
 	logoColor = "red"
-	author = "amy dang"
+	author = "John doe"
+	[params.profile]
+		occupation = "web developer"
+		name = "john doe"
+		email = "statusline@email.com"
+		location = "Los angeles, CA"
+	[params.profile.links]
+		github = "http://example.com/"
+		linkedin = "http://example.com"
+		facebook = "http://example.com"
+		twitter = "http://example.com"
 
 [languages]
 	[languages.en]
