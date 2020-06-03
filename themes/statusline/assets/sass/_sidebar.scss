@@ -35,6 +35,13 @@ div .sidebar {
 			margin-bottom: 0.4rem;
 		}
 
+		#profile-bio {
+			color: $text-color;
+			margin: 0.2rem 0;
+			text-align: justify;
+			font-size: $base-font-size-small;
+		}
+
 		ul {
 			width: 100%;
 			justify-content: flex-start;

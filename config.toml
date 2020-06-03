@@ -18,6 +18,7 @@ theme = "statusline"
 		name = "kirontoo"
 		location = "los angeles, CA"
 		email = "example@email.com"
+		bio = "A short bio you can write. It will be limited to 200 characters to prevent long paragraphs."
 		[params.profile.links]
 			[params.profile.links.facebook]
 				link = "https://example.com"
