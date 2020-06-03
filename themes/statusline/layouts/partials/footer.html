@@ -1,1 +1,25 @@
-<p>this is the footer</p>
+<footer>
+	<hr>
+	<div class="footer-container">
+		{{ partial "footer/social-links" . }}
+
+		<div class="footer-line">
+			<div class="bracket">
+				<div class="bracket-left"></div>
+				{{ if $.Site.Copyright }}
+				<span class="copyright">{{ $.Site.Copyright | safeHTML }}</span>	
+				{{ else }}
+				<span class="copyright">
+					&copy; {{ now.Year }} Powered by <a href="https://gohugo.io/">Hugo</a>
+					<span class="list-item-separator">::</span>
+					Theme made by <a href="https://github.com/kirontoo/hugo-theme-statusline">Kirontoo</a>
+				</span>
+				{{ end }}
+				<div class="bracket-right"></div>
+			</div>
+
+			{{ partial "footer/go-to-top" . }}
+		</div>
+
+	</div>
+</footer>

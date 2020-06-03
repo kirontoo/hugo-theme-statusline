@@ -1,0 +1,27 @@
+footer {
+	display: flex;
+	flex-direction: column;
+	font-size: $base-font-size-small;
+	margin-top: 3rem;
+
+	.footer-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		width: 100%;
+
+		.footer-line {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-top: 0.5rem;
+		}
+	}
+
+	.copyright {
+		a {
+			color: $link-color;
+		}
+	}
+}

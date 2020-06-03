@@ -1,0 +1,14 @@
+<div class="social-links">
+	{{ range $key, $value := $.Site.Params.Profile.Links }}
+	<li>
+		<a 
+			class="{{ $value.color }}"
+			href="{{ $value.link }}" 
+			target="_blank">
+			<i class="fab fa-lg fa-{{ if eq $key "github" }}{{ "github-alt" }}{{ else }}{{ $key }}{{end}}">
+			</i>
+		</a>
+	</li>
+	{{ end }}
+</div>
+<hr>

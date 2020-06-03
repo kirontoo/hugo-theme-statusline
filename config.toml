@@ -13,6 +13,24 @@ theme = "statusline"
 	logoHomeLink = "/"
 	logoColor = "red"
 	author = "amy dang"
+	enableGoToTop = true
+	[params.profile]
+		name = "kirontoo"
+		location = "los angeles, CA"
+		email = "example@email.com"
+		[params.profile.links]
+			[params.profile.links.facebook]
+				link = "https://example.com"
+				color = "blue"
+			[params.profile.links.twitter]
+				link = "https://example.com"
+				color = "purple"
+			[params.profile.links.linkedin]
+				link = "https://example.com"
+				color = "yellow"
+			[params.profile.links.github]
+				link = "https://example.com"
+				color = "red"
 
 [languages]
 	[languages.en]
