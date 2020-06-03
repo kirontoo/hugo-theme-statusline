@@ -11,6 +11,10 @@
 @import 'goToTop';
 @import 'socialLinks';
 
+html, body {
+	height: 100%;
+	width: 100%;
+}
 html {
 	background-color: $background-color-dark;
 	color: $text-color;
@@ -20,6 +24,7 @@ html {
 body {
 	font-feature-settings: "liga";
 	font-variant-ligatures: normal;
+	min-height: 100vh;
 }
 
 * {
@@ -28,8 +33,13 @@ body {
 	box-sizing: border-box;
 }
 
+header, main, footer {
+	flex-shrink: 0;
+}
+
 main {
 	margin-top: 2.5rem;
+	flex-grow: 1;
 }
 
 hr {
