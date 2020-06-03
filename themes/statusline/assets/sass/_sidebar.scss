@@ -22,6 +22,10 @@ div .sidebar {
 		}
 	}
 
+	.sidebar-title {
+		color: $red;
+	}
+
 	.sidebar-profile {
 		font-size: $base-font-size-small;
 
@@ -43,19 +47,26 @@ div .sidebar {
 				margin-right: 0.4rem;
 			}
 
-			a {
-				color: $pink;
-			}
 
 			.sidebar-profile-about {
 				color: $pink;
 				margin-bottom: 0.4rem;
+
+				a {
+					color: $pink;
+				}
 			}
 
 			.sidebar-profile-links {
 				display: flex;
 				flex-direction: row;
 				justify-content: space-evenly;
+				
+				i {
+					&:hover {
+						color: $link-color;
+					}
+				}
 			}
 		}
 	}

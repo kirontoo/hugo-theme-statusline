@@ -2,7 +2,7 @@
 
 	<div class="list">
 		<section>
-			{{ range .Pages.ByDate }}
+			{{ range .Pages.ByDate.Reverse }}
 				<div class="list-item">
 					<a href="{{ .Permalink }}" class="bracket capitalize list-item-title">
 						<div class="bracket-left"></div>

@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en.us{{ end }}">
-		{{ partial "head.html" . }}
+		{{ partial "head" . }}
 	<body>
 		<div class="container">
-			{{ partial "header.html" . }}
+			{{ partial "header" . }}
 
 			<main id="content">
 				{{ block "main" . }}
 				{{ end }}
 			</main>
 
-			{{ partial "footer.html" . }}
+			{{ partial "footer" . }}
 		</div>
+
+	<!-- scripts -->
+	{{ partial "scripts/go-to-top-script" . }}
 	</body>
 </html>

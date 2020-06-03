@@ -7,6 +7,9 @@
 @import 'sidebar';
 @import 'taxonomy';
 @import 'notfound';
+@import 'footer';
+@import 'goToTop';
+@import 'socialLinks';
 
 html {
 	background-color: $background-color-dark;
@@ -40,3 +43,4 @@ a {
 .capitalize {
 	text-transform: capitalize;
 }
+

@@ -12,17 +12,25 @@ theme = "statusline"
 	logoText = "statusline"
 	logoHomeLink = "/"
 	logoColor = "red"
-	author = "John doe"
+	author = "amy dang"
+	enableGoToTop = true
 	[params.profile]
-		occupation = "web developer"
-		name = "john doe"
-		email = "statusline@email.com"
-		location = "Los angeles, CA"
-	[params.profile.links]
-		github = "http://example.com/"
-		linkedin = "http://example.com"
-		facebook = "http://example.com"
-		twitter = "http://example.com"
+		name = "kirontoo"
+		location = "los angeles, CA"
+		email = "example@email.com"
+		[params.profile.links]
+			[params.profile.links.facebook]
+				link = "https://example.com"
+				color = "blue"
+			[params.profile.links.twitter]
+				link = "https://example.com"
+				color = "purple"
+			[params.profile.links.linkedin]
+				link = "https://example.com"
+				color = "yellow"
+			[params.profile.links.github]
+				link = "https://example.com"
+				color = "red"
 
 [languages]
 	[languages.en]
