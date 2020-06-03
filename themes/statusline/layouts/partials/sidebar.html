@@ -37,27 +37,14 @@
 
 				<div class="sidebar-profile-links">
 					{{ range $key, $value := $.Site.Params.Profile.Links }}
-						<li>
-							<a 
-								href="{{ $value }}" 
-								target="_blank">
-								<i class="fab fa-2x fa-{{ if eq $key "github" }}{{ "github-alt" }}{{ else }}{{ $key }}{{end}}">
-								</i>
-							</a>
-						</li>
-					{{ end }}
-
-					{{ with $.Site.Params.Profile.github}}
-						<li><a href="{{ . }}" target="_blank"><i class="fab fa-2x fa-github-alt"></i></a></li>
-					{{ end }}
-					{{ with $.Site.Params.Profile.linkedin }}
-						<li><a href="{{ . }}" target="_blank"><i class="fab fa-2x fa-linkedin"></i></a></li>
-					{{ end }}
-					{{ with $.Site.Params.Profile.twitter }}
-						<li><a href="{{ . }}" target="_blank"><i class="fab fa-2x fa-twitter"></i></a></li>
-					{{ end }}
-					{{ with $.Site.Params.Profile.facebook }}
-						<li><a href="{{ . }}" target="_blank"><i class="fab fa-2x fa-facebook"></i></a></li>
+					<li>
+						<a 
+							href="{{ $value.link }}" 
+							target="_blank">
+							<i class="fab fa-lg fa-{{ if eq $key "github" }}{{ "github-alt" }}{{ else }}{{ $key }}{{end}}">
+							</i>
+						</a>
+					</li>
 					{{ end }}
 				</div>
 
