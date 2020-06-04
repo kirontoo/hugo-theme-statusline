@@ -10,18 +10,6 @@ div .sidebar {
 		}
 	}
 
-	.taxonomies {
-		display: flex;
-		flex-flow: row wrap;
-		flex-direction: row;
-		justify-content: flex-start;
-		margin: 0.2rem 0.4rem;
-
-		.taxonomy-tags {
-			margin: 0.1rem ;
-		}
-	}
-
 	.sidebar-title {
 		color: $red;
 	}
@@ -80,6 +68,18 @@ div .sidebar {
 
 	.sidebar-taxonomy {
 		margin: 0.5rem 0;
+
+		.taxonomies {
+			display: flex;
+			flex-flow: row wrap;
+			flex-direction: row;
+			justify-content: flex-start;
+			margin: 0.2rem 0.4rem;
+
+			.taxonomy-tags {
+				margin: 0.1rem ;
+			}
+		}
 	}
 
 	.sidebar-info {

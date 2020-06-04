@@ -56,20 +56,19 @@
 	</div>
 
 	<!-- taxonomies -->
-	{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+	{{ range $taxonomyName, $taxonomy := .Site.Taxonomies }}
 		{{ if $taxonomy }}
-			<div class="sidebar-taxonomy {{ $taxonomyname }}">
+			<div class="sidebar-taxonomy {{ $taxonomyName }}">
 				<div class="bracket">
 					<div class="bracket-left"></div>
-						{{ $taxonomyname | upper }}
+						{{ $taxonomyName | upper }}
 					<div class="bracket-right"></div>
 				</div>
 				
 				<div class="taxonomies">
 					{{ range $key, $value := $taxonomy }}
-					<div class="taxonomy-tags {{ $taxonomyname }}">
-						<a href="{{ $value.Page.RelPermalink }}" class="taxonomy-tag {{ $taxonomyname }}-box"><span class="taxonomy-hashtag">#</span>{{ $key }}</a>
-					</div>
+						{{ $taxonomyStyles := "taxonomy-tags" }}
+						{{ partial "components/taxonomy-tag" ( dict "taxonomyName" $taxonomyName "styles" $taxonomyStyles "link" $value "name" $key)}}
 					{{ end  }}
 				</div>
 
