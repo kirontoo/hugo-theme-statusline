@@ -1,4 +1,32 @@
 {{ define "main" }}
-	<h1>{{ .Title }}</h1>
+<div class="content">
+	{{ partial "components/title" . .Title }}
+
+
+	<div class="taxonomies">
+		<ul>
+			{{ with .Params.categories }}
+			{{ range $value := . }}
+			{{ $link := ( urlize ( printf "categories/%s" . )) | absURL }}
+			<li>{{ partial "components/taxonomy-tag" ( dict "taxonomyName" "categories" "link" $link "name" $value)}}</li>
+			{{ end }}
+			{{ end }}
+
+			{{ with .Params.series }}
+			{{ range $value := . }}
+			{{ $link := ( urlize ( printf "series/%s" . )) | absURL }}
+			<li>{{ partial "components/taxonomy-tag" ( dict "taxonomyName" "series" "link" $link "name" $value)}}</li>
+			{{ end }}
+			{{ end }}
+
+			{{ with .Params.tags }}
+			{{ range $value := . }}
+			{{ $link := ( urlize ( printf "tags/%s" . )) | absURL }}
+			<li>{{ partial "components/taxonomy-tag" ( dict "taxonomyName" "tags" "link" $link "name" $value)}}</li>
+			{{ end }}
+			{{ end }}
+		</ul>
+	</div>
 	{{ .Content }}
+</div>
 {{ end }}
