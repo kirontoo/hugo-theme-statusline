@@ -1,8 +1,19 @@
 {{ define "main" }}
-<div class="content">
+<article class="content">
 	{{ partial "components/title" . .Title }}
+	<div class="content-info">
+		<p class="content-author capitalize">
+			{{ if .Params.Author }}
+			{{ .Params.Author}}
+			{{ else }}
+			{{  .Site.Params.Author }}
+			{{ end }}
+		</p>
 
+		<span class="separator">::</span>
+		<p class="content-date">{{ .Date.Format "01-02-2006" }}</p>
 
+	</div>
 	<div class="taxonomies">
 		<ul>
 			{{ with .Params.categories }}
@@ -27,6 +38,13 @@
 			{{ end }}
 		</ul>
 	</div>
+
+	<hr>
 	{{ .Content }}
-</div>
+
+	{{ if $.Site.Params.enableTOC }}
+	<aside>
+	</aside>
+	{{ end }}
+</article>
 {{ end }}

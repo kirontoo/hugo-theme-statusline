@@ -1,16 +1,36 @@
-div.content {
+article.content {
 	width: 100%;
 	height: auto;
 	display: flex;
 	flex-direction: column;
 	
+	hr {
+		margin: 0.4rem 0;
+	}
+	.content-info {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.content-author {
+		color: $red;
+	}
+
+	.content-date {
+		color: $blue;
+	}
+
 	.taxonomies {
 		padding: 0 1rem;
-		margin: 0.3rem 0;
+		margin-top: 0.2rem;
+		margin-bottom: 0.2rem;
 
 		ul {
 			display: flex;
 			flex-direction: row;
+			justify-content: center;
 		}
 
 		li {
