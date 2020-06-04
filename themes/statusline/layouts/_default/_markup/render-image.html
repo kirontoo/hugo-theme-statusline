@@ -1,0 +1,5 @@
+<div class="bracket md-image">
+	<div class="bracket-left"></div>
+	<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+	<div class="bracket-right"></div>
+</div>
