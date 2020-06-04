@@ -1,0 +1,13 @@
+.md-heading {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	align-content: center;
+	justify-items: center;
+	width: 100%;
+	margin: 0.5rem 0;
+
+	a {
+		color: inherit !important;
+	}
+}

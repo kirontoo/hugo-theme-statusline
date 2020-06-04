@@ -1,0 +1,9 @@
+<div class="bracket md-heading">
+	<div class="bracket-left"></div>
+	<h{{ .Level }} id="{{ .Anchor | safeURL }}">
+		<a href="#{{ .Anchor | safeURL }}">
+			{{ .Text | safeHTML }}
+		</a>
+	</h{{ .Level }}>
+	<div class="bracket-right"></div>
+</div>
