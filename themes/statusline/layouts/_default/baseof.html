@@ -3,14 +3,14 @@
 		{{ partial "head" . }}
 	<body>
 		<div class="container">
-			{{ partial "header" . }}
+			{{ partialCached "header" . }}
 
 			<main id="content">
 				{{ block "main" . }}
 				{{ end }}
 			</main>
 
-			{{ partial "footer" . }}
+			{{ partialCached "footer/index" . }}
 		</div>
 
 	<!-- scripts -->
