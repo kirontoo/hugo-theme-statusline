@@ -107,6 +107,7 @@ $link-hover-decoration : underline !default;
 // Style borders
 $border-color-dark  : $gray4;
 $border-color-light : null;
+$border-color       : $border-color-dark;
 $border-base-size   : 2px !default;
 $border-size-thin   : $border-base-size;
 $border-size-thick  : $border-base-size * 2;
