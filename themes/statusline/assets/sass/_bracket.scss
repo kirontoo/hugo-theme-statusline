@@ -1,6 +1,6 @@
 @mixin bracket-border {
-	border-top: $border-size-thin solid $border-color-dark;
-	border-bottom: $border-size-thin solid $border-color-dark;
+	border-top: $border-size-thin solid $border-color;
+	border-bottom: $border-size-thin solid $border-color;
 	min-height: $base-font-size;
 	width: $border-size-thick * 1.5;
 }
@@ -14,13 +14,13 @@
 
 .bracket-left {
 	@include bracket-border;
-	border-left: $border-size-thin solid $border-color-dark;
+	border-left: $border-size-thin solid $border-color;
 	margin-right: 1rem;
 }
 
 .bracket-right {
 	@include bracket-border;
-	border-right: $border-size-thin solid $border-color-dark;
+	border-right: $border-size-thin solid $border-color;
 	margin-left: 1rem;
 }
 

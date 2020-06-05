@@ -4,7 +4,7 @@ $taxonomy-series-color: $purple;
 $taxonomy-tags-color: $yellow;
 
 a.taxonomy-tag {
-	border: 1px solid $border-color-dark;
+	border: 1px solid $border-color;
 	text-align: center;
 	text-overflow: none;
 	padding: 0.1rem 0.2rem;
@@ -12,7 +12,7 @@ a.taxonomy-tag {
 	color: inherit;
 
 	.taxonomy-hashtag {
-		color: $border-color-dark;
+		color: $border-color;
 	}
 }
 
