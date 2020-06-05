@@ -35,10 +35,10 @@ $colors: map-merge(
 $separator-color: $gray4;
 
 // background
-$background-color-darker: $gray1;
-$background-color-dark: $gray2;
-$background-color-light: null;
-$background-color: $background-color-dark;
+$background-color-darker :  $gray1;
+$background-color-dark   :  $gray2;
+$background-color-light  :  null;
+$background-color        :  $background-color-dark;
 
 // Typography
 //
@@ -111,3 +111,25 @@ $border-color       : $border-color-dark;
 $border-base-size   : 2px !default;
 $border-size-thin   : $border-base-size;
 $border-size-thick  : $border-base-size * 2;
+
+.border-blue      {  border-color: $blue;    }
+.border-red       {  border-color: $red;     }
+.border-yellow    {  border-color: $yellow;  }
+.border-green     {  border-color: $green;   }
+.border-cyan      {  border-color: $cyan;    }
+.border-orange    {  border-color: $orange;  }
+.border-purple    {  border-color: $purple;  }
+.border-pink      {  border-color: $pink;    }
+.border-white     {  border-color: $gray5;   }
+.border-gray      {  border-color: $gray4;   }
+.border-gray-dark {  border-color: $gray2;   }
+
+// Markdown
+// 
+// Blockquote
+$blockquote-background-color :  $background-color-darker;
+$blockquote-text-color       :  $text-color;
+$blockquote-border-size      :  $border-size-thick * 1.5;
+$blockquote-border-color     :  $cyan;
+
+$reference-text-color: $yellow;
