@@ -5,7 +5,7 @@
 			class="{{ $value.color }}"
 			href="{{ $value.link }}" 
 			target="_blank">
-			<i class="fab fa-lg fa-{{ if eq $key "github" }}{{ "github-alt" }}{{ else }}{{ $key }}{{end}}">
+			<i class="{{ $value.color }} fab fa-lg fa-{{ if eq $key "github" }}{{ "github-alt" }}{{ else }}{{ $key }}{{end}}">
 			</i>
 		</a>
 	</li>
