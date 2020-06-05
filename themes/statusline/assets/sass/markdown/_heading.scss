@@ -1,14 +1,16 @@
-.md-heading {
-	display: flex;
-	align-items: stretch;
-	justify-content: space-between;
-	align-content: center;
-	justify-items: center;
-	width: 100%;
-	margin: 0.8rem 0;
-	text-align: center;
+.single-content {
+	.md-heading {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		align-content: center;
+		justify-items: center;
+		width: 100%;
+		margin: 0.8rem 0;
+		text-align: center;
 
-	a {
-		color: inherit !important;
+		a {
+			color: inherit !important;
+		}
 	}
 }

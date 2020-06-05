@@ -1,10 +1,11 @@
-.md-image {
-	width: 100%;
-	justify-content: center;
-	margin: 0.5rem 0;
+.single-content {
+	.md-image {
+		width: 100%;
+		justify-content: center;
+		margin: 0.5rem 0;
 
-
-	img {
-		width: 60%;
+		img {
+			width: 60%;
+		}
 	}
 }
