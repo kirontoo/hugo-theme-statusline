@@ -1,0 +1,14 @@
+.single-content {
+	blockquote {
+		background: $blockquote-background-color;
+		border-left: $blockquote-border-size solid $blockquote-border-color;
+		padding: 0.6rem;
+		padding-left: 1.5rem;
+		text-align: justify;
+		margin: 0.4rem 1rem 0.4rem 1rem;
+
+		p > sup > a {
+			color: $reference-text-color;
+		}
+	}
+}
