@@ -1,0 +1,8 @@
+a.md-link {
+	color: $link-color;
+	font-weight: bold;
+
+	&:hover {
+		color: $text-color;
+	}
+}

@@ -10,9 +10,17 @@
 @import 'footer';
 @import 'goToTop';
 @import 'socialLinks';
+
+// content styles
 @import 'content/title';
+
+// layout styles
 @import 'layouts/single';
+
+// markdown styles
 @import 'markdown/heading';
+@import 'markdown/image';
+@import 'markdown/link';
 
 html, body {
 	height: 100%;
