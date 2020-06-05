@@ -14,6 +14,7 @@ theme = "statusline"
 	logoColor = "red"
 	author = "amy dang"
 	enableGoToTop = true
+	enableParagraphIndent = false
 	[params.profile]
 		name = "kirontoo"
 		location = "los angeles, CA"
