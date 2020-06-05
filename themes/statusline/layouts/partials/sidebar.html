@@ -38,18 +38,7 @@
 					{{ end }}
 				</div>
 
-				<div class="sidebar-profile-links">
-					{{ range $key, $value := $.Site.Params.Profile.Links }}
-					<li>
-						<a 
-							href="{{ $value.link }}" 
-							target="_blank">
-							<i class="fab fa-lg fa-{{ if eq $key "github" }}{{ "github-alt" }}{{ else }}{{ $key }}{{end}}">
-							</i>
-						</a>
-					</li>
-					{{ end }}
-				</div>
+					{{ partial "components/social-links.html" . }}
 
 			</ul>
 		<div class="bracket-right"></div>

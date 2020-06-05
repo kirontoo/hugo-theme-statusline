@@ -51,18 +51,6 @@ div .sidebar {
 					color: $pink;
 				}
 			}
-
-			.sidebar-profile-links {
-				display: flex;
-				flex-direction: row;
-				justify-content: space-evenly;
-				
-				i {
-					&:hover {
-						color: $link-color;
-					}
-				}
-			}
 		}
 	}
 
