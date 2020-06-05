@@ -6,6 +6,10 @@
 		padding-left: 1.5rem;
 		text-align: justify;
 		margin: 0.4rem 1rem 0.4rem 1rem;
+		
+		p {
+			text-indent: 0;
+		}
 
 		p > sup > a {
 			color: $reference-text-color;
