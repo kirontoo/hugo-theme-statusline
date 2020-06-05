@@ -12,8 +12,9 @@
 	{{ $sass := resources.Get "sass/main.scss"}}
 	{{ $style := $sass | resources.ToCSS }}
 	<link rel="stylesheet" href="{{ $style.Permalink }}">
+
 	{{ if $.Site.Params.enableParagraphIndent }}
-		{{ $pCSS := resources.Get "sass/markdown/_p.scss" }}
+		{{ $pCSS := resources.Get "sass/markdown/_p-indent.scss" }}
 		{{ $paragraphIndent := $pCSS | resources.ToCSS }}
 		<link rel="stylesheet" href="{{ $paragraphIndent.Permalink }}">
 	{{ end }}
