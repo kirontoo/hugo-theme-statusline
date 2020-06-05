@@ -1,0 +1,16 @@
+.single-content {
+	ol, ul {
+		list-style-position: inside;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		margin-left: 1rem;
+		font-size: $base-font-size-small;
+	}
+
+	li {
+		text-align: justify;
+		word-wrap: break-word;
+	}
+
+}
