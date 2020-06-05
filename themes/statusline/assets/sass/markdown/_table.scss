@@ -1,0 +1,22 @@
+.single-content {
+	table {
+		margin: 1rem auto;
+		border-collapse: collapse;
+		border: $border-size-thin solid $border-color;
+
+		th {
+			text-align: center;
+		}
+
+		th, td {
+			border: $border-size-thin solid $border-color;
+			padding: 0.2rem 1rem;
+			margin: 0;
+			vertical-align: center;
+		}
+
+		td {
+			text-align: left;
+		}
+	}
+}
