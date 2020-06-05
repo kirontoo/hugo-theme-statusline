@@ -4,7 +4,9 @@
 		border-left: $blockquote-border-size solid $blockquote-border-color;
 		padding: 1.5rem 2rem;
 		text-align: justify;
-		margin: 1rem;
+		margin: 1rem auto;
+		max-width: 80%;
+		min-width: 50%;
 		
 		p {
 			text-indent: 0;
