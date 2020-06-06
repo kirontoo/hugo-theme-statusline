@@ -30,6 +30,13 @@ div .sidebar {
 			font-size: $base-font-size-small;
 		}
 
+		.social-links {
+			justify-content: space-evenly;
+			li {
+				margin: 0;
+			}
+		}
+
 		ul {
 			width: 100%;
 			justify-content: flex-start;
