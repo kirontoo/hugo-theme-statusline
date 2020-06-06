@@ -1,62 +1,64 @@
 {{ define "main" }}
-<article class="content">
-	<hr style="margin-bottom: 0.8rem;">
+<div class="content-container">
+	<article class="content">
+		{{ partial "components/title" . .Title }}
+		<header class="content-info">
+			<p class="content-author capitalize">
+				{{ if .Params.Author }}
+				{{ .Params.Author}}
+				{{ else }}
+				{{  .Site.Params.Author }}
+				{{ end }}
+			</p>
+			<span class="separator">::</span>
+			<p class="content-date">{{ .Date.Format "01-02-2006" }}</p>
+		</header>
 
-	{{ partial "components/title" . .Title }}
-	<div class="content-info">
-		<p class="content-author capitalize">
-			{{ if .Params.Author }}
-			{{ .Params.Author}}
-			{{ else }}
-			{{  .Site.Params.Author }}
-			{{ end }}
-		</p>
-		<span class="separator">::</span>
-		<p class="content-date">{{ .Date.Format "01-02-2006" }}</p>
-	</div>
-
-	{{ with .Lastmod }}
+		{{ with .Lastmod }}
 		<div class="content-info">
 			<p>
 				Last modified<span class="separator">::</span>
 				<p class="content-date">{{ .Format "01-02-2006" }}</p>
 			</p>
 		</div>
-	{{ end }}
-	<div class="taxonomies">
-		<ul>
-			{{ with .Params.categories }}
-			{{ range $value := . }}
-			{{ $link := ( urlize ( printf "categories/%s" . )) | absURL }}
-			<li>{{ partial "components/taxonomy-tag" ( dict "taxonomyName" "categories" "link" $link "name" $value)}}</li>
-			{{ end }}
-			{{ end }}
+		{{ end }}
+		<div class="taxonomies">
+			<ul>
+				{{ with .Params.categories }}
+					{{ range $value := . }}
+						{{ $link := ( urlize ( printf "categories/%s" . )) | absURL }}
+						<li>{{ partial "components/taxonomy-tag" ( dict "taxonomyName" "categories" "link" $link "name" $value)}}</li>
+					{{ end }}
+				{{ end }}
 
-			{{ with .Params.series }}
-			{{ range $value := . }}
-			{{ $link := ( urlize ( printf "series/%s" . )) | absURL }}
-			<li>{{ partial "components/taxonomy-tag" ( dict "taxonomyName" "series" "link" $link "name" $value)}}</li>
-			{{ end }}
-			{{ end }}
+				{{ with .Params.series }}
+					{{ range $value := . }}
+						{{ $link := ( urlize ( printf "series/%s" . )) | absURL }}
+						<li>{{ partial "components/taxonomy-tag" ( dict "taxonomyName" "series" "link" $link "name" $value)}}</li>
+					{{ end }}
+				{{ end }}
 
-			{{ with .Params.tags }}
-			{{ range $value := . }}
-			{{ $link := ( urlize ( printf "tags/%s" . )) | absURL }}
-			<li>{{ partial "components/taxonomy-tag" ( dict "taxonomyName" "tags" "link" $link "name" $value)}}</li>
-			{{ end }}
-			{{ end }}
-		</ul>
-	</div>
+				{{ with .Params.tags }}
+					{{ range $value := . }}
+						{{ $link := ( urlize ( printf "tags/%s" . )) | absURL }}
+						<li>{{ partial "components/taxonomy-tag" ( dict "taxonomyName" "tags" "link" $link "name" $value)}}</li>
+					{{ end }}
+				{{ end }}
+			</ul>
+		</div>
 
-	<hr>
+		<hr>
 
-	<section class="single-content">
-		{{ .Content }}
-	</section>
+		<section class="single-content">
+			{{ .Content }}
+		</section>
+	</article>
 
 	{{ if $.Site.Params.enableTOC }}
-	<aside>
-	</aside>
+		<aside>
+			{{ block "toc" . }}
+			{{ end }}
+		</aside>
 	{{ end }}
-</article>
+</div>
 {{ end }}

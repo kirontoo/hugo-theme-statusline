@@ -1,0 +1,16 @@
+{{ define "toc" }}
+	<div class="toc">
+		<div class="bracket" id="toc-title">
+			<div class="bracket-left"></div>
+			<h6>Table Of Contents</h6>
+			<div class="bracket-right"></div>
+		</div>
+
+		<div id="toc-links">
+			{{ .TableOfContents }}
+		</div>
+	</div>
+
+	{{ partial "scripts/toc-script" . }}
+
+{{ end }}

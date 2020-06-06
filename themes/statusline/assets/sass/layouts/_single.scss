@@ -4,10 +4,11 @@ article.content {
 	display: flex;
 	flex-direction: column;
 	text-align: justify;
-	
+
 	hr {
 		margin: 0.4rem 0;
 	}
+
 	.content-info {
 		display: flex;
 		flex-direction: row;
@@ -45,5 +46,21 @@ article.content {
 			margin: 1rem;
 			text-align: justify;
 		}
+	}
+}
+
+
+div.content-container {
+	display: flex;
+	flex-flow: row;
+	width: 100%;
+
+	article {
+		width: 75%;
+		margin-right: 1rem;
+	}
+
+	aside {
+		width: 25%;
 	}
 }
