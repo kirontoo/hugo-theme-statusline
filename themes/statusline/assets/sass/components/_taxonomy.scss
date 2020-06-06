@@ -1,0 +1,50 @@
+// Taxonomy colors
+$taxonomy-categories-color: $orange;
+$taxonomy-series-color: $purple;
+$taxonomy-tags-color: $yellow;
+
+a.taxonomy-tag {
+	border: 1px solid $border-color;
+	text-align: center;
+	text-overflow: none;
+	padding: 0.1rem 0.2rem;
+	font-size: $base-font-size-small;
+	color: inherit;
+
+	.taxonomy-hashtag {
+		color: $border-color;
+	}
+}
+
+.categories {
+	color: $taxonomy-categories-color;
+	.categories-box {
+
+		&:hover {
+			border-color: $taxonomy-categories-color;
+			color: $text-color;
+		}
+	}
+}
+
+.series {
+	color: $taxonomy-series-color;
+	.series-box {
+
+		&:hover {
+			border-color: $taxonomy-series-color;
+			color: $text-color;
+		}
+	}
+}
+
+.tags {
+	color: $taxonomy-tags-color;
+
+	.tags-box {
+		&:hover {
+			border-color: $taxonomy-tags-color;
+			color: $text-color;
+		}
+	}
+}

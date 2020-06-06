@@ -5,14 +5,14 @@
 @import 'bracket';
 @import 'list';
 @import 'sidebar';
-@import 'taxonomy';
 @import 'notfound';
 @import 'footer';
-@import 'goToTop';
-@import 'socialLinks';
 
-// content styles
-@import 'content/title';
+// component styles
+@import 'components/taxonomy';
+@import 'components/goToTop';
+@import 'components/socialLinks';
+@import 'components/title';
 
 // layout styles
 @import 'layouts/single';
@@ -30,6 +30,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 }
+
 html {
 	background-color: $background-color-dark;
 	color: $text-color;
