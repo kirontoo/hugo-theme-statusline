@@ -1,0 +1,94 @@
+<script>
+	// grab all nested headings and hide them;
+	function collapseHeadings( target ) {
+		if ( target.querySelectorAll( 'ul' ) ) {
+			let ultarget = target.querySelectorAll( 'ul' );
+			ultarget.forEach( ( rootUl ) => {
+				let litarget = rootUl.querySelectorAll( 'li' );
+				litarget.forEach( ( li ) => {
+					let nestedUl = li.querySelectorAll( 'ul' );
+					nestedUl.forEach( ( ul ) => {
+						ul.style.display = 'none';
+					})
+				})
+			});
+		}
+	}
+
+	function getParentElementByClass( element, className ) {
+		return ( element.parentElement.classList.contains( className ) ) 
+			? element.parentElement 
+			: getParentElementByClass( element.parentElement, className );
+	}
+
+	const PARENT_CLASS = 'parentLi';
+	const ACTIVE_CLASS = 'toc-active';
+	const ACTIVE_PARENT_CLASS = 'toc-parent-active';
+
+	let tocElem = document.querySelector("#TableOfContents");
+	let currElem = null;
+
+	if ( tocElem ) {
+
+		// collapse all nested headings
+		collapseHeadings( tocElem );
+
+		// add a class to all top-level headings
+		let tocChildren = tocElem.children;
+		for( let i = 0; i < tocChildren.length; i++ ) {
+			let li = tocChildren[ i ].children;
+			for ( let k = 0; k < li.length; k++ ) {
+				li[ k ].classList.add( PARENT_CLASS );
+			}
+		}
+
+		// add event listeners to all heading links
+		let headingLinks = tocElem.querySelectorAll( 'a' );
+		if ( headingLinks.length > 0 ) {
+			headingLinks.forEach( ( a ) => {
+				a.addEventListener( 'click', () => {
+					let currParent = getParentElementByClass( a, PARENT_CLASS );
+
+					if ( currElem ) {
+						let collapseHeading = true;
+						let prevParent = getParentElementByClass( currElem, PARENT_CLASS );
+
+						if (  currParent == prevParent ) {
+							collapseHeading = false;
+						}
+
+						if ( collapseHeading ) {
+							collapseHeadings( prevParent );
+						}
+					}
+
+					// remove previous active headings
+					headingLinks.forEach( ( elem ) => {
+						elem.classList.remove( ACTIVE_CLASS );
+						elem.classList.remove( ACTIVE_PARENT_CLASS );
+					});
+
+					// mark the current and parent heading as active
+					if ( currElem ) {
+						let link = currParent.querySelector( 'a' );
+						if ( a != link ) {
+							link.classList.add( ACTIVE_PARENT_CLASS );
+						}
+					}
+					a.classList.add( ACTIVE_CLASS );
+
+					// display nested headings
+					let id = a.getAttribute('href');
+					currElem = tocElem.querySelector('[href="' + id + '"]');
+
+					if ( currElem ) {
+						let nestedHeadings = currElem.parentElement.querySelectorAll( 'ul' );
+						nestedHeadings.forEach ( ( elem ) => {
+							elem.style.display = 'block';
+						})
+					}
+				});
+			});
+		}
+	}
+</script>
