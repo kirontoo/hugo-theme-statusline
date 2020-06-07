@@ -3,8 +3,8 @@ div.toc {
 	position: sticky;
 	top: 4rem;
 	padding: 0.8rem 0.4rem;
+	background: $background-color-darker;
 
-		background: $background-color-darker;
 	#toc-title {
 		justify-content: space-between;
 		text-align: center;
@@ -13,6 +13,7 @@ div.toc {
 	nav {
 		background: $background-color-darker;
 		margin-top: 0.5rem;
+
 		ul, ol {
 			list-style-type: none;
 			font-size: $base-font-size-small * 0.9;
@@ -26,9 +27,11 @@ div.toc {
 			li {
 				text-align: left;
 				margin-bottom: 0.1rem;
+				word-wrap: break-word;
 			}
 
 			a {
+				display: block;
 				border-left: $border-size-thin solid $cyan;
 				padding-left: 0.5rem;
 				color: $text-color;
@@ -42,10 +45,12 @@ div.toc {
 
 	.toc-active {
 		color: $pink;
+		border-color: $pink;
 	}
 
 	.toc-parent-active {
 		color: $yellow;
+		border-color: $yellow;
 	}
 }
 
