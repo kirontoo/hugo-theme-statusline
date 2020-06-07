@@ -1,10 +1,18 @@
 <div class="bracket md-image">
 	<div class="bracket-left"></div>
-	{{ if hasPrefix .Destination "http"  }}
-		<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
-	{{ else }}
-		{{- $path := path.Join .Page.File.Dir .Destination -}}
-		<img src="{{ $path | relURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
-	{{ end }}
+
+	<div class="md-image-main">
+		{{ if hasPrefix .Destination "http"	}}
+			<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+			{{ else }}
+				{{- $path := path.Join .Page.File.Dir .Destination -}}
+				<img src="{{ $path | relURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+		{{ end }}
+
+		{{ with .Title }}
+		<p class="md-image-caption">{{ . }}</p>
+		{{ end }}
+	</div>
+
 	<div class="bracket-right"></div>
 </div>

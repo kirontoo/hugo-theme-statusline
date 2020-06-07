@@ -1,11 +1,28 @@
 .single-content, .list-item-content {
 	.md-image {
 		width: 100%;
-		justify-content: center;
 		margin: 0.5rem 0;
+		justify-content: center;
+
+		.md-image-main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 70%;
+		}
+
+		.md-image-caption {
+			text-align: center;
+			border: $border-size-thin solid $border-color;
+			width: 70%;
+			color: $pink;
+			background: $background-color-darker;
+			padding: 0.2rem;
+		}
 
 		img {
-			width: 70%;
+			width: 100%;
+			margin: 0.5rem 0;
 		}
 	}
 }
