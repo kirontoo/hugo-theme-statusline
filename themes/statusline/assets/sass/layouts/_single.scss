@@ -9,6 +9,11 @@ article.content {
 		margin: 0.4rem 0;
 	}
 
+	.single-content {
+		display: flex;
+		flex-direction: column;
+	}
+
 	.content-info {
 		display: flex;
 		flex-direction: row;
@@ -43,7 +48,7 @@ article.content {
 
 	.single-content {
 		p {
-			margin: 1rem;
+			margin: 0.5rem;
 			text-align: justify;
 		}
 	}
