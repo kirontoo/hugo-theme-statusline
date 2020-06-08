@@ -48,11 +48,31 @@
 				{{ end }}
 			</ul>
 		</div>
-
+		{{ .Summary | safeHTML }}
 		<hr>
 
 		<section class="single-content">
-			{{ .Content }}
+			{{ .Content | safeHTML }}
+		</section>
+
+		<section class="post-navigation">
+			<div>
+				{{ with .PrevInSection }}
+					<a class="previous" href="{{.Permalink}}">
+						<i class="fas fa-angle-double-left post-navigation-arrow"></i>
+						<span class="post-navigation-title">{{.Title}}</span>
+						<i class="fas fa-angle-double-left post-navigation-arrow"></i>
+					</a>
+				{{ end }}
+			</div>
+
+			{{ with .NextInSection }}
+				<a class="previous" href="{{.Permalink}}">
+					<i class="fas fa-angle-double-right post-navigation-arrow"></i>
+					<span class="post-navigation-title">{{.Title}}</span>
+					<i class="fas fa-angle-double-right post-navigation-arrow"></i>
+				</a>
+			{{ end }}
 		</section>
 	</article>
 

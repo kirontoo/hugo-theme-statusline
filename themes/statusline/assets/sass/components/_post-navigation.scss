@@ -1,0 +1,32 @@
+.post-navigation {
+	border-top: $border-size-thin solid $border-color;
+	border-bottom: $border-size-thin solid $border-color;
+	margin-top: 1rem;
+	padding: 0.5rem 0;
+	justify-self: flex-end;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	.post-navigation-arrow {
+		color: $separator-color !important;
+	}
+
+	a {
+		padding: 0 0.5rem;
+		text-align: center;
+		&:hover {
+			background: $background-color-darker;
+		}
+	}
+
+	a.previous {
+		color: $red;
+	}
+
+	a.next {
+		color: $green;
+		align-self: flex-end;
+	}
+}
