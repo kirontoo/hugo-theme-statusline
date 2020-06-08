@@ -41,6 +41,14 @@ theme = "statusline"
 			[params.profile.links.github]
 				link = "https://example.com"
 				color = "red"
+	[params.archive]
+		pageTypeBlacklist = [ "archive", "projects", "about" ]
+		groupByDateFormat = "2006-01"
+		publishDateFormat = "Jan 02"
+	[params.archive.color]
+		type = "blue"
+		groupDate = "purple"
+		publishDate = "yellow"
 
 [languages]
 	[languages.en]
@@ -61,6 +69,11 @@ theme = "statusline"
 				name = "blog"
 				url = "/blog"
 				pre = "yellow"
+			[[languages.en.menu.main]]
+				identifier = "archive"
+				name = "archive"
+				url = "/archive"
+				pre = "pink"
 
 
 

@@ -3,7 +3,6 @@
 @import 'container';
 @import 'navbar';
 @import 'bracket';
-@import 'list';
 @import 'sidebar';
 @import 'notfound';
 @import 'footer';
@@ -19,6 +18,7 @@
 
 // layout styles
 @import 'layouts/defaults/single';
+@import 'layouts/defaults/list';
 
 // markdown styles
 @import 'markdown/heading';
