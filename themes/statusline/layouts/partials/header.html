@@ -5,9 +5,10 @@
 			<div class="bracket-left"></div>
 			<a 
 				class="{{ with $.Site.Params.LogoColor }}{{ . }}{{ end }}"
+				id="navbar-logo-link"
 				href="{{ if $.Site.Params.LogoHomeLink }}{{ $.Site.Params.LogoHomeLink }}{{ else }}{{ $.Site.BaseURL }}{{ end }}"
 			>
-				{{ with $.Site.Params.LogoText }}{{ . }}{{ else }}Statusline_Theme{{ end }}
+			{{ with $.Site.Params.LogoText }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}
 			</a>
 				<div class="bracket-right"></div>
 		</div>
