@@ -1,0 +1,69 @@
+{{ define "main" }}
+	<div class="sidebar-layout">
+		<section class="sidebar-layout-main">
+			<header class="archive-header">
+				{{ partial "components/title" . }}
+				<p>{{ .Description }} </p>
+				<p>{{ .Content }}</p>
+			</header>
+				<hr>
+
+			<div class="archive-list">
+				<!-- filter out unwanted page types -->
+				{{ $allowedPages := .Site.RegularPages }}
+				{{ range .Site.Params.arhive.pageTypeBlacklist }}
+				{{ $allowedPages = ( where $allowedPages "Type" "!=" ( lower . ) ) }}
+				{{ end }}
+
+				<!-- group pages by their date and render -->
+				{{ range $allowedPages.GroupByDate ( .Site.Params.archive.groupByDateFormat | default "2006" ) }}
+
+					<ul class="archive-list-item">
+						<li class="archive-date-box">
+							<div class="bracket {{ with $.Site.Params.archive.color.groupDate }}{{ . }}{{ end }}">
+								<div class="bracket-left"></div>
+									{{ .Key }}
+								<div class="bracket-right"></div>
+							</div>
+
+						</li>
+						<ul class="archive-page-group">
+							{{ range .Pages }}
+							<li>
+								<div class="archive-page-group-item">
+									<div class="archive-page-info">
+										<p 
+											class="page-type {{ with .Site.Params.archive.color.type }}{{ . }}{{ end }}">{{ .Type }}</p>
+										<p class="page-date {{ with .Site.Params.archive.color.publishDate }}{{ . }}{{ end }}">
+											{{ .Date.Format ( .Site.Params.archive.publishDateFormat | default "Jan 02" )}}
+										</p>
+									</div>
+									<a href="{{ .RelPermalink }}" class="page-title"><span>{{ .Title }}</span></a>
+								</div>
+							</li>
+							{{ end }}
+						</ul>
+					</ul>
+				{{ end }}
+			</div>
+
+				{{ range .Pages.GroupByDate "2020-01" }}
+			<h3>{{ .Key }}</h3>
+			<ul>
+				{{ range .Pages }}
+				<li>
+					<a href="{{ .Permalink }}">{{ .Title }}</a>
+					<div class="meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
+				</li>
+				{{ end }}
+			</ul>
+			{{ end }}
+		</section>
+
+		<aside>
+			{{ block "sidebar" . }}
+			{{ end }}
+		</aside>
+
+	</div>
+{{ end }}
