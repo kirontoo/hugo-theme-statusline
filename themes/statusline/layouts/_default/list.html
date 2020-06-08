@@ -25,7 +25,13 @@
 					</div>
 
 					<section class="list-item-content">
-						{{ .Summary | safeHTML }}
+						{{ if .Description }}
+							{{ .Description }}
+						{{ else }}
+							{{ if .Summary }}
+								{{ .Summary | safeHTML }}
+							{{ end }}
+						{{ end }}
 					</section>
 
 					{{ if .Truncated }}
