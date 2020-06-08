@@ -1,7 +1,7 @@
 {{ define "main" }}
 
-	<div class="list">
-		<section>
+	<div class="sidebar-layout">
+		<section class="sidebar-layout-main">
 			{{ range .Pages.ByDate.Reverse }}
 				<div class="list-item">
 					<a href="{{ .Permalink }}" class="bracket capitalize list-item-title">

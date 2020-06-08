@@ -1,0 +1,14 @@
+.sidebar-layout {
+	display: flex;
+	flex-flow: row;
+	width: 100%;
+
+	.sidebar-layout-main {
+		width: 75%;
+		margin-right: 1rem;
+	}
+
+	aside {
+		width: 25%;
+	}
+}

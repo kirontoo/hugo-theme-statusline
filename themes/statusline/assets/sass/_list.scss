@@ -52,19 +52,3 @@
 		margin: 1rem 0;
 	}
 }
-
-div.list {
-	display: flex;
-	flex-flow: row;
-	width: 100%;
-
-	section {
-		width: 75%;
-		margin-right: 1rem;
-	}
-
-	aside {
-		width: 25%;
-	}
-}
-
