@@ -13,10 +13,6 @@ nav {
 	.mobile-nav {
 		cursor: pointer;
 	}
-
-	a {
-		text-decoration: none;
-	}
 }
 
 .nav-links {
@@ -27,6 +23,10 @@ nav {
 	li {
 		list-style: none;
 		margin: 0 1px;
+
+		a {
+			color: $pink;
+		}
 	}
 
 	li:hover {

@@ -59,21 +59,24 @@ theme = "statusline"
 				name = "about"
 				url = "/about"
 				pre = "purple"
+				weight = 1
 			[[languages.en.menu.main]]
 				identifier = "projects"
 				name = "projects"
 				url = "/projects"
 				pre = "cyan"
+				weight = 2
 			[[languages.en.menu.main]]
 				identifier = "blog"
 				name = "blog"
 				url = "/blog"
 				pre = "yellow"
+				weight = 3
 			[[languages.en.menu.main]]
 				identifier = "archive"
 				name = "archive"
 				url = "/archive"
-				pre = "pink"
+				weight = 4
 
 
 
