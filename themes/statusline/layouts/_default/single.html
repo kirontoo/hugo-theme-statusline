@@ -1,7 +1,9 @@
 {{ define "main" }}
 <div class="sidebar-layout">
+
 	<article class="content sidebar-layout-main">
 		{{ partial "components/title" . .Title }}
+
 		<header class="content-info">
 			<p class="content-author capitalize">
 				{{ if .Params.Author }}
@@ -54,6 +56,7 @@
 			{{ .Content | safeHTML }}
 		</section>
 
+		{{ if or  .PrevInSection .NextInSection }}
 		<section class="post-navigation">
 			<div>
 				{{ with .PrevInSection }}
@@ -73,6 +76,8 @@
 				</a>
 			{{ end }}
 		</section>
+		{{ end }}
+
 	</article>
 
 	{{ if $.Site.Params.enableTOC }}
