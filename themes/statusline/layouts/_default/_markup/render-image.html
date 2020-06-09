@@ -1,7 +1,7 @@
 <div class="bracket md-image">
 	<div class="bracket-left"></div>
 
-	<div class="md-image-main">
+	<figure class="md-image-main">
 		{{ if hasPrefix .Destination "http"	}}
 			<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
 			{{ else }}
@@ -12,7 +12,7 @@
 		{{ with .Title }}
 		<p class="md-image-caption">{{ . }}</p>
 		{{ end }}
-	</div>
+	</figure>
 
 	<div class="bracket-right"></div>
 </div>
