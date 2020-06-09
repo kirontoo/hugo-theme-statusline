@@ -1,0 +1,38 @@
+.pagination {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+
+	.pagination-container {
+		max-width: 40%;
+	}
+
+	.pagination-numbers {
+		color: $cyan;
+	}
+
+	.pagination-arrow {
+		color: $separator-color;
+		&:hover {
+			color: $yellow;
+		}
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	.pagination-disabled {
+		color: $separator-color;
+		pointer-events: none;
+
+		&:hover {
+			color: inherit;
+		}
+	}
+
+	.pagination-active {
+		color: $pink;
+	}
+}

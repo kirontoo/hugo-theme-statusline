@@ -1,0 +1,63 @@
+{{ if ge .Paginator.TotalPages 2 }}
+	{{ $currPageNum := .Paginator.PageNumber }}
+	<div class="pagination">
+		<div class="pagination-container">
+			<a href="{{ .Paginator.First.URL }}" class="pagination-arrow" >
+				<i class="fas fa-angle-double-left"></i>
+			</a>
+
+			{{ if .Paginator.HasPrev }}
+				<a href="{{ .Paginator.Prev.URL }}" class="pagination-arrow" >
+					<i class="fas fa-angle-double-left"></i>
+				</a>
+				{{ else }}
+				<a href="#" class="pagination-arrow pagination-disabled">
+					<i class="fas fa-angle-double-left"></i>
+				</a>
+			{{ end }}
+
+				<span class="separator">...</span>
+
+				{{ if .Paginator.HasPrev }}
+					<a rel="prev "href="{{ .Paginator.Prev.URL }}" class="pagination-numbers ">
+						{{ sub $currPageNum 1 }}
+					</a>
+				{{ end }}
+
+				{{ if and ( eq .Paginator.HasNext false ) ( gt ( sub $currPageNum 2 ) 0 ) }}
+					<a rel="prev "href="{{.RelPermalink}}page/{{ sub $currPageNum 2 }}" class="pagination-numbers ">
+						{{ sub $currPageNum 2 }}
+					</a>
+				{{ end }}
+
+				<a href="{{ .URL }}" class="pagination-numbers pagination-active">
+					{{ $currPageNum }}
+				</a>
+
+				{{ if .Paginator.HasNext }}
+					<a rel="next "href="{{ .Paginator.Next.URL }}" class="pagination-numbers ">
+						{{ add $currPageNum 1 }}
+					</a>
+				{{ end }}
+
+				{{ if and ( eq .Paginator.HasPrev false ) (lt ( add $currPageNum 2 ) ( add .Paginator.TotalPages 1 ))}}
+					<a rel="prev "href="{{.RelPermalink}}page/{{ add $currPageNum 2 }}" class="pagination-numbers ">
+						{{ add $currPageNum 2 }}
+					</a>
+				{{ end }}
+
+			<span class="separator">...</span>
+
+			{{ if .Paginator.HasNext }}
+				<a href="{{ .Paginator.Next.URL }}" class="pagination-arrow" >
+					<i class="fas fa-angle-double-right"></i>
+				</a>
+				{{ else }}
+				<a href="#" class="pagination-arrow pagination-disabled">
+					<i class="fas fa-angle-double-right"></i>
+				</a>
+			{{ end }}
+			<a href="{{ .Paginator.Last.URL }}"class="pagination-arrow"><i class="fas fa-angle-double-right"></i></a>
+		</div>
+	</div>
+{{ end }}
