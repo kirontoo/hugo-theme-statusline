@@ -47,8 +47,13 @@ theme = "statusline"
 		publishDateFormat = "Jan 02"
 	[params.archive.color]
 		type = "blue"
-		groupDate = "purple"
+		groupDate = "pink"
 		publishDate = "yellow"
+	[params.pagination]
+		enable = true
+		pageColor = "blue"
+		activePageColor = "purple"
+		itemsPerPage = 1
 
 [languages]
 	[languages.en]
