@@ -5,8 +5,11 @@
 
 			{{ $pages := .Pages.ByDate.Reverse }}
 			{{ if $.Site.Params.pagination.enable }}
-				{{ $pagNum := $.Site.Params.pagination.itemsPerPage | default 8 }}
-				{{ $pages = (.Paginator $pagNum).Pages.ByDate.Reverse }}
+				{{ $pageNum := $.Site.Params.pagination.itemsPerPage | default 8 }}
+				{{ if le $pageNum 2 }}
+					{{ $pageNum = 8 }}
+				{{ end }}
+				{{ $pages = (.Paginator $pageNum).Pages.ByDate.Reverse }}
 			{{ end }}
 
 			{{ range $pages }}
@@ -49,7 +52,7 @@
 			{{ end }}
 
 			{{ if $.Site.Params.pagination.enable }}
-			{{ partial "components/pagination" . }}
+				{{ partial "components/pagination" . }}
 			{{ end }}
 		</section>
 
