@@ -2,7 +2,14 @@
 
 	<div class="sidebar-layout">
 		<section class="sidebar-layout-main">
-			{{ range .Pages.ByDate.Reverse }}
+
+			{{ $pages := .Pages.ByDate.Reverse }}
+			{{ if $.Site.Params.pagination.enable }}
+				{{ $pagNum := $.Site.Params.pagination.itemsPerPage | default 8 }}
+				{{ $pages = (.Paginator $pagNum).Pages.ByDate.Reverse }}
+			{{ end }}
+
+			{{ range $pages }}
 				<div class="list-item">
 					<a href="{{ .Permalink }}" class="bracket capitalize list-item-title">
 						<div class="bracket-left"></div>
@@ -24,7 +31,7 @@
 						<div class="bracket-right"></div>
 					</div>
 
-					<section class="list-item-content">
+					<summary class="list-item-content">
 						{{ if .Description }}
 							{{ .Description }}
 						{{ else }}
@@ -32,14 +39,17 @@
 								{{ .Summary | safeHTML }}
 							{{ end }}
 						{{ end }}
-					</section>
+					</summary>
 
 					{{ if .Truncated }}
 					<a href="{{ .Permalink }}"class="list-item-read-more"><span>Read More >></span></a>
 					{{ end }}
-
 					<hr>
 				</div>
+			{{ end }}
+
+			{{ if $.Site.Params.pagination.enable }}
+			{{ partial "components/pagination" . }}
 			{{ end }}
 		</section>
 
