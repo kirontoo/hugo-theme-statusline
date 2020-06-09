@@ -1,3 +1,14 @@
+header.list-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	p {
+		margin: 0.5rem 0;
+		text-align: justify;
+	}
+}
+
 .list-item-title {
 	display: flex;
 	justify-content: space-between;
@@ -7,6 +18,10 @@
 	&:hover {
 		background: $background-color-darker;
 	}
+}
+
+.list-group {
+	margin-top: 2rem;
 }
 
 .list-item {

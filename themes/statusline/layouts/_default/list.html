@@ -3,6 +3,7 @@
 	<div class="sidebar-layout">
 		<section class="sidebar-layout-main">
 
+			<!-- figure out if pagination is needed -->
 			{{ $pages := .Pages.ByDate.Reverse }}
 			{{ if $.Site.Params.pagination.enable }}
 				{{ $pageNum := $.Site.Params.pagination.itemsPerPage | default 8 }}
@@ -12,7 +13,14 @@
 				{{ $pages = (.Paginator $pageNum).Pages.ByDate.Reverse }}
 			{{ end }}
 
-			{{ range $pages }}
+			<header class="list-header">
+				{{ partial "components/title" . }}
+				<p>{{ .Description }} </p>
+			</header>
+			<hr>
+
+			<div class="list-group">
+				{{ range $pages }}
 				<div class="list-item">
 					<a href="{{ .Permalink }}" class="bracket capitalize list-item-title">
 						<div class="bracket-left"></div>
@@ -22,25 +30,25 @@
 
 					<div class="bracket list-item-subtitle">
 						<div class="bracket-left"></div>
-							<p class="list-item-author capitalize">
-								{{ if .Params.Author }}
-									{{ .Params.Author}}
-								{{ else }}
-									{{  .Site.Params.Author }}
-								{{ end }}
-							</p>
-							<span class="list-item-separator separator">::</span>
+						<p class="list-item-author capitalize">
+							{{ if .Params.Author }}
+							{{ .Params.Author}}
+							{{ else }}
+							{{	.Site.Params.Author }}
+							{{ end }}
+						</p>
+						<span class="list-item-separator separator">::</span>
 						<p class="list-item-date">{{ .Date.Format "01-02-2006" }}</p>
 						<div class="bracket-right"></div>
 					</div>
 
 					<summary class="list-item-content">
 						{{ if .Description }}
-							{{ .Description }}
+						{{ .Description }}
 						{{ else }}
-							{{ if .Summary }}
-								{{ .Summary | safeHTML }}
-							{{ end }}
+						{{ if .Summary }}
+						{{ .Summary | safeHTML }}
+						{{ end }}
 						{{ end }}
 					</summary>
 
@@ -49,7 +57,8 @@
 					{{ end }}
 					<hr>
 				</div>
-			{{ end }}
+				{{ end }}
+			</div>
 
 			{{ if $.Site.Params.pagination.enable }}
 				{{ partial "components/pagination" . }}
