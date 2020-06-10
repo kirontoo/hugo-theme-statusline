@@ -98,8 +98,8 @@ First Header | Second Header
 ~~strikethrough~~ | ``code``
 
 # Task Lists
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
+- [x] list syntax is required. Any unordered or ordered list are supported
+- [ ] task lists are disabled when rendered
 - [x] this is a complete item
 - [ ] this is an incomplete item
 
