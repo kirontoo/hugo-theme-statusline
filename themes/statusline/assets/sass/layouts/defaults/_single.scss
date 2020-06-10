@@ -13,6 +13,16 @@ article.content {
 		display: flex;
 		flex-direction: column;
 		min-height: 50vh;
+
+		mark {
+			background: $yellow;
+			font-weight: bold;
+		}
+
+		p {
+			margin: 0.5rem;
+			text-align: justify;
+		}
 	}
 
 	.content-info {
@@ -44,13 +54,6 @@ article.content {
 		li {
 			list-style: none;
 			margin: 0 0.2rem;
-		}
-	}
-
-	.single-content {
-		p {
-			margin: 0.5rem;
-			text-align: justify;
 		}
 	}
 }
