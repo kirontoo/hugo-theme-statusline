@@ -21,8 +21,10 @@
 					</a>
 				{{ end }}
 
-					{{ if and ( ne $currPageNum 1 ) ( gt ( sub $currPageNum 2 ) 0 )  }}
+					{{ if and ( ne $currPageNum 1 ) ( ge ( sub $currPageNum 3 ) 0 )  }}
+						{{ if gt .Paginator.TotalPages 3 }}
 						<span class="separator">...</span>
+						{{ end }}
 					{{ end }}
 
 					<!-- previous page links -->
