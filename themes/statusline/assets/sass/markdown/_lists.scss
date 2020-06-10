@@ -1,16 +1,24 @@
 .single-content, .list-item-content {
 	ol, ul {
-		list-style-position: inside;
+		list-style-position: outside;
 		max-width: 100%;
 		display: flex;
 		flex-direction: column;
-		margin-left: 1rem;
+		margin-left: 2rem;
+		margin: 0.2rem 0 0.2rem 2rem;
 		font-size: $base-font-size-small;
 	}
 
 	li {
 		text-align: justify;
 		word-wrap: break-word;
+
+		p {
+			margin: 0rem 0 !important;
+			text-align: left;
+			padding: 0;
+			line-height: 1.2rem;
+		}
 	}
 
 }
