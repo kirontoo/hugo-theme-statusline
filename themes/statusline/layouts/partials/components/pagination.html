@@ -21,18 +21,20 @@
 					</a>
 				{{ end }}
 
-					<span class="separator">...</span>
-
-					<!-- previous page links -->
-					{{ if .Paginator.HasPrev }}
-					<a rel="prev "href="{{ .Paginator.Prev.URL }}" class="pagination-numbers {{ $pageColor }}">
-							{{ sub $currPageNum 1 }}
-						</a>
+					{{ if and ( ne $currPageNum 1 ) ( gt ( sub $currPageNum 2 ) 0 )  }}
+						<span class="separator">...</span>
 					{{ end }}
 
+					<!-- previous page links -->
 					{{ if and ( eq .Paginator.HasNext false ) ( gt ( sub $currPageNum 2 ) 0 ) }}
 					<a rel="prev "href="{{$pageURL}}{{ sub $currPageNum 2 }}" class="pagination-numbers  {{ $pageColor }}">
 							{{ sub $currPageNum 2 }}
+						</a>
+					{{ end }}
+
+					{{ if .Paginator.HasPrev }}
+					<a rel="prev "href="{{ .Paginator.Prev.URL }}" class="pagination-numbers {{ $pageColor }}">
+							{{ sub $currPageNum 1 }}
 						</a>
 					{{ end }}
 
@@ -54,7 +56,9 @@
 						</a>
 					{{ end }}
 
-				<span class="separator">...</span>
+					{{ if and ( ne .Paginator.TotalPages $currPageNum ) ( gt .Paginator.TotalPages 3 ) }}
+						<span class="separator">...</span>
+					{{ end }}
 
 				{{ if .Paginator.HasNext }}
 					<a href="{{ .Paginator.Next.URL }}" class="pagination-arrow" >
