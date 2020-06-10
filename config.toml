@@ -23,6 +23,8 @@ theme = "statusline"
 	enableParagraphIndent = false
 	enableTOC = true
 	enableLastModified = false
+	listDateFormat = "01-02"
+	singleDateFormat = "Jan 02, 2006"
 	[params.profile]
 		name = "kirontoo"
 		location = "los angeles, CA"

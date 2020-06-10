@@ -1,19 +1,25 @@
 {{ define "main" }}
-<div class="sidebar-layout">
+	{{ $dateFormat := $.Site.Params.singleDateFormat | default "01-02-2006" }}
 
+<div class="sidebar-layout">
 	<article class="content sidebar-layout-main">
 		{{ partial "components/title" . .Title }}
 
 		<header class="content-info">
-			<p class="content-author capitalize">
+			<p class="content-author capitalize {{if eq .Date ""}}gray{{end}}">
+				{{ if eq .Date ""}}
+					<span class="red">Author: </span>
+				{{ end }}
 				{{ if .Params.Author }}
 				{{ .Params.Author}}
 				{{ else }}
 				{{  .Site.Params.Author }}
 				{{ end }}
 			</p>
+			{{ if .Date }}
 			<span class="separator">::</span>
-			<p class="content-date">{{ .Date.Format "01-02-2006" }}</p>
+			<p class="content-date">{{ .Date.Format $dateFormat }}</p>
+			{{ end }}
 		</header>
 
 		{{ if $.Site.Params.enableLastModified }}
@@ -21,7 +27,7 @@
 			<div class="content-info">
 				<p>
 					Last modified<span class="separator">::</span>
-					<p class="content-date">{{ .Format "01-02-2006" }}</p>
+					<p class="content-date">{{ .Format $dateFormat }}</p>
 				</p>
 			</div>
 			{{ end }}

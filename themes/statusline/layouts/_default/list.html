@@ -1,4 +1,5 @@
 {{ define "main" }}
+	{{ $dateFormat := $.Site.Params.listDateFormat | default "01-02-2006" }}
 
 	<div class="sidebar-layout">
 		<section class="sidebar-layout-main">
@@ -38,8 +39,10 @@
 							{{	.Site.Params.Author }}
 							{{ end }}
 						</p>
-						<span class="list-item-separator separator">::</span>
-						<p class="list-item-date">{{ .Date.Format "01-02-2006" }}</p>
+						{{ if .Date }}
+							<span class="list-item-separator separator">::</span>
+							<p class="list-item-date">{{ .Date.Format $dateFormat }}</p>
+						{{ end }}
 						<div class="bracket-right"></div>
 					</div>
 
