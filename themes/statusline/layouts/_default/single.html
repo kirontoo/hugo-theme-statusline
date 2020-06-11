@@ -17,8 +17,8 @@
 				{{ end }}
 			</p>
 			{{ if .Date }}
-			<span class="separator">::</span>
-			<p class="content-date">{{ .Date.Format $dateFormat }}</p>
+				<span class="separator">::</span>
+				<p class="content-date">{{ .Date.Format $dateFormat }}</p>
 			{{ end }}
 		</header>
 
@@ -62,27 +62,7 @@
 			{{ .Content | safeHTML }}
 		</section>
 
-			{{ if or .PrevInSection .NextInSection }}
-			<section class="post-navigation">
-				<div>
-					{{ with .PrevInSection }}
-						<a class="previous" href="{{.Permalink}}">
-							<i class="fas fa-angle-double-left post-navigation-arrow"></i>
-							<span class="post-navigation-title">{{.Title}}</span>
-							<i class="fas fa-angle-double-left post-navigation-arrow"></i>
-						</a>
-					{{ end }}
-				</div>
-
-				{{ with .NextInSection }}
-					<a class="previous" href="{{.Permalink}}">
-						<i class="fas fa-angle-double-right post-navigation-arrow"></i>
-						<span class="post-navigation-title">{{.Title}}</span>
-						<i class="fas fa-angle-double-right post-navigation-arrow"></i>
-					</a>
-				{{ end }}
-			</section>
-			{{ end }}
+		{{ partial "components/single-navigation" . }}
 
 	</article>
 

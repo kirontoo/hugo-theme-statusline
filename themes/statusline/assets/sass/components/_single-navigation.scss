@@ -1,4 +1,4 @@
-.post-navigation {
+.single-navigation {
 	border-top: $border-size-thin solid $border-color;
 	border-bottom: $border-size-thin solid $border-color;
 	margin-top: 1rem;
@@ -9,7 +9,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 
-	.post-navigation-arrow {
+	.single-navigation-arrow {
 		color: $separator-color !important;
 	}
 
