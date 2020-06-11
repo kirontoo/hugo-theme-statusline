@@ -62,8 +62,6 @@
 			{{ .Content | safeHTML }}
 		</section>
 
-		{{ partial "components/single-navigation" . }}
-
 	</article>
 
 	{{ if $.Site.Params.enableTOC }}
@@ -72,5 +70,9 @@
 			{{ end }}
 		</aside>
 	{{ end }}
+
 </div>
+
+	{{ partial "components/single-navigation" . }}
+
 {{ end }}
