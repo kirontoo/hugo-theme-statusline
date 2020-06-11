@@ -28,6 +28,7 @@
 						</li>
 						<ul class="archive-page-group">
 							{{ range .Pages }}
+							{{ $title := .Title | default .File.TranslationBaseName }}
 							<li>
 								<div class="archive-page-group-item">
 									<div class="archive-page-info">
@@ -37,7 +38,7 @@
 											{{ .Date.Format ( .Site.Params.archive.publishDateFormat | default "Jan 02" )}}
 										</p>
 									</div>
-									<a href="{{ .RelPermalink }}" class="page-title"><span>{{ .Title }}</span></a>
+									<a href="{{ .RelPermalink }}" class="page-title"><span>{{ $title }}</span></a>
 								</div>
 							</li>
 							{{ end }}
