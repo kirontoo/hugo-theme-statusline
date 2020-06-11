@@ -1,19 +1,17 @@
 {{ if or .PrevInSection .NextInSection }}
 <section class="single-navigation">
 		{{ with .PrevInSection }}
-			{{ $title := .Title | default .File.TranslationBaseName }}
 			<a class="previous" href="{{.Permalink}}">
 				<i class="fas fa-angle-double-left single-navigation-arrow"></i>
-				<span class="single-navigation-title">{{ $title}} </span>
+				<span class="single-navigation-title">{{ partial "functions/get-title" .}} </span>
 				<i class="fas fa-angle-double-left single-navigation-arrow"></i>
 			</a>
 		{{ end }}
 
 	{{ with .NextInSection }}
-		{{ $title := .Title | default .File.TranslationBaseName }}
 		<a class="next" href="{{.Permalink}}">
 			<i class="fas fa-angle-double-right single-navigation-arrow"></i>
-			<span class="single-navigation-title">{{ $title }}</span>
+			<span class="single-navigation-title">{{ partial "functions/get-title" . }}</span>
 			<i class="fas fa-angle-double-right single-navigation-arrow"></i>
 		</a>
 	{{ end }}

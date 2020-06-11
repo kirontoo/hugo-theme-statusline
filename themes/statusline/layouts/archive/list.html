@@ -10,7 +10,7 @@
 			<div class="archive-list">
 				<!-- filter out unwanted page types -->
 				{{ $allowedPages := .Site.RegularPages }}
-				{{ range .Site.Params.arhive.pageTypeBlacklist }}
+				{{ range .Site.Params.archive.pageTypeBlacklist }}
 				{{ $allowedPages = ( where $allowedPages "Type" "!=" ( lower . ) ) }}
 				{{ end }}
 
@@ -28,7 +28,6 @@
 						</li>
 						<ul class="archive-page-group">
 							{{ range .Pages }}
-							{{ $title := .Title | default .File.TranslationBaseName }}
 							<li>
 								<div class="archive-page-group-item">
 									<div class="archive-page-info">
@@ -38,7 +37,7 @@
 											{{ .Date.Format ( .Site.Params.archive.publishDateFormat | default "Jan 02" )}}
 										</p>
 									</div>
-									<a href="{{ .RelPermalink }}" class="page-title"><span>{{ $title }}</span></a>
+									<a href="{{ .RelPermalink }}" class="page-title"><span>{{ partial "functions/get-title" . }}</span></a>
 								</div>
 							</li>
 							{{ end }}
@@ -47,17 +46,6 @@
 				{{ end }}
 			</div>
 
-				{{ range .Pages.GroupByDate "2020-01" }}
-			<h3>{{ .Key }}</h3>
-			<ul>
-				{{ range .Pages }}
-				<li>
-					<a href="{{ .Permalink }}">{{ .Title }}</a>
-					<div class="meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
-				</li>
-				{{ end }}
-			</ul>
-			{{ end }}
 		</section>
 
 		<aside>

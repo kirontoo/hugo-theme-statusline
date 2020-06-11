@@ -22,11 +22,10 @@
 
 			<div class="list-group">
 				{{ range $pages }}
-				{{ $title := .Title | default .File.TranslationBaseName }}
 				<div class="list-item">
 					<a href="{{ .Permalink }}" class="bracket capitalize list-item-title">
 						<div class="bracket-left"></div>
-						{{ $title }}
+						{{ partial "functions/get-title" . }}
 						<div class="bracket-right"></div>
 					</a>
 
