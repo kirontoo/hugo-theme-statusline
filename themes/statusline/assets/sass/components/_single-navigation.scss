@@ -1,13 +1,14 @@
 .single-navigation {
 	border-top: $border-size-thin solid $border-color;
 	border-bottom: $border-size-thin solid $border-color;
-	margin-top: 1rem;
+	margin: 0.5rem 0;
 	padding: 0.5rem 0;
 	justify-self: flex-end;
 
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	width: 100%;
 
 	.single-navigation-arrow {
 		color: $separator-color !important;
@@ -16,6 +17,8 @@
 	a {
 		padding: 0 0.5rem;
 		text-align: center;
+		max-width: 50%;
+
 		&:hover {
 			background: $background-color-darker;
 		}
@@ -23,6 +26,7 @@
 
 	a.previous {
 		color: $red;
+		align-self: flex-start;
 	}
 
 	a.next {
