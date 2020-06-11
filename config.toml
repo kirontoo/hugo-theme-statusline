@@ -12,7 +12,24 @@ theme = "statusline"
 	[markup.tableOfContents]
 		endLevel = 6
 		ordered = false
-		startLevel = 2
+		startLevel = 1
+	[markup.goldmark]
+		[markup.goldmark.extensions]
+			definitionList = true
+			footnote = true
+			linkify = true
+			strikethrough = true
+			table = true
+			taskList = true
+			typographer = true
+		[markup.goldmark.parser]
+			attribute = true
+			autoHeadingID = true
+			autoHeadingIDType = "github"
+		[markup.goldmark.renderer]
+			hardWraps = false
+			unsafe = true
+			xhtml = false
 
 [params]
 	logoText = "statusline"
@@ -55,7 +72,7 @@ theme = "statusline"
 		enable = true
 		pageColor = "blue"
 		activePageColor = "purple"
-		itemsPerPage = 1
+		itemsPerPage = 4
 
 [languages]
 	[languages.en]
