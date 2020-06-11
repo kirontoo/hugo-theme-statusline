@@ -1,0 +1,62 @@
+header.project-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	p {
+		margin: 0.5rem 0;
+		text-align: justify;
+	}
+}
+
+div.project-list {
+	ul {
+		list-style-type: none;		
+		margin: 2rem 0;
+
+		li {
+			margin: 1rem 0;
+		}
+
+		.bracket {
+			justify-content: space-between;
+		}
+
+		.project-item-content {
+			width: 100%;
+			padding: 0.5rem 0;
+		}
+
+		.project-repo-name {
+			color: $cyan;
+			font-weight: bold;
+			margin-bottom: 1rem;
+		}
+
+		.project-description {
+			margin: 0.5rem 0;
+		}
+
+		.project-item-info {
+			font-size: $base-font-size-small;
+		}
+
+		.project-item-info {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-top: 0.5rem;
+
+			.project-language {
+				i {
+					color: $yellow;
+				}
+			}
+
+			.project-repo-link {
+				color: $text-color;
+			}
+		}
+	}
+}
+
