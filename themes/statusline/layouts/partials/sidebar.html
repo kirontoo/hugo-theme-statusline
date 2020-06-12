@@ -8,6 +8,9 @@
 	</div>
 
 	<!-- photo -->
+	{{ with $.Site.Params.Profile.image }}
+		{{ partial "components/image" ( dict "link" .link "alt" .alt "title" .title)}}
+	{{ end }}
 
 	<!-- profile -->
 	{{ if $.Site.Params.Profile }}
