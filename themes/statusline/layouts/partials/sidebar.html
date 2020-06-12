@@ -10,6 +10,7 @@
 	<!-- photo -->
 
 	<!-- profile -->
+	{{ if $.Site.Params.Profile }}
 	<div class="bracket sidebar-profile">
 		<div class="bracket-left"></div>
 			<ul>
@@ -41,6 +42,7 @@
 			</ul>
 		<div class="bracket-right"></div>
 	</div>
+	{{ end }}
 
 	<!-- taxonomies -->
 	{{ if .Site.Taxonomies }}
