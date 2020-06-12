@@ -1,0 +1,17 @@
+.sb-image {
+	width: 100%;
+	margin: 0.5rem 0;
+	justify-content: center;
+
+	.sb-image-main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	img {
+		width: 100%;
+		margin: 0.5rem 0;
+	}
+}

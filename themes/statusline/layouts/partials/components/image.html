@@ -1,0 +1,14 @@
+<div class="bracket sb-image">
+	<div class="bracket-left"></div>
+
+	<figure class="sb-image-main">
+		{{ if hasPrefix .link "http"	}}
+			<img src="{{ .link | safeURL }}" alt="{{ .alt }}" {{ with .title}} title="{{ . }}"{{ end }} />
+			{{ else }}
+				{{- $path := path.Join .Page.File.Dir .link -}}
+				<img src="{{ $path | relURL }}" alt="{{ .alt }}" {{ with .title}} title="{{ . }}"{{ end }} />
+		{{ end }}
+	</figure>
+
+	<div class="bracket-right"></div>
+</div>
