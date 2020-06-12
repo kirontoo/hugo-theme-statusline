@@ -33,9 +33,7 @@
 						{{ $url := urls.Parse $.Site.BaseURL }}
 						<li><a href="{{ $.Site.BaseURL }}"><i class="fas fa-link"></i>{{ $url.Host }}</a></li>
 					{{ end }}
-					{{ if le ( len $.Site.Params.Profile.bio ) 200 }}
-						<li id="profile-bio">{{ $.Site.Params.Profile.bio }}</li>
-					{{ end }}
+						<li id="profile-bio">{{ $.Site.Params.Profile.bio | truncate 200 }}</li>
 				</div>
 
 					{{ partial "components/social-links.html" . }}
