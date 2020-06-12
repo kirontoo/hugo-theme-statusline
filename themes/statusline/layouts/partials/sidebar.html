@@ -45,24 +45,28 @@
 	</div>
 
 	<!-- taxonomies -->
-	{{ range $taxonomyName, $taxonomy := .Site.Taxonomies }}
-		{{ if $taxonomy }}
-			<div class="sidebar-taxonomy {{ $taxonomyName }}">
-				<div class="bracket">
-					<div class="bracket-left"></div>
-						{{ $taxonomyName | upper }}
-					<div class="bracket-right"></div>
-				</div>
-				
-				<div class="taxonomies">
-					{{ range $key, $value := $taxonomy }}
-						{{ $taxonomyStyles := "taxonomy-tags" }}
-						{{ partial "components/taxonomy-tag" ( dict "taxonomyName" $taxonomyName "styles" $taxonomyStyles "link" $value.Page.RelPermalink "name" $key)}}
-					{{ end  }}
-				</div>
+	{{ if .Site.Taxonomies }}
+		<div class="taxonomies">
+			{{ range $taxonomyName, $taxonomy := .Site.Taxonomies }}
+				{{ if $taxonomy }}
+					<div class="sidebar-taxonomy {{ $taxonomyName }}">
+						<div class="bracket">
+							<div class="bracket-left"></div>
+								{{ $taxonomyName | upper }}
+							<div class="bracket-right"></div>
+						</div>
+						
+						<div class="taxonomy-tags">
+							{{ range $key, $value := $taxonomy }}
+								{{ $taxonomyStyles := "taxonomy-tag-container" }}
+								{{ partial "components/taxonomy-tag" ( dict "taxonomyName" $taxonomyName "styles" $taxonomyStyles "link" $value.Page.RelPermalink "name" $key)}}
+							{{ end  }}
+						</div>
 
-			</div>
+					</div>
+					{{ end }}
 			{{ end }}
+		</div>
 	{{ end }}
 </div>
 

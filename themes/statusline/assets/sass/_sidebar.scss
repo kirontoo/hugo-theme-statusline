@@ -61,17 +61,23 @@ div .sidebar {
 		}
 	}
 
+	.taxonomies {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 4rem;
+	}
+
 	.sidebar-taxonomy {
 		margin: 0.5rem 0;
 
-		.taxonomies {
+		.taxonomy-tags {
 			display: flex;
 			flex-flow: row wrap;
 			flex-direction: row;
 			justify-content: flex-start;
 			margin: 0.2rem 0.4rem;
 
-			.taxonomy-tags {
+			.taxonomy-tag-container {
 				margin: 0.1rem ;
 			}
 		}
