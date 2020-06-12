@@ -1,49 +1,39 @@
 {{ define "main" }}
  <div class="sidebar-layout">
 	 <section class="sidebar-layout-main">
-			<header class="project-header">
-				{{ partial "components/title" . }}
-				<p>{{ .Description }} </p>
-			</header>
-			<hr>
+		 <div class="project-list">
+			 <header class="project-header">
+				 {{ partial "components/title" . }}
+				 <p>{{ .Description }} </p>
+			 </header>
+			 <hr>
 
-			<div class="project-list">
-				<ul>
+			 {{ $sections := ( $.Site.GetPage "section" .Section ).Sections }}
 
-					{{ range .Pages.ByWeight }}
+			 <ul>
+				 {{ range .Pages.ByWeight }}
+						{{ partial "components/project-item" . }}
+				 {{ end }}
+			 </ul>
 
-						<li class="project-item">
-							<div class="bracket">
-								<div class="bracket-left"></div>
 
-								<div class="project-item-content">
-									<a class="project-repo-name" href="{{ .Params.link }}" target="_blank" >
-										{{ partial "functions/get-title" . }}
-									</a>
+			{{ if eq ( len (  where $sections "Title" .Title )) 0}}
+				{{ range $sections }}
+					{{ if ne .Title $.Title }}
+						<ul>
+							<li>
+								<a href="{{ .Params.link | relURL }}">{{ partial "components/title" . }}</a>
+							</li>
 
-									<p class="project-description">{{ .Description }}</p>
-
-									<div class="project-item-info">
-
-										<span class="project-language">
-											<i class="devicon-{{ .Params.language }}-plain"></i>
-											{{ .Params.language }}
-										</span>
-
-										<a class="project-repo-link" href="{{ .Params.repo }}" target="_blank">
-											<i class="fab fa-github"></i>
-											Repository
-										</a>
-
-									</div>
-								</div>
-								<div class="bracket-right"></div>
-							</div>
-						</li>
-
+							<hr>
+							{{ range .Pages.ByWeight }}
+								{{ partial "components/project-item" . }}
+							{{ end }}
+						</ul>
 					{{ end }}
-				</ul>
-			</div>
+				{{ end }}
+			{{ end }}
+		 </div>
 
 	 </section>
 

@@ -16,15 +16,19 @@ div.project-list {
 
 		li {
 			margin: 1rem 0;
-		}
 
-		.bracket {
-			justify-content: space-between;
+			&:hover {
+				background: $background-color-darker;
+			}
 		}
 
 		.project-item-content {
 			width: 100%;
 			padding: 0.5rem 0;
+		}
+
+		.project-language {
+			text-transform: capitalize;
 		}
 
 		.project-repo-name {
@@ -35,10 +39,7 @@ div.project-list {
 
 		.project-description {
 			margin: 0.5rem 0;
-		}
-
-		.project-item-info {
-			font-size: $base-font-size-small;
+			text-align: justify;
 		}
 
 		.project-item-info {
@@ -46,15 +47,18 @@ div.project-list {
 			flex-direction: row;
 			justify-content: space-between;
 			margin-top: 0.5rem;
-
-			.project-language {
-				i {
-					color: $yellow;
-				}
-			}
+			font-size: $base-font-size-small;
 
 			.project-repo-link {
 				color: $text-color;
+
+				&:hover {
+					color: $yellow;
+				}
+
+				i {
+					color: $orange;
+				}
 			}
 		}
 	}
