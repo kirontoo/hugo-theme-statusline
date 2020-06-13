@@ -96,8 +96,8 @@ div.project-list {
 .project-list {
 	ul.grid {
 		display: grid;
-		grid-template-columns: 1fr auto;
-		grid-template-rows: 1fr auto;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
 		grid-gap: 0.4rem 0.4rem;
 		margin: 1.5rem 0;
 
