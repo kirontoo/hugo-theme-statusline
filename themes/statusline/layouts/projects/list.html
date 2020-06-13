@@ -13,25 +13,29 @@
 			<!-- grab all sections on this page -->
 			{{ $sections := ( $.Site.GetPage "section" .Section ).Sections }}
 
-			<ul>
+			<ul class="project-section">
 				<!-- for each section -->
 				{{ range .Pages.GroupBy "Section" }}
 
 					<!-- render the parent section and projects that are pinned -->
 					{{ $pinned := ( where .Pages.ByWeight "Params.pinned" true ) }}
 
-					{{ range $pinned }}
-						{{ if eq ( len .Pages ) 0 }}
-								{{ if .Params.Pinned }}
-									{{ partial "components/project-item" . }}
+					<li>
+						<ul class="{{ $.Site.Params.projects.listStyle }}">
+							{{ range $pinned }}
+								{{ if eq ( len .Pages ) 0 }}
+									{{ if .Params.Pinned }}
+										{{ partial "components/project-item" . }}
+									{{ end }}
 								{{ end }}
-						{{ end }}
-					{{ end }}
+							{{ end }}
+						</ul>
+					</li>
 					
 					<!-- for all subsections that isn't the parent -->
 					<li>
 						{{ range ( complement $pinned .Pages ) }}
-							<ul>
+							<ul class="project-section">
 								{{ if len .Pages }}
 									<li class="project-subsection">
 										<a href="{{ .Params.link | relURL }}">
@@ -41,10 +45,12 @@
 									<hr>
 								{{ end }}
 
-								{{ $pinned := ( where .Pages.ByWeight "Params.pinned" true ) }}
-								{{ range $pinned }}
-									{{ partial "components/project-item" . }}
-								{{ end }}
+								<ul class="{{ $.Site.Params.projects.listStyle }}">
+									{{ $pinned := ( where .Pages.ByWeight "Params.pinned" true ) }}
+									{{ range $pinned }}
+										{{ partial "components/project-item" . }}
+									{{ end }}
+								</ul>
 							</ul>
 						{{ end }}
 

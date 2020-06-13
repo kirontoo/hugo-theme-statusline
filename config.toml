@@ -73,6 +73,8 @@ theme = "statusline"
 				color = "red"
 	[params.projects]
 		enableSidebar = true
+		borderStyle = "box"
+		listStyle = "grid"
 	[params.archive]
 		pageTypeBlacklist = [ "archive", "projects", "about" ]
 		groupByDateFormat = "01-2006"
