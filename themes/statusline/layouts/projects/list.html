@@ -54,9 +54,11 @@
 
 	</section>
 
-	<aside>
-		{{ block "sidebar" . }}
-		{{ end }}
-	</aside>
+	{{ if $.Site.Params.projects.enableSidebar }}
+		<aside>
+			{{ block "sidebar" . }}
+			{{ end }}
+		</aside>
+	{{ end }}
 </div>
 {{ end }}
