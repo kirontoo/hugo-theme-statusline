@@ -1,6 +1,8 @@
 <li class="project-item">
-	<div class="bracket">
-		<div class="bracket-left"></div>
+	<div class="{{ $.Site.Params.projects.borderStyle | default "bracket" }}">
+		{{ if eq $.Site.Params.projects.borderStyle "bracket" }}
+			<div class="bracket-left"></div>
+		{{ end }}
 
 		<div class="project-item-content">
 			<a class="project-repo-name" href="{{ .Params.link | safeURL }}" target="_blank" >
@@ -24,7 +26,9 @@
 				</div>
 		</div>
 
-		<div class="bracket-right"></div>
+		{{ if eq $.Site.Params.projects.borderStyle "bracket" }}
+			<div class="bracket-right"></div>
+		{{ end }}
 
 	</div>
 

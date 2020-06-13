@@ -11,6 +11,7 @@ header.project-header {
 
 .sidebar-layout-main {
 	width: 100%;
+
 }
 
 div.project-list {
@@ -77,3 +78,11 @@ div.project-list {
 	}
 }
 
+
+// styles for box border style
+.project-item {
+	.box {
+		border: $border-size-thin solid $border-color;
+		padding: 0.2rem 0.8rem;
+	}
+}
