@@ -48,13 +48,7 @@
 					</div>
 
 					<summary class="list-item-content md-content">
-						{{ if .Description }}
-						{{ .Description }}
-						{{ else }}
-						{{ if .Summary }}
-						{{ .Summary | safeHTML }}
-						{{ end }}
-						{{ end }}
+						{{ ( .Description | default .Summary ) | safeHTML }}
 					</summary>
 
 					<a href="{{ .Permalink }}"class="list-item-read-more"><span>Read More >></span></a>
