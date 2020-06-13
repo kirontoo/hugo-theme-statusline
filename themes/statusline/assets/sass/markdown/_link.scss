@@ -1,23 +1,26 @@
-.single-content, .list-item-content {
+.md-content {
+	a {
+		color: $link-color;
+		font-weight: bold;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&:visited, &:active {
+			color: $link-color;
+		}
+	}
+
 	a.md-link {
 		color: $link-color;
 		font-weight: bold;
 
 		&:hover {
-			color: $text-color;
 			text-decoration: underline;
 		}
 
-		&:visited {
-			color: $link-color;;
-		}
-	}
-
-	p > a {
-		color: $link-color;
-		font-weight: bold;
-
-		&:visited {
+		&:visited, &:active {
 			color: $link-color;
 		}
 	}
