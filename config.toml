@@ -9,6 +9,16 @@ theme = "statusline"
 	tag = "tags"
 
 [markup]
+	[markup.highlight]
+			codeFences = true
+			guessSyntax = false
+			hl_Lines = ""
+			lineNoStart = 1
+			lineNos = true
+			lineNumbersInTable = false
+			noClasses = true
+			style = "dracula"
+			tabWidth = 2
 	[markup.tableOfContents]
 		endLevel = 6
 		ordered = false
@@ -39,7 +49,7 @@ theme = "statusline"
 	enableGoToTop = true
 	enableParagraphIndent = false
 	enableTOC = true
-	enableLastModified = false
+	enableLastModified = true
 	enableSidebar = true
 	listDateFormat = "01-02"
 	singleDateFormat = "Jan 02, 2006"
@@ -65,7 +75,7 @@ theme = "statusline"
 		enableSidebar = true
 	[params.archive]
 		pageTypeBlacklist = [ "archive", "projects", "about" ]
-		groupByDateFormat = "2006-01"
+		groupByDateFormat = "01-2006"
 		publishDateFormat = "Jan 02"
 		enableSidebar = true
 		[params.archive.color]
@@ -76,7 +86,7 @@ theme = "statusline"
 		enable = true
 		pageColor = "blue"
 		activePageColor = "purple"
-		itemsPerPage = 4
+		itemsPerPage = 5
 
 [languages]
 	[languages.en]
