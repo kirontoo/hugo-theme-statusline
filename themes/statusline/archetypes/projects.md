@@ -5,4 +5,7 @@ author: {{ $.Site.Params.Author }}
 description: 
 link:
 repo:
+language:
+weight:
+pinned: true
 ---
