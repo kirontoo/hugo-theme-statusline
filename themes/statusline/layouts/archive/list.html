@@ -15,7 +15,7 @@
 				{{ end }}
 
 				<!-- group pages by their date and render -->
-				{{ range $allowedPages.GroupByDate ( .Site.Params.archive.groupByDateFormat | default "2006" ) }}
+				{{ range $allowedPages.GroupByDate ( .Site.Params.archive.groupByDateFormat | default "01-2006" ) }}
 
 					<ul class="archive-list-item">
 						<li class="archive-date-box">
