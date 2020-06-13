@@ -12,13 +12,20 @@ header.project-header {
 div.project-list {
 	ul {
 		list-style-type: none;		
-		margin: 2rem 0;
+		margin: 1rem 0;
+
 
 		li {
 			margin: 1rem 0;
 
-			&:hover {
-				background: $background-color-darker;
+			ul {
+				margin: 1.8rem 0;
+			}
+
+			.project-subsection {
+				&:hover {
+					background: $background-color-darker;
+				}
 			}
 		}
 

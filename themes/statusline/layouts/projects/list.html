@@ -1,45 +1,62 @@
 {{ define "main" }}
- <div class="sidebar-layout">
-	 <section class="sidebar-layout-main">
-		 <div class="project-list">
-			 <header class="project-header">
-				 {{ partial "components/title" . }}
-				 <p>{{ .Description }} </p>
-			 </header>
-			 <hr>
+<div class="sidebar-layout">
+	<section class="sidebar-layout-main">
 
-			 {{ $sections := ( $.Site.GetPage "section" .Section ).Sections }}
+		<header class="project-header">
+			{{ partial "components/title" . }}
+			<p>{{ .Description | default .Summary }} </p>
+		</header>
+		<hr>
 
-			 <ul>
-				 {{ range .Pages.ByWeight }}
-						{{ partial "components/project-item" . }}
-				 {{ end }}
-			 </ul>
+		<div class="project-list">
 
+			<!-- grab all sections on this page -->
+			{{ $sections := ( $.Site.GetPage "section" .Section ).Sections }}
 
-			{{ if eq ( len (  where $sections "Title" .Title )) 0}}
-				{{ range $sections }}
-					{{ if ne .Title $.Title }}
-						<ul>
-							<li>
-								<a href="{{ .Params.link | relURL }}">{{ partial "components/title" . }}</a>
-							</li>
+			<ul>
+				<!-- for each section -->
+				{{ range .Pages.GroupBy "Section" }}
 
-							<hr>
-							{{ range .Pages.ByWeight }}
-								{{ partial "components/project-item" . }}
-							{{ end }}
-						</ul>
+					<!-- render the parent section and projects that are pinned -->
+					{{ $pinned := ( where .Pages.ByWeight "Params.pinned" true ) }}
+
+					{{ range $pinned }}
+						{{ if eq ( len .Pages ) 0 }}
+								{{ if .Params.Pinned }}
+									{{ partial "components/project-item" . }}
+								{{ end }}
+						{{ end }}
 					{{ end }}
+					
+					<!-- for all subsections that isn't the parent -->
+					<li>
+						{{ range ( complement $pinned .Pages ) }}
+							<ul>
+								{{ if len .Pages }}
+									<li class="project-subsection">
+										<a href="{{ .Params.link | relURL }}">
+											{{ partial "components/title" . }}
+										</a>
+									</li>
+									<hr>
+								{{ end }}
+
+								{{ $pinned := ( where .Pages.ByWeight "Params.pinned" true ) }}
+								{{ range $pinned }}
+									{{ partial "components/project-item" . }}
+								{{ end }}
+							</ul>
+						{{ end }}
+
 				{{ end }}
-			{{ end }}
-		 </div>
+			</ul>
+		</div>
 
-	 </section>
+	</section>
 
-	 <aside>
-		 {{ block "sidebar" . }}
-		 {{ end }}
-	 </aside>
- </div>
+	<aside>
+		{{ block "sidebar" . }}
+		{{ end }}
+	</aside>
+</div>
 {{ end }}
