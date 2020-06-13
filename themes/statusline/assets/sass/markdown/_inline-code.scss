@@ -1,7 +1,9 @@
 .single-content, .list-item-content {
-	code {
-		background: $background-color-darker;
-		padding: 0.1rem 0.3rem;
-		color: $pink;
+	p , li {
+		code {
+			background: $background-color-darker;
+			padding: 0.1rem 0.3rem;
+			color: $pink;
+		}
 	}
 }
