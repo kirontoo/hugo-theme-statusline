@@ -10,15 +10,15 @@ theme = "statusline"
 
 [markup]
 	[markup.highlight]
-			codeFences = true
-			guessSyntax = false
-			hl_Lines = ""
-			lineNoStart = 1
-			lineNos = true
-			lineNumbersInTable = false
-			noClasses = true
-			style = "dracula"
-			tabWidth = 2
+		codeFences = true
+		guessSyntax = false
+		hl_Lines = ""
+		lineNoStart = 1
+		lineNos = true
+		lineNumbersInTable = false
+		noClasses = true
+		style = "dracula"
+		tabWidth = 2
 	[markup.tableOfContents]
 		endLevel = 6
 		ordered = false
