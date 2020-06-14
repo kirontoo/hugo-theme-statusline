@@ -55,14 +55,18 @@ header.archive-header {
 			margin-left: 5rem;
 			text-align: left;
 
-			a.page-title {
-				color: $text-color;
+			.page-title {
 				width: calc( 100% - 30% );
 				padding: 0.2rem 0; 
 
-				span:hover {
-					text-decoration: underline;
+				a {
+					color: $text-color;
+
+					&:hover {
+						text-decoration: underline;
+					}
 				}
+
 			}
 
 			.archive-page-info {
