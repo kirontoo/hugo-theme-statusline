@@ -62,8 +62,7 @@
 
 	{{ if $.Site.Params.projects.enableSidebar }}
 		<aside>
-			{{ block "sidebar" . }}
-			{{ end }}
+			{{ partial "sidebar/sidebar-main" . }}
 		</aside>
 	{{ end }}
 </div>
