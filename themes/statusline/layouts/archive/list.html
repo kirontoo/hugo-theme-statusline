@@ -3,7 +3,7 @@
 		<section class="sidebar-layout-main">
 			<header class="archive-header">
 				{{ partial "components/title" . }}
-				<p>{{ .Description }} </p>
+				<p>{{ .Description | default .Summary }} </p>
 			</header>
 				<hr>
 
@@ -11,33 +11,40 @@
 				<!-- filter out unwanted page types -->
 				{{ $allowedPages := .Site.RegularPages }}
 				{{ range .Site.Params.archive.pageTypeBlacklist }}
-				{{ $allowedPages = ( where $allowedPages "Type" "!=" ( lower . ) ) }}
+					{{ $allowedPages = ( where $allowedPages "Type" "!=" ( lower . ) ) }}
 				{{ end }}
 
 				<!-- group pages by their date and render -->
-				{{ range $allowedPages.GroupByDate ( .Site.Params.archive.groupByDateFormat | default "01-2006" ) }}
+				{{ $groupedPages :=  $allowedPages.GroupByDate "2006" }}
+				{{ range $groupedPages }}
+
+				{{ $year := .Key }}
+				{{ if eq .Key "0001" }}
+					{{ $year = "N/A" }}
+				{{ end }}
 
 					<ul class="archive-list-item">
-						<li class="archive-date-box">
+						<li class="archive-date-box" id="{{ $year }}">
 							<div class="bracket {{ with $.Site.Params.archive.color.groupDate }}{{ . }}{{ end }}">
 								<div class="bracket-left"></div>
-									{{ .Key }}
+									{{ $year }}
 								<div class="bracket-right"></div>
 							</div>
 
 						</li>
 						<ul class="archive-page-group">
 							{{ range .Pages }}
-							<li>
+							<li id="{{ .Date.Format "2006" }}-{{ .Date.Format "January" }}">
 								<div class="archive-page-group-item">
 									<div class="archive-page-info">
-										<p 
-											class="page-type {{ with .Site.Params.archive.color.type }}{{ . }}{{ end }}">{{ .Type }}</p>
+										<p class="page-type {{ with .Site.Params.archive.color.type }}{{ . }}{{ end }}">
+											{{ .Type }}
+										</p>
 										<p class="page-date {{ with .Site.Params.archive.color.publishDate }}{{ . }}{{ end }}">
 											{{ .Date.Format ( .Site.Params.archive.publishDateFormat | default "Jan 02" )}}
 										</p>
 									</div>
-									<a href="{{ .RelPermalink }}" class="page-title"><span>{{ partial "functions/get-title" . }}</span></a>
+									<p class="page-title"><a href="{{ .RelPermalink }}" >{{ partial "functions/get-title" . }}</a></p>
 								</div>
 							</li>
 							{{ end }}

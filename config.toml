@@ -58,6 +58,11 @@ theme = "statusline"
 		location = "los angeles, CA"
 		email = "example@email.com"
 		bio = "A short bio you can write. It will be limited to 200 characters to prevent long paragraphs."
+		occupation = "Web Developer"
+		[params.profile.image]
+			link = "https://mechwiki.com/wp-content/uploads/2019/01/TGR_Alice_1.png"
+			alt = "TGR Alice Keyboard"
+			title = "TGR Alice Keyboard"
 		[params.profile.links]
 			[params.profile.links.facebook]
 				link = "https://example.com"
@@ -77,7 +82,6 @@ theme = "statusline"
 		listStyle = "grid"
 	[params.archive]
 		pageTypeBlacklist = [ "archive", "projects", "about" ]
-		groupByDateFormat = "01-2006"
 		publishDateFormat = "Jan 02"
 		enableSidebar = true
 		[params.archive.color]
@@ -107,6 +111,16 @@ theme = "statusline"
 				pre = "cyan"
 				weight = 2
 			[[languages.en.menu.main]]
+				parent = "projects"
+				name = "python"
+				url = "/projects/python"
+				pre = "cyan"
+			[[languages.en.menu.main]]
+				parent = "projects"
+				name = "bots"
+				url = "/projects/bots"
+				pre = "cyan"
+			[[languages.en.menu.main]]
 				identifier = "blog"
 				name = "blog"
 				url = "/blog"
@@ -116,6 +130,18 @@ theme = "statusline"
 				identifier = "archive"
 				name = "archive"
 				url = "/archive"
+				weight = 6
+			[[languages.en.menu.main]]
+				identifier = "org"
+				name = "org"
+				url = "/org"
+				pre = "orange"
+				weight = 3
+			[[languages.en.menu.main]]
+				identifier = "cpp"
+				name = "cpp"
+				url = "/cpp"
+				pre = "blue"
 				weight = 4
 
 
