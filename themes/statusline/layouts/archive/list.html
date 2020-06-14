@@ -55,10 +55,9 @@
 
 		</section>
 
-		{{ if $.Site.Params.archive.enableSidebar }}
+		{{ if and $.Site.Params.archive.enableSidebar $.Site.Params.enableSidebar }}
 			<aside>
-				{{ block "sidebar" . }}
-				{{ end }}
+				{{ partial "sidebar/sidebar-archive" ( dict "pages" $allowedPages ) }}
 			</aside>
 		{{ end }}
 

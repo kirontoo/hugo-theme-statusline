@@ -1,0 +1,38 @@
+{{ $groupedByYear := .pages.GroupByDate "2006" }}
+
+<div class="archive-sidebar">
+	<div class="bracket" id="archive-sidebar-title">
+		<div class="bracket-left"></div>
+		<h6>Archive Dates</h6>
+		<div class="bracket-right"></div>
+	</div>
+
+	<div class="archive-grouped-date-list" id="archive-date-list">
+		<ul>
+
+			<!-- years -->
+			{{ range $year := $groupedByYear }}
+
+				{{ $date := .Key }}
+				{{ if eq .Key "0001" }}
+					{{ $date = "N/A" }}
+				{{ end }}
+
+				<li>
+					<a href="#{{ $date }}">{{ $date }}</a>
+
+					<!-- months within every year -->
+					<ul>
+						{{ range $year.GroupByDate "January" }}
+							<li>
+								<a href="#{{ $year.Key }}-{{ .Key }}">{{ .Key }}</a>
+							</li>
+						{{ end }}
+					</ul>
+				</li>
+			{{ end }}
+
+		</ul>
+
+	</div>
+</div>

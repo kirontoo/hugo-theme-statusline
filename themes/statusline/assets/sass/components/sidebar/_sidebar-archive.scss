@@ -1,0 +1,70 @@
+aside > div.archive-sidebar {
+	@include flexbox();
+	@include flex-direction( column );
+
+	position: -webit-sticky;
+	position: sticky;
+	top: 4rem;
+	overflow-y: scroll;
+	max-height: 65vh;
+
+	padding: 0.8rem 0.4rem;
+	background: $background-color-darker;
+	border: $border-size-thin solid $border-color;
+	font-size: $base-font-size-small;
+
+	#archive-sidebar-title {
+		@include justify-content( space-between );
+		text-align: center;
+	}
+
+	&::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $background-color;
+	}
+
+	ul, ol {
+		list-style-type: none;
+		font-size: $base-font-size-small * 0.9;
+		margin-left: 0.2rem;
+
+		// apply margin for all nested ul & ol
+		ul, ol * {
+			margin-left: 0.7rem;
+		}
+
+		li {
+			text-align: left;
+			margin-bottom: 0.1rem;
+			word-wrap: break-word;
+		}
+
+		a {
+			display: block;
+			border-left: $border-size-thin solid $cyan;
+			padding-left: 0.5rem;
+			color: $text-color;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.archive-grouped-date-list {
+		margin-top: 0.5rem;
+	}
+
+	.archive-active {
+		color: $pink;
+		border-color: $pink;
+	}
+
+	.archive-parent-active {
+		color: $yellow;
+		border-color: $yellow;
+	}
+}
