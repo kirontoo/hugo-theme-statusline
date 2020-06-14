@@ -1,0 +1,48 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+html {
+	background-color: $background-color-dark;
+	color: $text-color;
+	font-size: $base-font-size;
+}
+
+body {
+	font-feature-settings: "liga";
+	font-variant-ligatures: normal;
+	min-height: 100vh;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header, main, footer {
+	flex-shrink: 0;
+}
+
+main {
+	margin-top: 2.5rem;
+	flex-grow: 1;
+}
+
+hr {
+	border-color: $separator-color;
+}
+
+a {
+	text-decoration: none;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.separator {
+	color: $separator-color;
+}
+
