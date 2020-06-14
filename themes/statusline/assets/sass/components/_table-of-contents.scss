@@ -4,7 +4,7 @@ div.toc {
 	top: 4rem;
 	padding: 0.8rem 0.4rem;
 	background: $background-color-darker;
-	border: 2px solid $border-color;
+	border: $border-size-thin solid $border-color;
 
 	#toc-title {
 		@include justify-content( space-between );
