@@ -1,6 +1,7 @@
 // Flexbox Mixins
 //
-//
+// sourced from:
+// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins
 
 // Display flex
 //
@@ -68,10 +69,41 @@
   flex-wrap: $value;
 }
 
+// Flex flow
+//
+//
+@mixin flex-flow( $values: ( row nowrap ) ) {
+  // No Webkit/FF Box fallback.
+  -webkit-flex-flow: $values;
+  -ms-flex-flow: $values;
+  flex-flow: $values;
+}
+
+// Flex grow
+//
+//
+@mixin flex-grow( $int: 1 ) {
+  -webkit-box-flex: $int;
+  -moz-box-flex: $int;
+  -webkit-flex-grow: $int;
+  -ms-flex: $int;
+  flex-grow: $int;
+}
+
+// Flex shrink
+//
+//
+@mixin flex-shrink($int: 0) {
+  -webkit-flex-shrink: $int;
+  -moz-flex-shrink: $int;
+  -ms-flex: $int;
+  flex-shrink: $int;
+}
+
 // Justify content
 //
 // flex-start ( default ) | flex-end | space-between | space-around | space-evenly
-@mixin justify-content($value: flex-start) {
+@mixin justify-content( $value: flex-start ) {
   @if $value == flex-start {
     -webkit-box-pack: start;
     -moz-box-pack: start;
@@ -98,7 +130,7 @@
 // Align items
 //
 //
-@mixin align-items($value: stretch) {
+@mixin align-items( $value: stretch ) {
   @if $value == flex-start {
     -webkit-box-align: start;
     -moz-box-align: start;
@@ -120,7 +152,7 @@
 // Align self
 //
 //
-@mixin align-self($value: auto) {
+@mixin align-self( $value: auto ) {
   // No Webkit Box Fallback.
   -webkit-align-self: $value;
   @if $value == flex-start {
@@ -136,7 +168,7 @@
 // Align content
 //
 //
-@mixin align-content($value: stretch) {
+@mixin align-content( $value: stretch ) {
   // No Webkit Box Fallback.
   -webkit-align-content: $value;
   @if $value == flex-start {
