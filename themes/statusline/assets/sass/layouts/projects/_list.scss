@@ -96,9 +96,9 @@ div.project-list {
 // styling for grid view
 .project-list {
 	ul.grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto auto;
+		@include grid();
+		@include grid-template-columns( 1fr 1fr );
+		@include grid-template-rows( auto auto );
 		grid-gap: 0.4rem 0.4rem;
 		margin: 1.5rem 0;
 
@@ -106,8 +106,8 @@ div.project-list {
 			margin: 0;
 			height: 100%;
 
-			@include align-self( stretch );
-			justify-self: stretch;
+			@include grid-align-self( stretch );
+			@include grid-justify-self( stretch );
 			display: inline-grid;
 		}
 

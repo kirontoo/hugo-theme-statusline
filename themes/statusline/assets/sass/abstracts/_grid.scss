@@ -1,0 +1,43 @@
+// CSS Grid Mixins
+//
+//
+
+// Display grid
+//
+//
+@mixin grid() {
+	display: -ms-grid;
+	display: grid;
+}
+
+// grid-template-columns
+//
+//
+@mixin grid-template-columns( $values... ) {
+	-ms-grid-columns: $values;
+	grid-template-columns: $values;
+}
+
+// grid-template-rows
+//
+//
+@mixin grid-template-rows( $values... ) {
+	-ms-grid-rows: $values;
+	grid-template-rows: $values;
+}
+
+// Align self
+//
+//
+@mixin grid-align-self( $value ) {
+	-ms-grid-row-align: $value;
+	align-self: $value;
+}
+
+// Justify self
+//
+//
+@mixin grid-justify-self( $value ) {
+	-ms-grid-column-align: $value;
+	justify-self: $value;
+}
