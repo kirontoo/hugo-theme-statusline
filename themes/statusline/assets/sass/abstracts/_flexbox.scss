@@ -29,17 +29,17 @@
 //
 // row ( default ) | row-reverse | column | colmn-reverse
 @mixin flex-direction( $direction: row ) {
-	@if $value == row-reverse {
+	@if $direction == row-reverse {
 		-webkit-box-direction: reverse;
 		-webkit-box-orient: horizontal;
 		-moz-box-direction: reverse;
 		-moz-box-orient: horizontal;
-	} @else if $value == column {
+	} @else if $direction == column {
 		-webkit-box-direction: normal;
 		-webkit-box-orient: vertical;
 		-moz-box-direction: normal;
 		-moz-box-orient: vertical;
-	} @else if $value == column-reverse {
+	} @else if $direction == column-reverse {
 		-webkit-box-direction: reverse;
 		-webkit-box-orient: vertical;
 		-moz-box-direction: reverse;
@@ -50,9 +50,9 @@
 		-moz-box-direction: normal;
 		-moz-box-orient: horizontal;
 	}
-	-webkit-flex-direction: $value;
-	-ms-flex-direction: $value;
-	flex-direction: $value;
+	-webkit-flex-direction: $direction;
+	-ms-flex-direction: $direction;
+	flex-direction: $direction;
 }
 
 // Flex wrap
