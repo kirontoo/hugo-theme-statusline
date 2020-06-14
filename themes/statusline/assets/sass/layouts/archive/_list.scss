@@ -104,3 +104,13 @@ header.archive-header {
 	color: $yellow;
 	font-size: $base-font-size-small * 0.8;
 }
+
+.archive-active {
+	color: $pink;
+	border-color: $pink;
+}
+
+.archive-parent-active {
+	color: $yellow;
+	border-color: $yellow;
+}

@@ -59,6 +59,8 @@
 			<aside>
 				{{ partial "sidebar/sidebar-archive" ( dict "pages" $allowedPages ) }}
 			</aside>
+
+			{{ partial "scripts/tree-view-script" ( dict "sidebarId" "archive-date-list" "activeClass" "archive-active" "activeParentClass" "archive-parent-active") }}
 		{{ end }}
 
 	</div>

@@ -11,6 +11,6 @@
 		</div>
 	</div>
 
-	{{ partial "scripts/toc-script" . }}
+	{{ partial "scripts/tree-view-script" ( dict "sidebarId" "TableOfContents" "activeClass" "toc-active" "activeParentClass" "toc-parent-active") }}
 
 {{ end }}
