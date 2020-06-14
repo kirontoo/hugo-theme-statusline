@@ -1,9 +1,10 @@
 .md-content {
 	ol, ul {
+		@include flexbox();
+		@include flex-direction( column );
+
 		list-style-position: outside;
 		max-width: 100%;
-		display: flex;
-		flex-direction: column;
 		margin-left: 2rem;
 		margin: 0.2rem 0 0.2rem 2rem;
 		font-size: $base-font-size-small;

@@ -1,8 +1,8 @@
 article.content {
 	width: 100%;
 	height: auto;
-	display: flex;
-	flex-direction: column;
+	@include flexbox();
+	@include flex-direction( column );
 	text-align: justify;
 
 	hr {
@@ -10,8 +10,8 @@ article.content {
 	}
 
 	.single-content {
-		display: flex;
-		flex-direction: column;
+		@include flexbox();
+		@include flex-direction( column );
 		min-height: 50vh;
 		margin: 1rem 0;
 
@@ -28,10 +28,10 @@ article.content {
 	}
 
 	.content-info {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
+		@include flexbox();
+		@include flex-direction( row );
+		@include justify-content( center );
+		@include align-items( center );
 	}
 
 	.content-author {
@@ -52,9 +52,9 @@ article.content {
 		margin-bottom: 0.2rem;
 
 		ul {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
+			@include flexbox();
+			@include flex-direction( row );
+			@include justify-content( center );
 		}
 
 		li {

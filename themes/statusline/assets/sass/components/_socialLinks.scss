@@ -1,7 +1,7 @@
 div.social-links {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	@include flexbox();
+	@include flex-direction( row );
+	@include justify-content( center );
 	margin: 0.5rem 0;
 	max-width: 100%;
 

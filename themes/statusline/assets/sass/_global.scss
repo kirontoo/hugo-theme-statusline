@@ -22,12 +22,12 @@ body {
 }
 
 header, main, footer {
-	flex-shrink: 0;
+	@include flex-shrink( 0 );
 }
 
 main {
 	margin-top: 2.5rem;
-	flex-grow: 1;
+	@include flex-grow( 1 );
 }
 
 hr {

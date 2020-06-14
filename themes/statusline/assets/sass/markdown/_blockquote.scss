@@ -1,11 +1,13 @@
 .md-content {
 	blockquote {
+		@include align-self( center );
+
 		background: $blockquote-background-color;
 		border-left: $blockquote-border-size solid $blockquote-border-color;
-		padding: 1rem 1rem;
+
 		text-align: justify;
+		padding: 1rem 1rem;
 		margin: 0.5rem 0;
-		align-self: center;
 		max-width: 80%;
 		min-width: 60%;
 		

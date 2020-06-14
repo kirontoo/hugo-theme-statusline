@@ -7,7 +7,7 @@ div.toc {
 	border: 2px solid $border-color;
 
 	#toc-title {
-		justify-content: space-between;
+		@include justify-content( space-between );
 		text-align: center;
 	}
 

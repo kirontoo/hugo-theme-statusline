@@ -4,10 +4,10 @@ nav {
 	font-size: 1rem;
 
 	&.navbar {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
+		@include flexbox();
+		@include flex-direction();
+		@include align-items( center );
+		@include justify-content( space-between );
 	}
 
 	.mobile-nav {
@@ -20,9 +20,9 @@ nav {
 }
 
 .nav-links {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
+	@include flexbox();
+	@include flex-direction();
+	@include justify-content( space-evenly );
 
 	li {
 		list-style: none;

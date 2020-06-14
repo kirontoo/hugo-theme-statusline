@@ -6,8 +6,8 @@
 	justify-self: flex-end;
 
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	@include flex-direction( row );
+	@include justify-content( space-between );
 	width: 100%;
 
 	.single-navigation-arrow {
@@ -25,13 +25,13 @@
 
 	a.previous {
 		color: $red;
-		align-self: flex-start;
+		@include align-self( flex-start );
 		text-align: left;
 	}
 
 	a.next {
 		color: $green;
-		align-self: flex-end;
+		@include align-self( flex-end );
 		text-align: right;
 	}
 }

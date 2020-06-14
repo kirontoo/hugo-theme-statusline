@@ -1,8 +1,8 @@
 .md-content {
 	.md-heading {
-		display: flex;
-		align-items: stretch;
-		justify-content: flex-start;
+		@include flexbox();
+		@include align-items( stretch );
+		@include justify-content( flex-start );
 		width: 100%;
 		margin: 0.5rem 0;
 		text-align: left;

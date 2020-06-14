@@ -1,6 +1,6 @@
 .sidebar-layout {
-	display: flex;
-	flex-flow: row;
+	@include flexbox();
+	@include flex-flow( row );
 	width: 100%;
 
 	.sidebar-layout-main {

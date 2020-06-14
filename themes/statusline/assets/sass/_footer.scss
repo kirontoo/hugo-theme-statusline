@@ -1,20 +1,20 @@
 footer {
-	display: flex;
-	flex-direction: column;
+	@include flexbox();
+	@include flex-direction( column );
 	font-size: $base-font-size-small;
 	margin-top: 3rem;
 
 	.footer-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-content: center;
+		@include flexbox();
+		@include flex-direction( column );
+		@include justify-content( center );
+		@include align-content( center );
 		width: 100%;
 
 		.footer-line {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
+			@include flexbox();
+			@include flex-direction( row );
+			@include justify-content( space-between );
 			margin-top: 0.5rem;
 		}
 	}

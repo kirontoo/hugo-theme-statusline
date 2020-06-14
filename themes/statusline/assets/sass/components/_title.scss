@@ -1,5 +1,5 @@
 .content-title {
 	width: 100%;
-	justify-content: space-between;
+	@include justify-content( space-between );
 	text-align: center;
 }

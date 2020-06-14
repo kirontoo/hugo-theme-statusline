@@ -1,7 +1,7 @@
 header.project-header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include flexbox();
+	@include flex-direction( column );
+	@include align-items( center );
 
 	p {
 		margin: 0.5rem 0;
@@ -61,9 +61,10 @@ div.project-list {
 		}
 
 		.project-item-info {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
+			@include flexbox();
+			@include flex-direction( row );
+			@include justify-content( space-between );
+
 			margin-top: 0.5rem;
 			font-size: $base-font-size-small;
 
@@ -86,9 +87,9 @@ div.project-list {
 
 	// styles for box border style
 	.box {
+		@include flexbox();
 		border: $border-size-thin solid $border-color;
 		padding: 0.2rem 0.8rem;
-		display: flex;
 	}
 }
 
@@ -104,7 +105,8 @@ div.project-list {
 		li {
 			margin: 0;
 			height: 100%;
-			align-self: stretch;
+
+			@include align-self( stretch );
 			justify-self: stretch;
 			display: inline-grid;
 		}
@@ -122,9 +124,9 @@ div.project-list {
 		}
 
 		.project-item-content {
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
+			@include flexbox();
+			@include flex-direction( column );
+			@include justify-content( flex-start );
 		}
 
 		.project-item-info {

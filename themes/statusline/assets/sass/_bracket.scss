@@ -6,9 +6,9 @@
 }
 
 .bracket {
-	display: flex;
-	align-items: stretch;
-	align-content: center;
+	@include flexbox();
+	@include align-items( stretch );
+	@include align-content( center );
 	margin-bottom: 0.3rem;
 }
 

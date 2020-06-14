@@ -2,11 +2,11 @@ div .sidebar {
 	height: 100%;
 
 	.bracket {
-		justify-content: space-between;
+		@include justify-content( space-between );
 
 		ul {
-			display: flex;
-			flex-direction: column;
+			@include flexbox();
+			@include flex-direction( column );
 		}
 	}
 
@@ -31,7 +31,7 @@ div .sidebar {
 		}
 
 		.social-links {
-			justify-content: space-evenly;
+			@include justify-content( space-evenly );
 			li {
 				margin: 0;
 			}
@@ -39,9 +39,9 @@ div .sidebar {
 
 		ul {
 			width: 100%;
-			justify-content: flex-start;
-			flex-flow: column;
-			flex-direction: column;
+			@include justify-content( flex-start );
+			@include flex-flow( column );
+			@include flex-direction( column );
 			list-style: none;
 
 			i {
@@ -75,10 +75,10 @@ div .sidebar {
 		margin: 0.5rem 0;
 
 		.taxonomy-tags {
-			display: flex;
-			flex-flow: row wrap;
-			flex-direction: row;
-			justify-content: flex-start;
+			@include flexbox();
+			@include flex-flow( row wrap );
+			@include flex-direction( row );
+			@include justify-content( flex-start );
 			margin: 0.2rem 0.4rem;
 
 			.taxonomy-tag-container {
