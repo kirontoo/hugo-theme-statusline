@@ -9,7 +9,7 @@ article.content {
 		margin: 0.4rem 0;
 	}
 
-	.single-content {
+	.md-content {
 		@include flexbox();
 		@include flex-direction( column );
 		min-height: 50vh;
