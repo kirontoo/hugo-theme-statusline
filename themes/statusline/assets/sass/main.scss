@@ -1,6 +1,8 @@
 // abstracts
 @import 'abstracts/flexbox';
 @import 'abstracts/grid';
+@import 'abstracts/scrollbar';
+
 @import 'variables';
 @import 'fonts';
 @import 'container';
@@ -20,9 +22,9 @@
 @import 'components/pagination';
 @import 'components/image';
 @import 'components/single-navigation';
+@import 'components/tree-view';
 @import 'components/table-of-contents';
 @import 'components/sidebar-layout';
-@import 'components/sidebar/sidebar-archive';
 
 // layout styles
 @import 'layouts/defaults/single';

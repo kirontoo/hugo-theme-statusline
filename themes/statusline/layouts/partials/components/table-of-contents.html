@@ -1,16 +1,19 @@
 {{ define "toc" }}
-	<div class="toc">
-		<div class="bracket" id="toc-title">
+	<div class="tree-view">
+		<div class="bracket tree-header" >
 			<div class="bracket-left"></div>
 			<h6>Table Of Contents</h6>
 			<div class="bracket-right"></div>
 		</div>
 
-		<div id="toc-links">
-			{{ .TableOfContents }}
+		<div class="tree-list" id="toc-links">
+				{{ .TableOfContents }}
 		</div>
 	</div>
 
-	{{ partial "scripts/tree-view-script" ( dict "sidebarId" "TableOfContents" "activeClass" "toc-active" "activeParentClass" "toc-parent-active") }}
+	<script>
+		// document.querySelector( '#TableOfContents' ).classList.add( 'tree-list' );
+	</script>
+	{{ partial "scripts/tree-view-script" ( dict "sidebarId" "TableOfContents" ) }}
 
 {{ end }}

@@ -1,11 +1,10 @@
-aside > div.archive-sidebar {
+aside > div.tree-view {
 	@include flexbox();
 	@include flex-direction( column );
 
 	position: -webit-sticky;
 	position: sticky;
 	top: 4rem;
-	overflow-y: scroll;
 	max-height: 65vh;
 
 	padding: 0.8rem 0.4rem;
@@ -13,19 +12,6 @@ aside > div.archive-sidebar {
 	border: $border-size-thin solid $border-color;
 	font-size: $base-font-size-small;
 
-	#archive-sidebar-title {
-		@include justify-content( space-between );
-		text-align: center;
-	}
-
-	&::-webkit-scrollbar {
-		width: 10px;
-		height: 10px;
-	}
-
-	&::-webkit-scrollbar-thumb {
-		background-color: $background-color;
-	}
 
 	ul, ol {
 		list-style-type: none;
@@ -53,18 +39,25 @@ aside > div.archive-sidebar {
 			}
 		}
 	}
-
-	.archive-grouped-date-list {
-		margin-top: 0.5rem;
-	}
-
-	.archive-active {
+	
+	.tv-active {
 		color: $pink;
 		border-color: $pink;
 	}
 
-	.archive-parent-active {
+	.tv-active-root {
 		color: $yellow;
 		border-color: $yellow;
+	}
+
+	.tree-header {
+		@include justify-content( space-between );
+		text-align: center;
+	}
+
+	.tree-list {
+		overflow-y: scroll;
+		margin-top: 0.5rem;
+		@include scrollbar();
 	}
 }

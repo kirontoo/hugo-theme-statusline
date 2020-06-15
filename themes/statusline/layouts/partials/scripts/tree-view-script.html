@@ -1,8 +1,8 @@
 <script>
 	const SIDEBAR_ID =  '#' + JSON.parse( {{ .sidebarId |jsonify }} );
-	const ACTIVE_CLASS = JSON.parse( {{ .activeClass | jsonify }} );
-	const ACTIVE_PARENT_CLASS = JSON.parse( {{ .activeParentClass | jsonify }} );
-	const PARENT_CLASS = 'sidebar-parent-header';
+	const ACTIVE_CLASS = 'tv-active';
+	const ACTIVE_PARENT_CLASS = 'tv-active-root';
+	const PARENT_CLASS = 'tv-parent-heading';
 
 	// grab all nested headings and hide them;
 	function collapseHeading( target ) {
@@ -26,7 +26,6 @@
 			? element.parentElement 
 			: getParentElementByClass( element.parentElement, className );
 	}
-
 
 	let treeElem = document.querySelector( SIDEBAR_ID );
 	let currElem = null;
