@@ -66,9 +66,7 @@ div .sidebar {
 	}
 
 	.taxonomies {
-		position: -webkit-sticky;
-		position: sticky;
-		top: 4rem;
+		@include sticky();
 	}
 
 	.sidebar-taxonomy {

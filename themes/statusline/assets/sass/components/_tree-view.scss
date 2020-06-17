@@ -1,10 +1,8 @@
 aside > div.tree-view {
 	@include flexbox();
 	@include flex-direction( column );
+	@include sticky();
 
-	position: -webit-sticky;
-	position: sticky;
-	top: 4rem;
 	max-height: 65vh;
 
 	padding: 0.8rem 0.4rem;
