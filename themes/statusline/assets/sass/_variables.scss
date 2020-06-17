@@ -65,21 +65,21 @@ $h4-color: $red;
 $h5-color: $orange;
 $h6-color: $yellow;
 
-h1 { font-size: $h1-text-size; color: $h1-color; }
-h2 { font-size: $h2-text-size; color: $h2-color; }
-h3 { font-size: $h3-text-size; color: $h3-color; }
-h4 { font-size: $h4-text-size; color: $h4-color; }
-h5 { font-size: $h5-text-size; color: $h5-color; }
-h6 { font-size: $h6-text-size; color: $h6-color; }
-p  { font-size: $base-font-size-small;  color: $text-color; }
+h1 { font-size: $h1-text-size;          color: $h1-color;    }
+h2 { font-size: $h2-text-size;          color: $h2-color;    }
+h3 { font-size: $h3-text-size;          color: $h3-color;    }
+h4 { font-size: $h4-text-size;          color: $h4-color;    }
+h5 { font-size: $h5-text-size;          color: $h5-color;    }
+h6 { font-size: $h6-text-size;          color: $h6-color;    }
+p  { font-size: $base-font-size-small;  color: $text-color;  }
 
-.h1 { font-size: $h1-text-size; color: $h1-color; }
-.h2 { font-size: $h2-text-size; color: $h2-color; }
-.h3 { font-size: $h3-text-size; color: $h3-color; }
-.h4 { font-size: $h4-text-size; color: $h4-color; }
-.h5 { font-size: $h5-text-size; color: $h5-color; }
-.h6 { font-size: $h6-text-size; color: $h6-color; }
-.p  { font-size: $base-font-size-small;  color: $text-color; }
+.h1 { font-size: $h1-text-size;          color: $h1-color;    }
+.h2 { font-size: $h2-text-size;          color: $h2-color;    }
+.h3 { font-size: $h3-text-size;          color: $h3-color;    }
+.h4 { font-size: $h4-text-size;          color: $h4-color;    }
+.h5 { font-size: $h5-text-size;          color: $h5-color;    }
+.h6 { font-size: $h6-text-size;          color: $h6-color;    }
+.p  { font-size: $base-font-size-small;  color: $text-color;  }
 
 $h1-color: $green;
 $h2-color: $blue;
@@ -88,17 +88,17 @@ $h4-color: $red;
 $h5-color: $orange;
 $h6-color: $yellow;
 
-.blue       {  color: $blue !important;   }
-.red        {  color: $red !important;    }
-.yellow     {  color: $yellow !important; }
-.green      {  color: $green !important;  }
-.cyan       {  color: $cyan !important;   }
-.orange     {  color: $orange !important; }
-.purple     {  color: $purple !important; }
-.pink       {  color: $pink !important;   }
-.white      {  color: $gray5 !important;  }
-.gray       {  color: $gray4 !important;  }
-.gray-dark  {  color: $gray2 !important;  }
+.blue       {  color: $blue    !important;  }
+.red        {  color: $red     !important;  }
+.yellow     {  color: $yellow  !important;  }
+.green      {  color: $green   !important;  }
+.cyan       {  color: $cyan    !important;  }
+.orange     {  color: $orange  !important;  }
+.purple     {  color: $purple  !important;  }
+.pink       {  color: $pink    !important;  }
+.white      {  color: $gray5   !important;  }
+.gray       {  color: $gray4   !important;  }
+.gray-dark  {  color: $gray2   !important;  }
 
 
 // Links
@@ -120,17 +120,17 @@ $border-base-size   : 2px !default;
 $border-size-thin   : $border-base-size;
 $border-size-thick  : $border-base-size * 2;
 
-.border-blue      {  border-color: $blue;    }
-.border-red       {  border-color: $red;     }
-.border-yellow    {  border-color: $yellow;  }
-.border-green     {  border-color: $green;   }
-.border-cyan      {  border-color: $cyan;    }
-.border-orange    {  border-color: $orange;  }
-.border-purple    {  border-color: $purple;  }
-.border-pink      {  border-color: $pink;    }
-.border-white     {  border-color: $gray5;   }
-.border-gray      {  border-color: $gray4;   }
-.border-gray-dark {  border-color: $gray2;   }
+.border-blue      {  border-color: $blue    !important;  }
+.border-red       {  border-color: $red     !important;  }
+.border-yellow    {  border-color: $yellow  !important;  }
+.border-green     {  border-color: $green   !important;  }
+.border-cyan      {  border-color: $cyan    !important;  }
+.border-orange    {  border-color: $orange  !important;  }
+.border-purple    {  border-color: $purple  !important;  }
+.border-pink      {  border-color: $pink    !important;  }
+.border-white     {  border-color: $gray5   !important;  }
+.border-gray      {  border-color: $gray4   !important;  }
+.border-gray-dark {  border-color: $gray2   !important;  }
 
 // Markdown
 // 
@@ -141,3 +141,10 @@ $blockquote-border-size      :  $border-size-thick * 1.5;
 $blockquote-border-color     :  $cyan;
 
 $reference-text-color: $yellow;
+
+
+// Flexbox
+//
+//
+.fb-space-between { @include justify-content( space-between ); }
+.fb-stretch { @include justify-content( stretch ); }
