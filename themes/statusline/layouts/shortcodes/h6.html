@@ -1,0 +1,10 @@
+
+{{ $stretch := "fb-stretch" }}
+{{ if eq ( index .Params 1 ) "stretch" }}
+	{{ $stretch = "fb-space-between" }}
+{{ end }}
+<div class="bracket {{ $stretch }}">
+	<div class="bracket-left"></div>
+	<h6>{{ index .Params 0 }}</h6>
+	<div class="bracket-right"></div>
+</div>
