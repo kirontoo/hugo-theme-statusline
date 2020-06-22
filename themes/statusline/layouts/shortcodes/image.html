@@ -1,0 +1,41 @@
+{{ $destination := .Get "src" }}
+{{ $text := .Get "alt"}}
+{{ $title := .Get "caption"}}
+
+{{ $style := "" }}
+{{ if eq ( .Get "style" )  "border"}}
+{{ $style = "image-border" }}
+{{ else }}
+{{ $style = .Get "style" }}
+{{ end }}
+
+{{ $color := "pink" }}
+{{ if .Get "color" }}
+{{ $color = .Get "color" }}
+{{ end }}
+
+
+<div class="md-image {{ if eq $style "bracket" }}{{ $style }}{{ end }}">
+
+	{{ if eq $style "bracket" }}
+	<div class="bracket-left"></div>
+	{{ end }}
+
+	<figure class="md-image-main {{ if eq $style "image-border" }}{{ $style }}{{ end }}">
+		{{ if hasPrefix $destination "http"	}}
+			<img src="{{ $destination | safeURL }}" alt="{{ $text }}" {{ with $title}}$title="{{ . }}"{{ end }} />
+			{{ else }}
+				{{- $path := path.Join .Page.File.Dir $destination -}}
+				<img src="{{ $path | relURL }}" alt="{{ $text }}" {{ with $title}}$title="{{ . }}"{{ end }} />
+		{{ end }}
+
+		{{ with $title }}
+		<p class="md-image-caption {{ $color }}">{{ . }}</p>
+		{{ end }}
+
+	</figure>
+
+	{{ if eq $style "bracket" }}
+	<div class="bracket-right"></div>
+	{{ end }}
+</div>
