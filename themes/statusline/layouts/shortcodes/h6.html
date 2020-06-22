@@ -1,10 +1,16 @@
-
 {{ $stretch := "fb-stretch" }}
 {{ if eq ( index .Params 1 ) "stretch" }}
 	{{ $stretch = "fb-space-between" }}
 {{ end }}
-<div class="bracket {{ $stretch }}">
+{{ $link := replace ( index .Params 0 ) " " "-" }}
+
+<div class="bracket {{ $stretch }} md-heading">
 	<div class="bracket-left"></div>
-	<h6>{{ index .Params 0 }}</h6>
+	<h6 id="{{ $link }}">
+		<a href="#{{ $link }}">
+			{{ index .Params 0 }}
+		</a>
+	</h6>
 	<div class="bracket-right"></div>
+	<i class="fas fa-link"></i>
 </div>
