@@ -16,7 +16,7 @@
 
 			<header class="list-header">
 				{{ partial "components/title" . }}
-				<p>{{ .Description }} </p>
+				<p>{{ .Description | default .Summary }} </p>
 			</header>
 			<hr>
 
