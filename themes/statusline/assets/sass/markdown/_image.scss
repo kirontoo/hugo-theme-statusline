@@ -29,3 +29,10 @@
 		}
 	}
 }
+
+.md-image {
+	.image-border {
+		padding: 0 0.5rem;
+		border: $border-size-thin solid $border-color;
+	}
+}
