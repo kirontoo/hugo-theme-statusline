@@ -10,6 +10,23 @@
 		a {
 			color: inherit !important;
 		}
+
+		i {
+			margin: 0.2rem 0.6rem;
+			color: $border-color;
+			@include filter-brightness( 75% );
+			display: none;
+		}
+
+		&:hover {
+			a {
+				text-decoration: none;
+			}
+
+			i {
+				display: block;
+			}
+		}
 	}
 
 	h1, h2, h3, 
