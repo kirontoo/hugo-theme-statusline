@@ -2,7 +2,7 @@
 	border-top: $border-size-thin solid $border-color;
 	border-bottom: $border-size-thin solid $border-color;
 	min-height: $base-font-size;
-	width: $border-size-thick * 1.5;
+	min-width: $border-size-thick * 1.5;
 }
 
 .bracket {
