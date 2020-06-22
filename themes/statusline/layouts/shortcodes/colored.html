@@ -1,0 +1,5 @@
+{{ $color := string "red" }}
+{{ if ( index .Params 1 ) }}
+	{{ $color = ( index .Params 1 ) }}
+{{ end }}
+<span class="{{ $color }}">{{ index .Params 0 }}</span>
