@@ -1,0 +1,6 @@
+@mixin filter-brightness( $value ) {
+	-webkit-filter: brightness( $value );
+	-moz-filter: brightness( $value );
+	-o-filter: brightness( $value );
+	filter: brightness( $value );
+}
