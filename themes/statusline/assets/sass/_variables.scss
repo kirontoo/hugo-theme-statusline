@@ -146,5 +146,5 @@ $reference-text-color: $yellow;
 // Flexbox
 //
 //
-.fb-space-between { @include justify-content( space-between ); }
+.fb-space-between { @include justify-content( space-between !important); }
 .fb-stretch { @include justify-content( stretch ); }
