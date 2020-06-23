@@ -1,0 +1,25 @@
+	<ol  class="bc">
+		{{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+	</ol>
+
+{{ define "breadcrumbnav" }}
+
+	{{ if .p1.Parent }}
+		{{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
+	{{ else if not .p1.IsHome }}
+			{{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
+	{{ end }}
+
+	<li{{ if eq .p1 .p2 }} class="bc-active" disabled{{ end }}>
+		{{ if eq ( len .p1.Title ) 0 }}
+			<a href="{{ .p1.Permalink }}">{{ .p1.Site.Title }}</a>
+		{{ else }}
+		<a href="{{ .p1.Permalink }}">{{if gt ( len .p1.Title ) 50 }}{{ .p1.Title | truncate 60 }}{{ else }}{{ .p1.Title }}{{ end }}</a>
+		{{ end }}
+	</li>
+
+	{{ if ne .p1 .p2 }}
+	<span class="bc-separator">/</span>
+	{{ end }}
+
+{{ end }}

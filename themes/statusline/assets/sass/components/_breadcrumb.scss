@@ -1,0 +1,43 @@
+ol.bc {
+	@include flexbox();
+	@include flex-direction( row );
+	@include justify-content( flex-start );
+	@include flex-wrap( wrap );
+	margin-bottom: 2rem;
+	padding: 0.2rem 0.5rem;
+	background: $background-color-darker;
+	border: $border-size-thin solid $border-color;
+
+	li {
+		list-style-type: none;
+	}
+
+	span.bc-separator {
+		margin: 0 0.4rem;
+		color: $cyan;
+	}
+	
+	a {
+		font-size: $base-font-size-small * 0.9;
+		margin: 0;
+		text-decoration: none;
+		color: $text-color;
+		text-transform: capitalize;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.bc-active {
+		a {
+			color: $separator-color;
+			pointer-events: none;
+			cursor: none;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
