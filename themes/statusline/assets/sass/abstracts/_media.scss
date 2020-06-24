@@ -1,0 +1,33 @@
+$breakpoints: ( 
+	mobile: 768px,
+	desktop: 1240px,
+	desktop-lg: 1800px
+);
+
+@mixin breakpoint( $breakpoint, $direction ) {
+	@if map-has-key( $breakpoints, $breakpoint ) {
+		$bp-value: map-get( $breakpoints, $breakpoint );
+
+		@if $direction == max {
+			@media ( max-width: ( $bp-value - 1 ) ) {
+				@content;
+			}
+		} @else if $direction == min {
+			@media( min-width: $bp-value ) {
+				@content;
+			}
+		}
+
+	// for breakpoints that don't exist in the map
+	} @else {
+		@if $direction == max {
+			@media( max-width: $breakpoint ) {
+				@content;
+			}
+		} @else if $direction == min {
+			@media ( min-width: $breakpoint ) {
+				@content;
+			}
+		}
+	}
+}

@@ -1,4 +1,11 @@
+// Variables
+//
+//
+
+
 // base colors
+//
+//
 $gray1     : #1b202a;
 $gray2     : #232936;
 $gray3     : #323c4d;
@@ -148,3 +155,13 @@ $reference-text-color: $yellow;
 //
 .fb-space-between { @include justify-content( space-between !important); }
 .fb-stretch { @include justify-content( stretch ); }
+
+
+// Media breakpoints
+//
+//
+$breakpoints: ( 
+	mobile: 768px,
+	desktop: 1240px,
+	desktop-lg: 1800px
+);
