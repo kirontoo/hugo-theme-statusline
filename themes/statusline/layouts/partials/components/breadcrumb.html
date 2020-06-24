@@ -14,7 +14,7 @@
 		{{ if eq ( len .p1.Title ) 0 }}
 			<a href="{{ .p1.Permalink }}">{{ .p1.Site.Title }}</a>
 		{{ else }}
-		<a href="{{ .p1.Permalink }}">{{if gt ( len .p1.Title ) 50 }}{{ .p1.Title | truncate 60 }}{{ else }}{{ .p1.Title }}{{ end }}</a>
+		<a href="{{ .p1.Permalink }}">{{if gt ( len .p1.Title ) 50 }}{{ .p1.Title | truncate 70 }}{{ else }}{{ .p1.Title }}{{ end }}</a>
 		{{ end }}
 	</li>
 
