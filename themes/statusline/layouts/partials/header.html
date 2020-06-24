@@ -13,17 +13,23 @@
 				<div class="bracket-right"></div>
 		</div>
 
-			<ul class="nav-links">
-				{{ if len $.Site.Menus }}
-					{{ range $.Site.Menus.main }}
-					<li class="bracket">
-						<div class="bracket-left"></div>
-						<a class="{{ .Pre }}" href="{{ .URL }}">{{ .Name }}</a>
-						<div class="bracket-right"></div>
-					</li>
-					{{ end }}
+		<a href="#" class="media-toggle">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</a>
+
+		<ul class="nav-links">
+			{{ if len $.Site.Menus }}
+				{{ range $.Site.Menus.main }}
+				<li class="bracket">
+					<div class="bracket-left"></div>
+					<a class="{{ .Pre }}" href="{{ .URL }}">{{ .Name }}</a>
+					<div class="bracket-right"></div>
+				</li>
 				{{ end }}
-			</ul>
+			{{ end }}
+		</ul>
 
 	</nav>
 </header>
