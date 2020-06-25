@@ -26,8 +26,11 @@ header, main, footer {
 }
 
 main {
-	margin-top: 2.5rem;
 	@include flex-grow( 1 );
+
+	@include media( ">desktop" ) {
+		margin-top: 2.5rem;
+	}
 }
 
 hr {
