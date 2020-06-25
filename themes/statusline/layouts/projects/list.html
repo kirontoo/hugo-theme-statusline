@@ -1,5 +1,11 @@
 {{ define "main" }}
 <div class="sidebar-layout">
+	{{ if $.Site.Params.projects.enableSidebar }}
+		<aside class="sidebar">
+			{{ partial "sidebar/sidebar-main" . }}
+		</aside>
+	{{ end }}
+
 	<section class="sidebar-layout-main">
 
 		<header class="project-header">
@@ -57,13 +63,7 @@
 				{{ end }}
 			</ul>
 		</div>
-
 	</section>
 
-	{{ if $.Site.Params.projects.enableSidebar }}
-		<aside>
-			{{ partial "sidebar/sidebar-main" . }}
-		</aside>
-	{{ end }}
 </div>
 {{ end }}

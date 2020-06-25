@@ -1,5 +1,19 @@
 {{ define "main" }}
+
+	<!-- filter out unwanted page types -->
+	{{ $allowedPages := .Site.RegularPages }}
+	{{ range .Site.Params.archive.pageTypeBlacklist }}
+		{{ $allowedPages = ( where $allowedPages "Type" "!=" ( lower . ) ) }}
+	{{ end }}
+
 	<div class="sidebar-layout">
+
+		{{ if and $.Site.Params.archive.enableSidebar $.Site.Params.enableSidebar }}
+			<aside>
+				{{ partial "sidebar/sidebar-archive" ( dict "pages" $allowedPages ) }}
+			</aside>
+		{{ end }}
+
 		<section class="sidebar-layout-main">
 			<header class="archive-header">
 				{{ partial "components/title" . }}
@@ -8,11 +22,6 @@
 				<hr>
 
 			<div class="archive-list">
-				<!-- filter out unwanted page types -->
-				{{ $allowedPages := .Site.RegularPages }}
-				{{ range .Site.Params.archive.pageTypeBlacklist }}
-					{{ $allowedPages = ( where $allowedPages "Type" "!=" ( lower . ) ) }}
-				{{ end }}
 
 				<!-- group pages by their date and render -->
 				{{ $groupedPages :=  $allowedPages.GroupByDate "2006" }}
@@ -54,14 +63,10 @@
 			</div>
 
 		</section>
-
-		{{ if and $.Site.Params.archive.enableSidebar $.Site.Params.enableSidebar }}
-			<aside>
-				{{ partial "sidebar/sidebar-archive" ( dict "pages" $allowedPages ) }}
-			</aside>
-
-			{{ partial "scripts/tree-view-script" ( dict "sidebarId" "archive-date-list" ) }}
-		{{ end }}
-
 	</div>
+
+	{{ if and $.Site.Params.archive.enableSidebar $.Site.Params.enableSidebar }}
+		{{ partial "scripts/tree-view-script" ( dict "sidebarId" "archive-date-list" ) }}
+	{{ end }}
+
 {{ end }}
