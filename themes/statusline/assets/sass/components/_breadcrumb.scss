@@ -3,10 +3,15 @@ ol.bc {
 	@include flex-direction( row );
 	@include justify-content( flex-start );
 	@include flex-wrap( wrap );
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 	padding: 0.2rem 0.5rem;
 	background: $background-color-darker;
 	border: $border-size-thin solid $border-color;
+
+	@include media( ">=phone", "<=tablet" ) {
+		margin-top: 1rem;
+		margin-bottom: 0;
+	}
 
 	li {
 		list-style-type: none;
