@@ -16,10 +16,6 @@
 	@include media( ">=phone", "<=tablet" ) {
 		@include flex-flow( column );
 
-		.sidebar-layout-main {
-			margin-top: 1rem;
-		}
-
 		aside {
 			width: 100%;
 			max-width: 100%;
