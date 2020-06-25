@@ -88,6 +88,13 @@ nav {
 		@include flex-direction( column );
 		width: 100%;
 
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		padding: 0.5rem;
+		background-color: $background-color-darker;
+
+		border: $border-size-thin solid $border-color;
+
 		li{
 			margin: 0.2rem 0;
 			text-align: center;
