@@ -1,7 +1,10 @@
 aside > div.tree-view {
 	@include flexbox();
 	@include flex-direction( column );
-	@include sticky();
+
+	@include media( ">tablet" ) {
+		@include sticky();
+	}
 
 	max-height: 65vh;
 
