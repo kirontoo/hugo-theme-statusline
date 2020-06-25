@@ -8,9 +8,13 @@
 	min-height: 90vh;
 
 	@include media( ">=phone", "<tablet" ) {
-		width: 90%;
+		width: 95%;
 		margin: 1rem auto;
 		min-height: 95vh;
+	}
+
+	@include media( ">=tablet" ) {
+		width: 95%;
 	}
 
 }

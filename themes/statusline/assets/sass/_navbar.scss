@@ -11,7 +11,7 @@ nav {
 
 
 		// mobile view
-		@include media( ">=phone", "<tablet" ) {
+		@include media( ">=phone", "<=tablet" ) {
 			@include flex-direction( column );
 			@include align-items( flex-start );
 		}
@@ -42,8 +42,13 @@ nav {
 		margin: 0;
 
 		// mobile view
-		@include media( ">=phone", "<tablet" ) {
+		@include media( ">=phone", "<=tablet" ) {
 			@include flexbox();
+		}
+
+		@include media( ">=tablet" ) {
+			top: 2rem;
+			right: 1rem;
 		}
 	}
 
@@ -78,7 +83,7 @@ nav {
 	}
 
 	// mobile view
-	@include media( ">=phone", "<tablet" ) {
+	@include media( ">phone", "<=tablet" ) {
 		display: none;
 		@include flex-direction( column );
 		width: 100%;
