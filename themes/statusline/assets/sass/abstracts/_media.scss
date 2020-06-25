@@ -3,7 +3,7 @@
 		$bp-value: map-get( $breakpoints, $breakpoint );
 
 		@if $direction == max {
-			@media ( max-width: ( $bp-value - 1 ) ) {
+			@media ( max-width: ( $bp-value - 0.2 ) ) {
 				@content;
 			}
 		} @else if $direction == min {
@@ -15,7 +15,7 @@
 	// for breakpoints that don't exist in the map
 	} @else {
 		@if $direction == max {
-			@media( max-width: $breakpoint ) {
+			@media( max-width: $breakpoint - 0.2 ) {
 				@content;
 			}
 		} @else if $direction == min {
