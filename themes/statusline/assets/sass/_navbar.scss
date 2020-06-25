@@ -11,7 +11,7 @@ nav {
 
 
 		// mobile view
-		@include breakpoint( mobile, max ) {
+		@include media( ">=phone", "<tablet" ) {
 			@include flex-direction( column );
 			@include align-items( flex-start );
 		}
@@ -32,7 +32,7 @@ nav {
 
 		position: absolute;
 		top: 1rem;
-		right: 1.5rem;
+		right: 1rem;
 
 		width: 1.4rem;
 		height: 1.4rem;
@@ -42,7 +42,7 @@ nav {
 		margin: 0;
 
 		// mobile view
-		@include breakpoint( mobile, max ) {
+		@include media( ">=phone", "<tablet" ) {
 			@include flexbox();
 		}
 	}
@@ -78,7 +78,7 @@ nav {
 	}
 
 	// mobile view
-	@include breakpoint( mobile, max ) {
+	@include media( ">=phone", "<tablet" ) {
 		display: none;
 		@include flex-direction( column );
 		width: 100%;
