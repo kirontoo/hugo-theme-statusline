@@ -3,7 +3,7 @@
 	@include flex-direction( column );
 	@include align-items( stretch );
 
-	width: 70%;
+	width: 75%;
 	margin: 2rem auto;
 	min-height: 90vh;
 
@@ -12,10 +12,5 @@
 		margin: 1rem auto;
 		min-height: 95vh;
 	}
-
-	@include media( ">=tablet" ) {
-		width: 95%;
-	}
-
 }
 
