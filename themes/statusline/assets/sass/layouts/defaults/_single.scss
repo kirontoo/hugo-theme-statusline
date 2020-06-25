@@ -25,6 +25,11 @@ article.content {
 		p {
 			margin: 0.5rem;
 			text-align: justify;
+
+			@include media( ">=phone", "<tablet" ) {
+				margin-left: 0;
+				margin-rigth: 0;
+			}
 		}
 	}
 
