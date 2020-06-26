@@ -1,4 +1,13 @@
-.go-to-top:hover {
-	background: $background-color-darker;
-	color: $link-color;
+.go-to-top {
+	@include align-self( center );
+
+	@include media( ">=phone", "<tablet" ) {
+		display: none ;
+	}
+
+	&:hover {
+		background: $background-color-darker;
+		color: $link-color;
+
+	}
 }

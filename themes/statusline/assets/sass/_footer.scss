@@ -16,6 +16,11 @@ footer {
 			@include flex-direction( row );
 			@include justify-content( space-between );
 			margin-top: 0.5rem;
+
+			@include media( ">=phone", "<tablet" ) {
+				@include flex-direction( column );
+				text-align: center;	
+			}
 		}
 	}
 
