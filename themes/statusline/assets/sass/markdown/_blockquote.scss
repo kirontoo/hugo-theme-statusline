@@ -10,6 +10,11 @@
 		margin: 0.5rem auto;
 		max-width: 80%;
 		min-width: 60%;
+
+		@include media( ">=phone", "<tablet" ) {
+			max-width: 100%;
+			min-width: 85%;
+		}
 		
 		p {
 			text-indent: 0;
