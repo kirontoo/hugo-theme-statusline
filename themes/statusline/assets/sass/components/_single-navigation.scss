@@ -10,6 +10,10 @@
 	@include justify-content( space-between );
 	width: 100%;
 
+	@include media( ">=phone", "<tablet" ) {
+		@include flex-direction( column );
+	}
+
 	.single-navigation-arrow {
 		color: $separator-color !important;
 	}
@@ -20,6 +24,17 @@
 
 		&:hover {
 			background: $background-color-darker;
+		}
+
+		@include media( ">=phone", "<tablet" ) {
+			@include flexbox();
+			@include flex-direction( row );
+			@include justify-content( space-between );
+			@include align-items( center );
+
+			max-width: 100%;
+			width: 100%;
+			text-align: center !important;
 		}
 	}
 
