@@ -50,9 +50,13 @@ $background-color        :  $background-color-dark;
 // Typography
 //
 // font, color, headers, etc..
-$base-font-size       : 20px;
-$base-font-size-big   : 22px;
-$base-font-size-small : 16px;
+$base-font-size         : 20px;
+$base-font-size-big     : 22px;
+$base-font-size-small   : 16px;
+
+$mobile-font-size       : 1em;
+$mobile-font-size-big   : 1.1em;
+$mobile-font-size-small : 0.9em;
 
 $text-color-light : $gray3;
 $text-color-dark  : $gray5;
@@ -65,6 +69,13 @@ $h4-text-size: $base-font-size * 1.4;
 $h5-text-size: $base-font-size * 1.2;
 $h6-text-size: $base-font-size;
 
+$h1-mobile-text-size: $mobile-font-size * 2;
+$h2-mobile-text-size: $mobile-font-size * 1.8;
+$h3-mobile-text-size: $mobile-font-size * 1.6;
+$h4-mobile-text-size: $mobile-font-size * 1.4;
+$h5-mobile-text-size: $mobile-font-size * 1.2;
+$h6-mobile-text-size: $mobile-font-size;
+
 $h1-color: $green;
 $h2-color: $blue;
 $h3-color: $pink;
@@ -72,13 +83,13 @@ $h4-color: $red;
 $h5-color: $orange;
 $h6-color: $yellow;
 
-h1 { font-size: $h1-text-size;          color: $h1-color;    }
-h2 { font-size: $h2-text-size;          color: $h2-color;    }
-h3 { font-size: $h3-text-size;          color: $h3-color;    }
-h4 { font-size: $h4-text-size;          color: $h4-color;    }
-h5 { font-size: $h5-text-size;          color: $h5-color;    }
-h6 { font-size: $h6-text-size;          color: $h6-color;    }
-p  { font-size: $base-font-size-small;  color: $text-color;  }
+h1 { font-size: $h1-text-size;          color: $h1-color;   @include media( ">=phone", "<tablet" ) { font-size: $h1-mobile-text-size; }}
+h2 { font-size: $h2-text-size;          color: $h2-color;   @include media( ">=phone", "<tablet" ) { font-size: $h2-mobile-text-size; }}
+h3 { font-size: $h3-text-size;          color: $h3-color;   @include media( ">=phone", "<tablet" ) { font-size: $h3-mobile-text-size; }}
+h4 { font-size: $h4-text-size;          color: $h4-color;   @include media( ">=phone", "<tablet" ) { font-size: $h4-mobile-text-size; }}
+h5 { font-size: $h5-text-size;          color: $h5-color;   @include media( ">=phone", "<tablet" ) { font-size: $h5-mobile-text-size; }}
+h6 { font-size: $h6-text-size;          color: $h6-color;   @include media( ">=phone", "<tablet" ) { font-size: $h6-mobile-text-size; }}
+p  { font-size: $base-font-size-small;  color: $text-color; @include media( ">=phone", "<tablet" ) { font-size: $mobile-font-size-small; }}
 
 .h1 { font-size: $h1-text-size;          color: $h1-color;    }
 .h2 { font-size: $h2-text-size;          color: $h2-color;    }
