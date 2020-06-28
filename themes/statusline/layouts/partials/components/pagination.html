@@ -7,15 +7,18 @@
 
 		<div class="pagination">
 			<div class="pagination-container">
-				<a href="{{ .Paginator.First.URL }}" class="pagination-arrow" >
-					<i class="fas fa-angle-double-left"></i>
-				</a>
 
 				{{ if .Paginator.HasPrev }}
+					<a href="{{ .Paginator.First.URL }}" class="pagination-arrow" >
+						<i class="fas fa-angle-double-left"></i>
+					</a>
 					<a href="{{ .Paginator.Prev.URL }}" class="pagination-arrow" >
 						<i class="fas fa-angle-double-left"></i>
 					</a>
 					{{ else }}
+					<a href="#" class="pagination-arrow pagination-disabled" >
+						<i class="fas fa-angle-double-left"></i>
+					</a>
 					<a href="#" class="pagination-arrow pagination-disabled">
 						<i class="fas fa-angle-double-left"></i>
 					</a>
@@ -66,12 +69,13 @@
 					<a href="{{ .Paginator.Next.URL }}" class="pagination-arrow" >
 						<i class="fas fa-angle-double-right"></i>
 					</a>
+					<a href="{{ .Paginator.Last.URL }}"class="pagination-arrow"><i class="fas fa-angle-double-right"></i></a>
 					{{ else }}
 					<a href="#" class="pagination-arrow pagination-disabled">
 						<i class="fas fa-angle-double-right"></i>
 					</a>
+					<a href="#"class="pagination-arrow pagination-disabled"><i class="fas fa-angle-double-right"></i></a>
 				{{ end }}
-				<a href="{{ .Paginator.Last.URL }}"class="pagination-arrow"><i class="fas fa-angle-double-right"></i></a>
 			</div>
 		</div>
 	{{ end }}
