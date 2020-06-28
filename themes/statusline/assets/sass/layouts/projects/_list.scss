@@ -132,5 +132,10 @@ div.project-list {
 		.project-item-info {
 			margin-top: auto;
 		}
+
+		@include media( ">=phone", "<=tablet" ) {
+			@include grid-template-columns( 1fr );
+			@include grid-template-rows( 1fr );
+		}
 	}
 }
