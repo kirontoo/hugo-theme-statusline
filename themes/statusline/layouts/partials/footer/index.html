@@ -5,12 +5,12 @@
 		<hr>
 
 		<div class="footer-line">
-			<div class="bracket">
+			<div class="bracket copyright">
 				<div class="bracket-left"></div>
 				{{ if $.Site.Copyright }}
-				<span class="copyright">{{ $.Site.Copyright | safeHTML }}</span>	
+				<span class="copyright-link">{{ $.Site.Copyright | safeHTML }}</span>	
 				{{ else }}
-				<span class="copyright">
+				<span class="copyright-link">
 					&copy; {{ now.Year }} Powered by <a href="https://gohugo.io/">Hugo</a>
 					<span class="list-item-separator">::</span>
 					Theme made by <a href="https://github.com/kirontoo/hugo-theme-statusline">Kirontoo</a>
