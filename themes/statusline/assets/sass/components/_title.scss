@@ -2,4 +2,8 @@
 	width: 100%;
 	@include justify-content( space-between );
 	text-align: center;
+
+	@include media( ">=phone", "<tablet" ) {
+		margin-top: 0.5rem;
+	}
 }
