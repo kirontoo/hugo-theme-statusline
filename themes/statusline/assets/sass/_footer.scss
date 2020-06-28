@@ -25,8 +25,14 @@ footer {
 	}
 
 	.copyright {
-		a {
-			color: $link-color;
+		@include media( ">=phone", "<tablet" ) {
+			@include justify-content( space-between );
+		}
+
+		.copyright-link {
+			a {
+				color: $link-color;
+			}
 		}
 	}
 }
