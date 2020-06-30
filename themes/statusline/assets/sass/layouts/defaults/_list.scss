@@ -18,6 +18,19 @@ header.list-header {
 	&:hover {
 		background: $background-color-darker;
 	}
+
+	@include media( ">=phone", "<tablet" ) {
+		overflow-wrap: break-all;
+		word-wrap: break-all;
+		word-break: break-all;
+
+		-ms-word-break: break-all;
+
+		-ms-hyphens: auto;
+		-moz-hyphens: auto;
+		-webkit-hyphens: auto;
+		hyphens: auto;
+	}
 }
 
 .list-group {
