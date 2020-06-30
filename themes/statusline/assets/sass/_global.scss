@@ -7,6 +7,10 @@ html {
 	background-color: $background-color-dark;
 	color: $text-color;
 	font-size: $base-font-size;
+
+	@include media( ">=phone", "<tablet" ) {
+		font-size: $mobile-font-size;
+	}
 }
 
 body {
