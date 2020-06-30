@@ -9,7 +9,7 @@
 	<div class="sidebar-layout">
 
 		{{ if and $.Site.Params.archive.enableSidebar $.Site.Params.enableSidebar }}
-			<aside>
+			<aside id="archive-dates">
 				{{ partial "sidebar/sidebar-archive" ( dict "pages" $allowedPages ) }}
 			</aside>
 		{{ end }}
@@ -36,7 +36,7 @@
 						<li class="archive-date-box" id="{{ $year }}">
 							<div class="bracket {{ with $.Site.Params.archive.color.groupDate }}{{ . }}{{ end }}">
 								<div class="bracket-left"></div>
-									{{ $year }}
+									<h3>{{ $year }}</h3>
 								<div class="bracket-right"></div>
 							</div>
 

@@ -12,12 +12,20 @@ header.archive-header {
 .archive-list {
 	margin: 1rem;
 
+	@include media( ">=phone", "<tablet" ) {
+		margin: 1rem 0;
+	}
+
 	ul, li {
 		list-style-type: none;
 	}
 
 	.archive-list-item {
 		margin: 2rem 0;
+
+		@include media( ">=phone", "<tablet" ) {
+			margin: 1rem 0;
+		}
 	}
 
 	.archive-date-box {
@@ -25,6 +33,11 @@ header.archive-header {
 		color: $pink;
 		.bracket {
 			@include justify-content( space-between );
+		}
+
+
+		@include media( ">=phone", "<tablet" ) {
+			width: 100%;
 		}
 	}
 
@@ -44,6 +57,10 @@ header.archive-header {
 			width: $border-size-thick;
 			height: 100%;
 			background: $border-color;
+
+			@include media( ">=phone", "<tablet" ) {
+				display: none;
+			}
 		}
 
 		.archive-page-group-item {
@@ -56,6 +73,12 @@ header.archive-header {
 			text-align: left;
 			width: 100%;
 
+			@include media( ">=phone", "<tablet" ) {
+				margin-left: 0.5rem;
+				margin-top: 0.5rem;
+				@include flex-direction( column );
+			}
+
 			.page-title {
 				max-width: calc( 100% - 30% );
 				min-width: 50%;
@@ -67,6 +90,13 @@ header.archive-header {
 					&:hover {
 						text-decoration: underline;
 					}
+				}
+
+				@include media( ">=phone", "<tablet" ) {
+					font-size: $mobile-font-size;
+					margin: 0.2rem 1rem 0.2rem 1.5rem;
+					max-width: 100%;
+					text-align: justify;
 				}
 
 			}
@@ -91,6 +121,11 @@ header.archive-header {
 				text-align: center;
 				white-space: nowrap;
 				text-overflow: ellipsis;
+
+				@include media ( ">=phone", "<tablet" ) {
+					max-width: 100%;
+					min-width: 25%;
+				}
 			}
 		}
 	}
@@ -115,4 +150,10 @@ header.archive-header {
 .archive-parent-active {
 	color: $yellow;
 	border-color: $yellow;
+}
+
+aside#archive-dates {
+	@include media( ">=phone", "<tablet" ) {
+		margin-top: 1rem;
+	}
 }
