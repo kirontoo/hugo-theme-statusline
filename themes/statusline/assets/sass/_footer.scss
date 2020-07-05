@@ -32,6 +32,10 @@ footer {
 		.copyright-link {
 			a {
 				color: $link-color;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}

@@ -72,6 +72,10 @@ div .sidebar {
 	.sidebar-taxonomy {
 		margin: 0.5rem 0;
 
+		a.bracket:hover {
+			background: $background-color-darker;
+		}
+
 		.taxonomy-tags {
 			@include flexbox();
 			@include flex-flow( row wrap );
