@@ -54,25 +54,4 @@ article.content {
 	.content-read-time {
 		color: $orange;
 	}
-
-	.taxonomies {
-		padding: 0 1rem;
-		margin-top: 0.2rem;
-		margin-bottom: 0.2rem;
-
-		ul {
-			@include flexbox();
-			@include flex-direction( row );
-			@include justify-content( center );
-		}
-
-		li {
-			list-style: none;
-			margin: 0 0.2rem;
-
-			@include media( ">=phone", "<tablet" ) {
-				margin-left: 2rem;
-			}
-		}
-	}
 }

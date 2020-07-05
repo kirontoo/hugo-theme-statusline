@@ -1,17 +1,36 @@
 {{ define "main" }}
 
 	{{ $baseurl := .Site.BaseURL }}
+	{{ $name := .Title | lower}}
 
-	<h1>{{ .Title }}</h1>
-
-	{{ $plural := .Data.Terms }}
-
-	{{ with .Data.Terms }}
-		{{ range $key, $value := . }}
-			<a href="{{ $baseurl  }}/{{ $plural }}/{{ $key }}">{{ $key }}</a>
-			<br>
+	<div class="sidebar-layout">
+		{{ if $.Site.Params.enableSidebar }}
+		<aside class="sidebar">
+			{{ partial "sidebar/sidebar-main" . }}
+		</aside>
 		{{ end }}
-	{{ else }}
-		<p>Whoops! There aren't any!</p>
-	{{ end }}
+
+		<section class="sidebar-layout-main">
+			<header class="list-header {{ $name }}-title">
+				{{ partial "components/title" . }}
+			</header>
+			<hr>
+
+			<div class="term-taxonomies taxonomies">
+				<ul>
+					{{ with .Data.Terms.Alphabetical }}
+
+					{{ range  . }}
+					{{ $link := .Page.Permalink }}
+					<li>{{ partial "components/taxonomy-tag" ( dict "taxonomyName" $name "link" $link "name" .Term "count" .Count )}}</li>
+					{{ end }}
+
+					{{ else }}
+					<p>Whoops! There aren't any!</p>
+					{{ end }}
+				</ul>
+			</div>
+		</section>
+	</div>
+
 {{ end }}
