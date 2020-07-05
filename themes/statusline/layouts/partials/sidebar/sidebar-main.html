@@ -51,16 +51,16 @@
 			{{ range $taxonomyName, $taxonomy := .Site.Taxonomies }}
 				{{ if $taxonomy }}
 					<div class="sidebar-taxonomy {{ $taxonomyName }}">
-						<div class="bracket">
+						<a href="{{ $taxonomyName | absURL }}" class="bracket {{ $taxonomyName }}">
 							<div class="bracket-left"></div>
-								{{ $taxonomyName | upper }}
+							{{ $taxonomyName | upper }}
 							<div class="bracket-right"></div>
-						</div>
+						</a>
 						
 						<div class="taxonomy-tags">
 							{{ range $key, $value := $taxonomy }}
 								{{ $taxonomyStyles := "taxonomy-tag-container" }}
-								{{ partial "components/taxonomy-tag" ( dict "taxonomyName" $taxonomyName "styles" $taxonomyStyles "link" $value.Page.RelPermalink "name" $key)}}
+								{{ partial "components/taxonomy-tag" ( dict "taxonomyName" $taxonomyName "styles" $taxonomyStyles "link" $value.Page.RelPermalink "name" $key "count" .Count "this" . )}}
 							{{ end  }}
 						</div>
 
