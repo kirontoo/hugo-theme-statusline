@@ -1,3 +1,8 @@
-<div class="{{ .taxonomyName }} {{ .styles }}">
-	<a href="{{ .link }}" class="taxonomy-tag {{ .taxonomyName }}-box"><span class="taxonomy-hashtag">#</span>{{ .name }}</a>
+<div class="{{ .taxonomyName }} {{ .styles }} taxonomy-tag">
+	<a href="{{ .link }}" class="taxonomy-tagname "><span class="taxonomy-hashtag">#</span>{{ .name }}</a>
+
+	{{ if .count }}
+		<span class="taxonomy-tag-count">{{ .count }}</span>
+	{{ end }}
+
 </div>
