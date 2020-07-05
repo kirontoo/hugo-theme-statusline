@@ -29,6 +29,13 @@
 				</li>
 				{{ end }}
 			{{ end }}
+			{{ range $name, $taxonomy := .Site.Taxonomies }}
+				<li class="bracket hidden">
+					<div class="bracket-left"></div>
+					<a class="{{ $name }}" href="{{ $name | absURL }}">{{ $name }}</a>
+					<div class="bracket-right"></div>
+				</li>
+			{{ end }}
 		</ul>
 
 	</nav>

@@ -57,3 +57,10 @@ a {
 	color: $separator-color;
 }
 
+.hidden {
+	display: none;
+
+	@include media( ">=phone", "<tablet" ) {
+		display: flex;
+	}
+}
