@@ -2,9 +2,11 @@
 	{{ $dateFormat := $.Site.Params.listDateFormat | default "01-02-2006" }}
 
 	<div class="sidebar-layout">
-		<aside class="sidebar">
-			{{ partial "sidebar/sidebar-main" . }}
-		</aside>
+		{{ if $.Site.Params.enableSidebar }}
+			<aside class="sidebar">
+				{{ partial "sidebar/sidebar-main" . }}
+			</aside>
+		{{ end }}
 
 		<section class="sidebar-layout-main">
 
