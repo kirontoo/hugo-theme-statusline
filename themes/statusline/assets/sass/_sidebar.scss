@@ -67,6 +67,7 @@ div .sidebar {
 
 	.taxonomies {
 		@include sticky();
+		top: 4rem;
 	}
 
 	.sidebar-taxonomy {

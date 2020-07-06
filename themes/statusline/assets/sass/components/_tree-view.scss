@@ -4,6 +4,7 @@ aside > div.tree-view {
 
 	@include media( ">tablet" ) {
 		@include sticky();
+		top: 4rem;
 	}
 
 	max-height: 65vh;
