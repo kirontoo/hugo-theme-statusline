@@ -17,10 +17,6 @@ $taxonomy-tags-color: $yellow !important;
 	li {
 		list-style: none;
 		margin: 0.2rem;
-
-		@include media( ">=phone", "<tablet" ) {
-			margin-left: 2rem;
-		}
 	}
 }
 
