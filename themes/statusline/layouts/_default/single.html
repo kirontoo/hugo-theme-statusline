@@ -9,6 +9,10 @@
 	<aside {{ if ne $.Site.Params.enableTOC true }} style="display: none;" {{ end }}>
 		{{ block "toc" . }}
 		{{ end }}
+
+		<div class="go-to-top-float" onClick="scrollToTop()">
+			<i class="fas fa-lg fa-angle-up"></i>
+		</div>
 	</aside>
 
 	<article class="content sidebar-layout-main">

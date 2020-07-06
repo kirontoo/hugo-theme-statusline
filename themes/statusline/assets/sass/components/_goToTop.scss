@@ -2,12 +2,42 @@
 	@include align-self( center );
 
 	@include media( ">=phone", "<tablet" ) {
-		display: none ;
+		display: none;
 	}
 
 	&:hover {
 		background: $background-color-darker;
 		color: $link-color;
+		cursor: pointer;
+	}
+}
 
+.go-to-top-float {
+	@include sticky();
+	@include align-self( flex-end );
+
+	top: calc( 100% - 6rem );
+	margin-left: auto;
+	margin-bottom: 1rem;
+	height: 2.5rem;
+	width: 2.5rem;
+
+	border-radius: 50%;
+	border: $border-size-thin solid $border-color;
+	background: $background-color-darker;
+	z-index: 1;
+
+	@include flexbox();
+	@include justify-content( center );
+	@include align-items( center );
+
+	&:hover {
+		color: $link-color;
+		cursor: pointer;
+		border-color: $link-color;
+	}
+
+	@include media( ">=phone", "<tablet" ) {
+		display: none;
 	}
 }
