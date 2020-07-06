@@ -6,6 +6,7 @@
 		background: $background-color-darker;
 		overflow-x: scroll;
 		max-height: 80vh;
+		border: $border-size-thin solid $border-color;
 
 		&::-webkit-scrollbar {
 			width: 10px;

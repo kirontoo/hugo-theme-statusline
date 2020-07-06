@@ -7,6 +7,7 @@ ol.bc {
 	padding: 0.2rem 0.5rem;
 	background: $background-color-darker;
 	border: $border-size-thin solid $border-color;
+	border-radius: 5px;
 
 	@include media( ">=phone", "<=tablet" ) {
 		margin-top: 1rem;
