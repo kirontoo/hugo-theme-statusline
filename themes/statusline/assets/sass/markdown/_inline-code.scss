@@ -4,6 +4,11 @@
 			background: $background-color-darker;
 			padding: 0.1rem 0.3rem;
 			color: $pink;
+			border-radius: 5px;
+
+			@include media( ">=phone", "<tablet" ) {
+				border-radius: 2px;
+			}
 		}
 	}
 }

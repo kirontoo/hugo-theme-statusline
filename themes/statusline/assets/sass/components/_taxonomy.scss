@@ -60,10 +60,6 @@ a.taxonomy-tagname {
 	&:hover {
 		border-color: $taxonomy-categories-color;
 		color: $text-color;
-		
-		.taxonomy-tag-count {
-			border-color: $taxonomy-categories-color;
-		}
 	}
 }
 
@@ -73,10 +69,6 @@ a.taxonomy-tagname {
 	&:hover {
 		border-color: $taxonomy-series-color;
 		color: $text-color;
-
-		.taxonomy-tag-count {
-			border-color: $taxonomy-series-color;
-		}
 	}
 }
 
@@ -86,9 +78,5 @@ a.taxonomy-tagname {
 	&:hover {
 		border-color: $taxonomy-tags-color;
 		color: $text-color;
-
-		.taxonomy-tag-count {
-			border-color: $taxonomy-series-color;
-		}
 	}
 }
