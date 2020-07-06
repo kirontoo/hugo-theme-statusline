@@ -32,12 +32,13 @@ nav {
 
 		position: absolute;
 		top: 1rem;
-		right: 1rem;
+		right: 0.7rem;
 
-		width: 1.4rem;
-		height: 1.4rem;
+		width: 1.8rem;
+		height: 1.8rem;
 
-		border: 1px solid $border-color;
+		border: 2px solid $border-color;
+		border-radius: 2px;
 		padding: 0.2rem;
 		margin: 0;
 
