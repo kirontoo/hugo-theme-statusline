@@ -13,4 +13,8 @@ div.social-links {
 	i:hover {
 		filter: brightness( 75% );
 	}
+
+	@include media( ">=phone", "<tablet" ) {
+		@include flex-wrap( wrap );
+	}
 }
