@@ -44,6 +44,7 @@ header.list-header {
 
 	.list-item-subtitle {
 		font-size: 0.8rem;
+		@include align-items( center );
 	}
 
 	.list-item-separator {
