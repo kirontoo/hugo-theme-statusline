@@ -71,7 +71,6 @@ header.archive-header {
 			margin: 0.1rem;
 			margin-left: 5rem;
 			text-align: left;
-			width: 100%;
 
 			@include media( ">=phone", "<tablet" ) {
 				margin-left: 0.5rem;
@@ -80,7 +79,6 @@ header.archive-header {
 			}
 
 			.page-title {
-				max-width: calc( 100% - 30% );
 				min-width: 50%;
 				padding: 0.2rem 0; 
 
