@@ -3,6 +3,10 @@ header.project-header {
 	@include flex-direction( column );
 	@include align-items( center );
 
+	@include media( ">=phone", "<tablet" ) {
+		margin-top: 1rem;
+	}
+
 	p {
 		margin: 0.5rem 0;
 		text-align: justify;

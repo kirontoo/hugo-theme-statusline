@@ -2,6 +2,14 @@
 	margin-top: 1.5rem;
 }
 
+header.terms-title {
+	margin-bottom: 1rem;
+
+	@include media( ">=phone", "<tablet" ) {
+		margin-top: 1rem;
+	}
+}
+
 .categories-title {
 	h1 {
 		color: $taxonomy-categories-color;

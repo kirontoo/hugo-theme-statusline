@@ -7,6 +7,14 @@ header.list-header {
 		margin: 0.5rem 0;
 		text-align: justify;
 	}
+
+}
+
+.list-header {
+
+	@include media( ">=phone", "<tablet" ) {
+		margin-top: 1rem;
+	}
 }
 
 .list-item-title {
