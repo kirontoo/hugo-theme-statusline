@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="sidebar-layout">
 	{{ if $.Site.Params.projects.enableSidebar }}
-		<aside class="sidebar">
+		<aside id="sidebar">
 			{{ partial "sidebar/sidebar-main" . }}
 		</aside>
 	{{ end }}
