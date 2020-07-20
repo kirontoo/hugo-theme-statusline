@@ -38,6 +38,7 @@
 					<div class="bracket list-item-subtitle">
 						<div class="bracket-left"></div>
 						<p class="list-item-author capitalize">
+							<i class="fas fa-user"></i>
 							{{ if .Params.Author }}
 							{{ .Params.Author}}
 							{{ else }}
@@ -46,10 +47,16 @@
 						</p>
 						{{ if .Date }}
 							<span class="list-item-separator separator">::</span>
-							<p class="list-item-date">{{ .Date.Format $dateFormat }}</p>
+							<p class="list-item-date">
+								<i class="fas fa-calendar-alt"></i>
+								{{ .Date.Format $dateFormat }}
+							</p>
 						{{ end }}
 							<span class="list-item-separator separator">::</span>
-							<p class="list-item-read-time">{{ .ReadingTime }} min read</p>
+							<p class="list-item-read-time">
+								<i class="fas fa-clock"></i>
+								{{ .ReadingTime }} min read
+							</p>
 						<div class="bracket-right"></div>
 					</div>
 

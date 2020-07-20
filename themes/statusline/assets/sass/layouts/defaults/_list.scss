@@ -53,6 +53,10 @@ header.list-header {
 	.list-item-subtitle {
 		font-size: 0.8rem;
 		@include align-items( center );
+
+		i {
+			color: $text-color;
+		}
 	}
 
 	.list-item-separator {
