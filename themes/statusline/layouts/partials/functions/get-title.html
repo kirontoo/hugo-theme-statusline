@@ -1,2 +1,8 @@
-{{ $title := .Title | default .File.TranslationBaseName }}
+{{ $title := .Title }}
+{{ with .File }}
+	{{ if eq ( len $title ) 0 }}
+		{{ $title =  .TranslationBaseName }}
+	{{ end }}
+{{ end }}
+
 {{ return $title }}
