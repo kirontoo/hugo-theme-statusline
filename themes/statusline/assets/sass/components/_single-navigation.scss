@@ -23,7 +23,7 @@
 		max-width: 50%;
 
 		&:hover {
-			background: $background-color-darker;
+			font-weight: bold;
 		}
 
 		@include media( ">=phone", "<tablet" ) {

@@ -21,10 +21,9 @@ header.list-header {
 	@include flexbox();
 	@include justify-content( space-between );
 	color: $green;
-	font-weight: bold;
 
 	&:hover {
-		background: $background-color-darker;
+		font-weight: bold;
 	}
 
 	@include media( ">=phone", "<tablet" ) {
