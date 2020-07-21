@@ -35,23 +35,4 @@ article.content {
 			}
 		}
 	}
-
-	.content-info {
-		@include flexbox();
-		@include flex-direction( row );
-		@include justify-content( center );
-		@include align-items( center );
-	}
-
-	.content-author {
-		color: $red;
-	}
-
-	.content-date {
-		color: $blue;
-	}
-
-	.content-read-time {
-		color: $orange;
-	}
 }

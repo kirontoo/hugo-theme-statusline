@@ -53,26 +53,6 @@ header.list-header {
 	.list-item-subtitle {
 		font-size: 0.8rem;
 		@include align-items( center );
-
-		i {
-			color: $text-color;
-		}
-	}
-
-	.list-item-separator {
-		margin: 0 0.2rem;
-	}
-
-	.list-item-author {
-		color: $red;
-	}
-
-	.list-item-date {
-		color: $blue;
-	}
-
-	.list-item-read-time {
-		color: $orange;
 	}
 
 	.list-item-content {

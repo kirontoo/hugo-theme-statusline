@@ -37,26 +37,7 @@
 
 					<div class="bracket list-item-subtitle">
 						<div class="bracket-left"></div>
-						<p class="list-item-author capitalize">
-							<i class="fas fa-user"></i>
-							{{ if .Params.Author }}
-							{{ .Params.Author}}
-							{{ else }}
-							{{	.Site.Params.Author }}
-							{{ end }}
-						</p>
-						{{ if .Date }}
-							<span class="list-item-separator separator">::</span>
-							<p class="list-item-date">
-								<i class="fas fa-calendar-alt"></i>
-								{{ .Date.Format $dateFormat }}
-							</p>
-						{{ end }}
-							<span class="list-item-separator separator">::</span>
-							<p class="list-item-read-time">
-								<i class="fas fa-clock"></i>
-								{{ .ReadingTime }} min read
-							</p>
+						{{ partial "components/post-info" . }}
 						<div class="bracket-right"></div>
 					</div>
 

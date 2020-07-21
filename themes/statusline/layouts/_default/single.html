@@ -19,31 +19,16 @@
 
 		{{ partial "components/title" . }}
 
-		<header class="content-info">
-			<p class="content-author capitalize {{if eq .Date ""}}gray{{end}}">
-				{{ if eq .Date ""}}
-					<span class="red">Author: </span>
-				{{ end }}
-				{{ if .Params.Author }}
-				{{ .Params.Author}}
-				{{ else }}
-				{{  .Site.Params.Author }}
-				{{ end }}
-			</p>
-			{{ if .Date }}
-				<span class="separator">::</span>
-				<p class="content-date">{{ .Date.Format $dateFormat }}</p>
-			{{ end }}
-			<span class="separator">::</span>
-			<p class="content-read-time">{{ .ReadingTime }} min read</p>
+		<header>
+			{{ partial "components/post-info" . }}
 		</header>
 
 		{{ if $.Site.Params.enableLastModified }}
 			{{ with .Lastmod }}
-			<div class="content-info">
+			<div class="post-info">
 				<p>
 					Last modified<span class="separator">::</span>
-					<p class="content-date">{{ .Format $dateFormat }}</p>
+					<p class="post-info-date">{{ .Format $dateFormat }}</p>
 				</p>
 			</div>
 			{{ end }}

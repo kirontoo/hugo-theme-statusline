@@ -1,0 +1,24 @@
+	{{ $dateFormat := $.Site.Params.listDateFormat | default "01-02-2006" }}
+
+	<div class="post-info">
+		<p class="post-info-author capitalize">
+			<i class="fas fa-user"></i>
+			{{ if .Params.Author }}
+			{{ .Params.Author}}
+			{{ else }}
+			{{	.Site.Params.Author }}
+			{{ end }}
+		</p>
+		{{ if .Date }}
+		<span class="post-info-separator separator">::</span>
+		<p class="post-info-date">
+			<i class="fas fa-calendar-alt"></i>
+			{{ .Date.Format $dateFormat }}
+		</p>
+		{{ end }}
+		<span class="post-info-separator separator">::</span>
+		<p class="post-info-read-time">
+			<i class="fas fa-clock"></i>
+			{{ .ReadingTime }} min read
+		</p>
+	</div>

@@ -1,0 +1,26 @@
+.post-info {
+	@include flexbox();
+	@include flex-direction( row );
+	@include justify-content( center );
+	@include align-items( center );
+
+	i {
+		color: $text-color;
+	}
+}
+
+.post-info-author {
+	color: $red;
+}
+
+.post-info-date {
+	color: $blue;
+}
+
+.post-info-read-time {
+	color: $orange;
+}
+
+.post-info-separator {
+	margin: 0 0.2rem;
+}
