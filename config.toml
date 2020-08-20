@@ -51,7 +51,7 @@ theme = "statusline"
 	enableTOC = true
 	enableLastModified = true
 	enableSidebar = true
-	listDateFormat = "01-02"
+	listDateFormat = "01-02-2006"
 	singleDateFormat = "Jan 02, 2006"
 	[params.profile]
 		name = "kirontoo"
@@ -60,9 +60,9 @@ theme = "statusline"
 		bio = "A short bio you can write. It will be limited to 200 characters to prevent long paragraphs."
 		occupation = "Web Developer"
 		[params.profile.image]
-			link = "https://mechwiki.com/wp-content/uploads/2019/01/TGR_Alice_1.png"
-			alt = "TGR Alice Keyboard"
-			title = "TGR Alice Keyboard"
+			link = "images/starship.png"
+			alt = "starship"
+			title = "starship"
 		[params.profile.links]
 			[params.profile.links.facebook]
 				link = "https://example.com"
@@ -90,8 +90,8 @@ theme = "statusline"
 			publishDate = "yellow"
 	[params.pagination]
 		enable = true
-		pageColor = "blue"
-		activePageColor = "purple"
+		pageColor = "cyan"
+		activePageColor = "pink"
 		itemsPerPage = 5
 
 [languages]
