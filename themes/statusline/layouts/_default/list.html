@@ -9,8 +9,7 @@
 		{{ end }}
 
 		<section class="sidebar-layout-main">
-
-			{{ $pages := ( where .Pages.ByDate.Reverse "Section" .Section ) }}
+			{{ $pages := "" }}
 
 			<!-- pagination is enabled -->
 			{{ if $.Site.Params.pagination.enable }}
@@ -20,13 +19,21 @@
 					{{ $pages = (.Paginate ( where $.Site.RegularPages.ByDate.Reverse "Type" "in" $.Site.Params.mainSections )).Pages }}
 				{{ else }}
 
-				<!-- paginate sections -->
-					{{ $pages = ( .Paginate ( where .Pages.ByDate.Reverse "Section" .Section )).Pages }}
+					<!-- paginate sections -->
+					{{ if in $.Site.Params .Section }}
+						{{ $pages = ( .Paginate ( where .Pages.ByDate.Reverse "Section" .Section )).Pages }}
+					{{ else }}
+						<!-- paginate taxonomy pages -->
+						{{ $pages = .Pages.ByDate.Reverse }}
+					{{ end }}
 				{{ end }}
 
 			{{ else }}
+				<!-- no pagination, homepage pages -->
 				{{ if ( eq .Title $.Site.Params.logoText ) }}
 					{{ $pages = ( where $.Site.RegularPages.ByDate.Reverse "Type" "in" $.Site.Params.mainSections ) }}
+				{{ else }}
+					{{ $pages = .Pages.ByDate.Reverse }}
 				{{ end }}
 			{{ end }}
 
