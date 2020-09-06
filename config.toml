@@ -2,6 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "hugo-statusline-theme"
 theme = "statusline"
+paginate = 10
 
 [taxonomies]
 	category = "categories"
@@ -19,10 +20,12 @@ theme = "statusline"
 		noClasses = true
 		style = "dracula"
 		tabWidth = 2
+
 	[markup.tableOfContents]
 		endLevel = 6
 		ordered = false
 		startLevel = 1
+
 	[markup.goldmark]
 		[markup.goldmark.extensions]
 			definitionList = true
@@ -32,10 +35,12 @@ theme = "statusline"
 			table = true
 			taskList = true
 			typographer = true
+
 		[markup.goldmark.parser]
 			attribute = true
 			autoHeadingID = true
 			autoHeadingIDType = "github"
+
 		[markup.goldmark.renderer]
 			hardWraps = false
 			unsafe = true
@@ -53,46 +58,56 @@ theme = "statusline"
 	enableSidebar = true
 	listDateFormat = "01-02-2006"
 	singleDateFormat = "Jan 02, 2006"
+	mainSections = [ "blog", "org", "cpp" ]
+
 	[params.profile]
 		name = "kirontoo"
 		location = "los angeles, CA"
 		email = "example@email.com"
 		bio = "A short bio you can write. It will be limited to 200 characters to prevent long paragraphs."
 		occupation = "Web Developer"
+
 		[params.profile.image]
 			link = "images/starship.png"
 			alt = "starship"
 			title = "starship"
+
 		[params.profile.links]
 			[params.profile.links.facebook]
 				link = "https://example.com"
 				color = "blue"
+
 			[params.profile.links.twitter]
 				link = "https://example.com"
 				color = "purple"
+
 			[params.profile.links.linkedin]
 				link = "https://example.com"
 				color = "yellow"
+
 			[params.profile.links.github]
 				link = "https://example.com"
 				color = "red"
+
 	[params.projects]
 		enableSidebar = true
 		borderStyle = "box"
 		listStyle = "grid"
+
 	[params.archive]
 		pageTypeBlacklist = [ "archive", "projects", "about" ]
 		publishDateFormat = "Jan 02"
 		enableSidebar = true
+
 		[params.archive.color]
 			type = "blue"
 			groupDate = "pink"
 			publishDate = "yellow"
+
 	[params.pagination]
 		enable = true
 		pageColor = "cyan"
 		activePageColor = "pink"
-		itemsPerPage = 5
 
 [languages]
 	[languages.en]
@@ -104,39 +119,46 @@ theme = "statusline"
 				url = "/about"
 				pre = "purple"
 				weight = 1
+
 			[[languages.en.menu.main]]
 				identifier = "projects"
 				name = "projects"
 				url = "/projects"
 				pre = "cyan"
 				weight = 2
+
 			[[languages.en.menu.main]]
 				parent = "projects"
 				name = "python"
 				url = "/projects/python"
 				pre = "cyan"
+
 			[[languages.en.menu.main]]
 				parent = "projects"
 				name = "bots"
 				url = "/projects/bots"
 				pre = "cyan"
+
 			[[languages.en.menu.main]]
 				identifier = "blog"
 				name = "blog"
 				url = "/blog"
 				pre = "yellow"
 				weight = 3
+
 			[[languages.en.menu.main]]
 				identifier = "archive"
 				name = "archive"
 				url = "/archive"
 				weight = 6
+
 			[[languages.en.menu.main]]
 				identifier = "org"
 				name = "org"
 				url = "/org"
 				pre = "orange"
 				weight = 3
+
 			[[languages.en.menu.main]]
 				identifier = "cpp"
 				name = "cpp"

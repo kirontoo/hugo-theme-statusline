@@ -10,15 +10,26 @@
 
 		<section class="sidebar-layout-main">
 
-			<!-- figure out if pagination is needed -->
-			{{ $pages := .Pages.ByDate.Reverse }}
+			{{ $pages := ( where .Pages.ByDate.Reverse "Section" .Section ) }}
+
+			<!-- pagination is enabled -->
 			{{ if $.Site.Params.pagination.enable }}
-				{{ $pageNum := $.Site.Params.pagination.itemsPerPage | default 8 }}
-				{{ if le $pageNum 2 }}
-					{{ $pageNum = 8 }}
+
+				<!-- paginate homepage -->
+				{{ if ( eq .Title $.Site.Params.logoText ) }}
+					{{ $pages = (.Paginate ( where $.Site.RegularPages.ByDate.Reverse "Type" "in" $.Site.Params.mainSections )).Pages }}
+				{{ else }}
+
+				<!-- paginate sections -->
+					{{ $pages = ( .Paginate ( where .Pages.ByDate.Reverse "Section" .Section )).Pages }}
 				{{ end }}
-				{{ $pages = (.Paginator $pageNum).Pages.ByDate.Reverse }}
+
+			{{ else }}
+				{{ if ( eq .Title $.Site.Params.logoText ) }}
+					{{ $pages = ( where $.Site.RegularPages.ByDate.Reverse "Type" "in" $.Site.Params.mainSections ) }}
+				{{ end }}
 			{{ end }}
+
 
 			<header class="list-header">
 				{{ partial "components/title" . }}
