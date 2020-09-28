@@ -5,7 +5,7 @@ author: amy dang
 draft: true
 categories: [ "guide" ]
 tags: [ "markdown" ]
-series: []
+series: [ "hugo-guide"]
 description: "A sample article to showcase basic Markdown syntax and formatting for HTML elements."
 ---
 
@@ -25,7 +25,7 @@ This is how headings are rendered. There are six levels of section headings. `<h
 # Paragraphs
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus orci et luctus gravida. Nunc luctus condimentum elit nec euismod. Duis eget eros ac massa eleifend feugiat. Morbi finibus odio porttitor nulla mollis, in posuere purus ultrices.
 
-Nunc vitae laoreet lectus. Curabitur viverra venenatis porta. Fusce luctus eros eu purus tristique facilisis. Duis in libero non turpis sodales viverra. Vivamus tempus, metus sit amet consectetur tempor, enim risus venenatis mi, a ornare lorem massa vel dui. Fusce luctus semper euismod. Nullam non efficitur nisl. 
+Nunc vitae laoreet lectus. Curabitur viverra venenatis porta. Fusce luctus eros eu purus tristique facilisis. Duis in libero non turpis sodales viverra. Vivamus tempus, metus sit amet consectetur tempor, enim risus venenatis mi, a ornare lorem massa vel dui. Fusce luctus semper euismod. Nullam non efficitur nisl.
 
 # Emphasis
 italic: *this text will be italic*
@@ -40,7 +40,7 @@ Blockquotes can be made with or without citations. Citations can be found at the
 
 ## Blockquote without citation
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-> 
+>
 > **Note** you can also use markdown syntax inside a blockquote
 
 ## Blockquote with citation
@@ -91,7 +91,7 @@ First Header | Second Header
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 
-## Tables with Inline Markdown 
+## Tables with Inline Markdown
 First Header | Second Header
 ------------ | -------------
 *italic*     | **bold text**
@@ -131,11 +131,11 @@ function fancyAlert(arg) {
 {{< /highlight >}}
 
 
-# Miscellaneous 
+# Miscellaneous
 Subscripts, superscripts, abbreviations, keyboard commands, marks ( highlight ) can be used only if `markup.goldmark.renderer.unsafe` is enabled.
-You can change the text color by adding `class="your-color" `to the HTML tags. 
+You can change the text color by adding `class="your-color" `to the HTML tags.
 
-**Example**: 
+**Example**:
 `H<sub class="yellow">2</sub>0` will output H<sub class="yellow">2</sub>O
 
 Colors available:
@@ -147,11 +147,12 @@ Colors available:
 * <span class="purple">purple</span>
 * <span class="pink">pink</span>
 * <span class="cyan">cyan</span>
+* <span class="white">white</span>
 
 ## Abbreviations
 <abbr class="green" title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
 
-## Subscript 
+## Subscript
 H<sub>2</sub>O
 
 ## Superscript
