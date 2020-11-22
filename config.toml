@@ -1,7 +1,6 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "hugo-statusline-theme"
-theme = "statusline"
 paginate = 10
 
 [taxonomies]
