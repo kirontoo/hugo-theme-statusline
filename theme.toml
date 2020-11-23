@@ -3,11 +3,11 @@
 
 name = "Statusline"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+licenselink = "https://github.com/kirontoo/hugo-theme-statusline/blob/master/LICENSE"
 description = ""
 homepage = "http://example.com/"
-tags = [ "blog", "portfolio", "dark", "personal", "responsive", "simple" ]
-features = []
+tags = [ "blog", "dark", "personal", "responsive", "simple", "syntax highlighting" ]
+features = [ "responsive", "blog", "simple", "syntax highlighting" ]
 min_version = "0.71.0"
 
 [author]

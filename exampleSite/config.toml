@@ -1,7 +1,9 @@
-baseURL = "http://example.org/"
+baseURL = "http://localhost:1313"
 languageCode = "en-us"
+defaultContentLanguage ="en"
 title = "hugo-statusline-theme"
 paginate = 10
+theme="statusline"
 
 [taxonomies]
 	category = "categories"
@@ -164,6 +166,4 @@ paginate = 10
 				url = "/cpp"
 				pre = "blue"
 				weight = 4
-
-
 

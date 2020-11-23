@@ -5,7 +5,7 @@ author: amy dang
 categories: [ "guide" ]
 tags: [ "shortcodes" ]
 series: [ "hugo-guide" ]
-draft: true
+draft: false
 description:
 summary:
 ---
