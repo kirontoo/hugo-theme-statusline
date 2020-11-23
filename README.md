@@ -40,8 +40,6 @@ $ cp ./themes/statusline/archetypes/default.md ./archetypes/default.md
 [comment]: # (TODO: provide link to see all available shortcodes)
 This theme provides various shortcodes for your markdown. See all of the available shortcodes [here]().
 
-This theme provides `center`,` right`, `left`,` music`, `admonition` shortcodes, and support `center`,` right`, `left` class for the built-in `figure`. See more information from [there](https://blog.kirontoo.com/example-site/post/shortcodes/).
-
 ## Update The Theme
 
 ```bash
@@ -56,6 +54,8 @@ Just run the development server with:
 ```bash
 $ hugo server --source=exampleSite --themesDir=../.. --disableFastRender
 ```
+
+or use the Makefile
 
 ## Important Notes
 The instagram API endpoint has been deprecated since October 24th, 2020. 
