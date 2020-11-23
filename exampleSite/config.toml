@@ -137,7 +137,7 @@ theme="statusline"
 			[[languages.en.menu.main]]
 				parent = "projects"
 				name = "bots"
-				url = "/projects/bots"
+				url = "/projects/web-app"
 				pre = "cyan"
 
 			[[languages.en.menu.main]]
@@ -152,18 +152,3 @@ theme="statusline"
 				name = "archive"
 				url = "/archive"
 				weight = 6
-
-			[[languages.en.menu.main]]
-				identifier = "org"
-				name = "org"
-				url = "/org"
-				pre = "orange"
-				weight = 3
-
-			[[languages.en.menu.main]]
-				identifier = "cpp"
-				name = "cpp"
-				url = "/cpp"
-				pre = "blue"
-				weight = 4
-
