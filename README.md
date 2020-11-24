@@ -58,9 +58,17 @@ $ hugo server --source=exampleSite --themesDir=../.. --disableFastRender
 or use the Makefile
 
 ## Important Notes
+
+### Instagram
 The instagram API endpoint has been deprecated since October 24th, 2020. 
 If you want to use the instagram shortcode, you must register your Hugo site as an app to get a Facebook API key.
 See the issue [here](https://github.com/gohugoio/hugo/issues/7879).
+
+### Config File
+Hugo supports	`yaml`,	`toml`, and `json` config files.
+
+### Profile Image
+Your profile image can be placed in `static/images`.
 
 ## License
 
