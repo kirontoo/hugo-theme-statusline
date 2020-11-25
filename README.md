@@ -70,6 +70,13 @@ Hugo supports	`yaml`,	`toml`, and `json` config files.
 ### Profile Image
 Your profile image can be placed in `static/images`.
 
+### Projects Page
+Only pinned projects will be shown. Make sure you have `pinned` set as `true` in the front-matter.
+If you use the archetypes for projects, `pinned` is set to `true` on default.
+
+### About Page
+The about page will only show one content file. Make sure you create an `_index.md` in `content/about`.
+
 ## License
 
 Released under the [MIT](https://github.com/kirontoo/hugo-theme-statusline/blob/master/LICENSE.md) License.
