@@ -15,7 +15,7 @@
 			{{ if $.Site.Params.pagination.enable }}
 
 				<!-- paginate homepage -->
-				{{ if ( eq .Title $.Site.Params.logoText ) }}
+				{{ if ( eq .Title ( $.Site.Params.logoText | default .Site.Title )) }}
 					{{ $pages = (.Paginate ( where $.Site.RegularPages.ByDate.Reverse "Type" "in" $.Site.Params.mainSections )).Pages }}
 				{{ else }}
 
@@ -30,7 +30,7 @@
 
 			{{ else }}
 				<!-- no pagination, homepage pages -->
-				{{ if ( eq .Title $.Site.Params.logoText ) }}
+				{{ if ( eq .Title ( $.Site.Params.logoText | default .Site.Title ) ) }}
 					{{ $pages = ( where $.Site.RegularPages.ByDate.Reverse "Type" "in" $.Site.Params.mainSections ) }}
 				{{ else }}
 					{{ $pages = .Pages.ByDate.Reverse }}
