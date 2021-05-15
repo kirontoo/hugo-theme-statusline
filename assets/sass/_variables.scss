@@ -1,55 +1,8 @@
 // Variables
-//
-//
-
-
-// base colors
-//
-//
-$gray1     : #1b202a;
-$gray2     : #232936;
-$gray3     : #323c4d;
-$gray4     : #51617d;
-$gray5     : #9aa7bd;
-$red       : #b15e7c;
-$orange    : #b3785d;
-$yellow    : #b5a262;
-$green     : #709d6c;
-$cyan      : #56adb7;
-$blue      : #608cc3;
-$purple    : #8f72bf;
-$pink      : #c47ebd;
-
-$colors: () !default;
-$colors: map-merge(
-	(
-		"red"       : $red,
-		"orange"    : $orange,
-		"yellow"    : $yellow,
-		"green"     : $green,
-		"blue"      : $blue,
-		"purple"    : $purple,
-		"cyan"      : $cyan,
-		"pink"      : $pink,
-		"white"     : $gray5,
-		"gray"      : $gray4,
-		"gray-dark" : $gray2
-	),
-	$colors
-);
-
-// Separator
-$separator-color: $gray4;
-
-// background
-$background-color-darker :  $gray1;
-$background-color-dark   :  $gray2;
-$background-color-light  :  null;
-$background-color        :  $background-color-dark;
+//==============================================
 
 // Typography
 //
-// font, color, headers, etc..
 $base-font-size         : 20px;
 $base-font-size-big     : 22px;
 $base-font-size-small   : 16px;
@@ -57,10 +10,6 @@ $base-font-size-small   : 16px;
 $mobile-font-size       : 1em;
 $mobile-font-size-big   : 1.1em;
 $mobile-font-size-small : 0.9em;
-
-$text-color-light : $gray3;
-$text-color-dark  : $gray5;
-$text-color       : $text-color-dark;
 
 $h1-text-size: $base-font-size * 2;
 $h2-text-size: $base-font-size * 1.8;
@@ -76,93 +25,22 @@ $h4-mobile-text-size: $mobile-font-size * 1.2;
 $h5-mobile-text-size: $mobile-font-size * 1.1;
 $h6-mobile-text-size: $mobile-font-size;
 
-$h1-color: $green;
-$h2-color: $blue;
-$h3-color: $pink;
-$h4-color: $red;
-$h5-color: $orange;
-$h6-color: $yellow;
-
-h1 { font-size: $h1-text-size;          color: $h1-color;   @include media( ">=phone", "<tablet" ) { font-size: $h1-mobile-text-size; }}
-h2 { font-size: $h2-text-size;          color: $h2-color;   @include media( ">=phone", "<tablet" ) { font-size: $h2-mobile-text-size; }}
-h3 { font-size: $h3-text-size;          color: $h3-color;   @include media( ">=phone", "<tablet" ) { font-size: $h3-mobile-text-size; }}
-h4 { font-size: $h4-text-size;          color: $h4-color;   @include media( ">=phone", "<tablet" ) { font-size: $h4-mobile-text-size; }}
-h5 { font-size: $h5-text-size;          color: $h5-color;   @include media( ">=phone", "<tablet" ) { font-size: $h5-mobile-text-size; }}
-h6 { font-size: $h6-text-size;          color: $h6-color;   @include media( ">=phone", "<tablet" ) { font-size: $h6-mobile-text-size; }}
-p  { font-size: $base-font-size-small;  color: $text-color; @include media( ">=phone", "<tablet" ) { font-size: $mobile-font-size-small; }}
-
-.h1 { font-size: $h1-text-size;          color: $h1-color;    }
-.h2 { font-size: $h2-text-size;          color: $h2-color;    }
-.h3 { font-size: $h3-text-size;          color: $h3-color;    }
-.h4 { font-size: $h4-text-size;          color: $h4-color;    }
-.h5 { font-size: $h5-text-size;          color: $h5-color;    }
-.h6 { font-size: $h6-text-size;          color: $h6-color;    }
-.p  { font-size: $base-font-size-small;  color: $text-color;  }
-
-$h1-color: $green;
-$h2-color: $blue;
-$h3-color: $pink;
-$h4-color: $red;
-$h5-color: $orange;
-$h6-color: $yellow;
-
-.blue       {  color: $blue    !important;  }
-.red        {  color: $red     !important;  }
-.yellow     {  color: $yellow  !important;  }
-.green      {  color: $green   !important;  }
-.cyan       {  color: $cyan    !important;  }
-.orange     {  color: $orange  !important;  }
-.purple     {  color: $purple  !important;  }
-.pink       {  color: $pink    !important;  }
-.white      {  color: $gray5   !important;  }
-.gray       {  color: $gray4   !important;  }
-.gray-dark  {  color: $gray2   !important;  }
-
-
 // Links
 //
 // Style anchor elements
-$link-color            : $yellow;
 $link-decoration       : none !default;
 $link-hover-color      : darken( $link-color, 15% ) !default;
 $link-hover-decoration : underline !default;
 
-
 // Borders
 //
 // Style borders
-$border-color-dark  : $gray4;
-$border-color-light : null;
-$border-color       : $border-color-dark;
 $border-base-size   : 2px !default;
 $border-size-thin   : $border-base-size;
 $border-size-thick  : $border-base-size * 2;
 
-.border-blue      {  border-color: $blue    !important;  }
-.border-red       {  border-color: $red     !important;  }
-.border-yellow    {  border-color: $yellow  !important;  }
-.border-green     {  border-color: $green   !important;  }
-.border-cyan      {  border-color: $cyan    !important;  }
-.border-orange    {  border-color: $orange  !important;  }
-.border-purple    {  border-color: $purple  !important;  }
-.border-pink      {  border-color: $pink    !important;  }
-.border-white     {  border-color: $gray5   !important;  }
-.border-gray      {  border-color: $gray4   !important;  }
-.border-gray-dark {  border-color: $gray2   !important;  }
-
 // Markdown
 // 
 // Blockquote
-$blockquote-background-color :  $background-color-darker;
 $blockquote-text-color       :  $text-color;
 $blockquote-border-size      :  $border-size-thick * 1.5;
-$blockquote-border-color     :  $cyan;
-
-$reference-text-color: $yellow;
-
-
-// Flexbox
-//
-//
-.fb-space-between { @include justify-content( space-between !important); }
-.fb-stretch { @include justify-content( stretch ); }

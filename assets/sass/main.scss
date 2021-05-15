@@ -9,8 +9,11 @@
 @import 'abstracts/filter';
 @import 'abstracts/media';
 
+// @import 'deepspace';
+@import './colorschemes/{{.Site.Params.theme | default "deepspace" }}';
+
 @import 'variables';
-@import 'fonts';
+@import 'global';
 @import 'container';
 @import 'navbar';
 @import 'bracket';
@@ -18,7 +21,6 @@
 @import 'notfound';
 @import 'footer';
 @import 'scrollbar';
-@import 'global';
 
 // component styles
 @import 'components/taxonomy';
