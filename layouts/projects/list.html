@@ -27,7 +27,8 @@
 					{{ $pinned := ( where .Pages.ByWeight "Params.pinned" true ) }}
 
 					<li>
-						<ul class="{{ $.Site.Params.projects.listStyle }}">
+						<!-- other listStyle option: project-section -->
+						<ul class="{{ $.Site.Params.projects.listStyle | default "grid" }}">
 							{{ range $pinned }}
 								{{ if eq ( len .Pages ) 0 }}
 									{{ if .Params.Pinned }}
@@ -51,7 +52,7 @@
 									<hr>
 								{{ end }}
 
-								<ul class="{{ $.Site.Params.projects.listStyle }}">
+								<ul class="{{ $.Site.Params.projects.listStyle | default "grid" }}">
 									{{ $pinned := ( where .Pages.ByWeight "Params.pinned" true ) }}
 									{{ range $pinned }}
 										{{ partial "components/project-item" . }}
