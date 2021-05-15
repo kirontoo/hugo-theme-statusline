@@ -64,3 +64,31 @@ a {
 		display: flex;
 	}
 }
+
+h1 { font-size: $h1-text-size;          color: $h1-color;   @include media( ">=phone", "<tablet" ) { font-size: $h1-mobile-text-size; }}
+h2 { font-size: $h2-text-size;          color: $h2-color;   @include media( ">=phone", "<tablet" ) { font-size: $h2-mobile-text-size; }}
+h3 { font-size: $h3-text-size;          color: $h3-color;   @include media( ">=phone", "<tablet" ) { font-size: $h3-mobile-text-size; }}
+h4 { font-size: $h4-text-size;          color: $h4-color;   @include media( ">=phone", "<tablet" ) { font-size: $h4-mobile-text-size; }}
+h5 { font-size: $h5-text-size;          color: $h5-color;   @include media( ">=phone", "<tablet" ) { font-size: $h5-mobile-text-size; }}
+h6 { font-size: $h6-text-size;          color: $h6-color;   @include media( ">=phone", "<tablet" ) { font-size: $h6-mobile-text-size; }}
+p  { font-size: $base-font-size-small;  color: $text-color; @include media( ">=phone", "<tablet" ) { font-size: $mobile-font-size-small; }}
+
+.h1 { font-size: $h1-text-size;          color: $h1-color;    }
+.h2 { font-size: $h2-text-size;          color: $h2-color;    }
+.h3 { font-size: $h3-text-size;          color: $h3-color;    }
+.h4 { font-size: $h4-text-size;          color: $h4-color;    }
+.h5 { font-size: $h5-text-size;          color: $h5-color;    }
+.h6 { font-size: $h6-text-size;          color: $h6-color;    }
+.p  { font-size: $base-font-size-small;  color: $text-color;  }
+
+.blue       {  color: $blue    !important;  }
+.red        {  color: $red     !important;  }
+.yellow     {  color: $yellow  !important;  }
+.green      {  color: $green   !important;  }
+.cyan       {  color: $cyan    !important;  }
+.orange     {  color: $orange  !important;  }
+.purple     {  color: $purple  !important;  }
+.pink       {  color: $pink    !important;  }
+.white      {  color: $gray5   !important;  }
+.gray       {  color: $gray4   !important;  }
+.gray-dark  {  color: $gray2   !important;  }
