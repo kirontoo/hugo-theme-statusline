@@ -1,0 +1,94 @@
+// Deepspace colorscheme
+
+$gray1     : #1b202a;
+$gray2     : #232936;
+$gray3     : #323c4d;
+$gray4     : #51617d;
+$gray5     : #9aa7bd;
+$red       : #b15e7c;
+$orange    : #b3785d;
+$yellow    : #b5a262;
+$green     : #709d6c;
+$cyan      : #56adb7;
+$blue      : #608cc3;
+$purple    : #8f72bf;
+$pink      : #c47ebd;
+$white     : #9aa7bd;
+$gray      : $gray4;
+$gray-dark : $gray2;
+
+// $colors: () !default;
+// $colors: map-merge(
+// 	(
+// 		"red"       : $red,
+// 		"orange"    : $orange,
+// 		"yellow"    : $yellow,
+// 		"green"     : $green,
+// 		"blue"      : $blue,
+// 		"purple"    : $purple,
+// 		"cyan"      : $cyan,
+// 		"pink"      : $pink,
+// 		"white"     : $gray5,
+// 		"gray"      : $gray4,
+// 		"gray-dark" : $gray2
+// 	),
+// 	$colors
+// );
+
+// Separator
+$separator-color: $gray4;
+
+// background
+$background-color-darker :  $gray1;
+$background-color-dark   :  $gray2;
+$background-color-light  :  null;
+$background-color        :  $background-color-dark;
+
+$text-color-light : $gray3;
+$text-color-dark  : $gray5;
+$text-color       : $text-color-dark;
+
+$h1-color: $green;
+$h2-color: $blue;
+$h3-color: $pink;
+$h4-color: $red;
+$h5-color: $orange;
+$h6-color: $yellow;
+
+$link-color : $yellow;
+
+// Markdown - Blockquotes
+$blockquote-background-color :  $background-color-darker;
+$blockquote-border-color     :  $cyan;
+
+// Markdown - References
+$reference-text-color: $yellow;
+
+// Markdown - Inline-code
+$inline-code-color: $pink;
+
+// Markdown - Tables
+$table-heading-color: $cyan;
+
+// Markdown - Image
+$image-caption-color: $pink;
+
+// Borders
+$border-color-dark  : $gray;
+$border-color       : $border-color-dark;
+
+// Navigation bar
+$navbar-logo-color: $red;
+$navbar-links-color: $pink;
+
+// Sidebar
+$sidebar-title-color: $red;
+$sidebar-occupation-color: $blue;
+$sidebar-profile-link-color: $pink;
+
+// 404 Page Not Found
+$not-found-icon-color: $yellow;
+
+// Project Page 
+$project-repo-name-color: $cyan;
+$project-repo-icon-color: $gray4;
