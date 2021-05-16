@@ -34,7 +34,7 @@ aside > div.tree-view {
 
 		a {
 			display: block;
-			border-left: $border-size-thin solid $cyan;
+			border-left: $border-size-thin solid $tv-border-color;
 			padding-left: 0.5rem;
 			color: $text-color;
 			&:hover {
@@ -46,11 +46,13 @@ aside > div.tree-view {
 	.tv-active {
 		color: $tv-active-color;
 		border-color: $tv-active-color;
+		font-weight: bold;
 	}
 
 	.tv-active-root {
 		color: $tv-active-root-color;
 		border-color: $tv-active-root-color;
+		font-weight: bold;
 	}
 
 	.tree-header {
