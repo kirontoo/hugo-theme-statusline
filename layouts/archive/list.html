@@ -34,9 +34,9 @@
 
 					<ul class="archive-list-item">
 						<li class="archive-date-box" id="{{ $year }}">
-							<div class="bracket {{ with $.Site.Params.archive.color.groupDate }}{{ . }}{{ end }}">
+							<div class="bracket">
 								<div class="bracket-left"></div>
-									<h3>{{ $year }}</h3>
+									<h3 class="{{ with $.Site.Params.archive.color.groupDate }}{{ . }}{{ end }}">{{ $year }}</h3>
 								<div class="bracket-right"></div>
 							</div>
 
