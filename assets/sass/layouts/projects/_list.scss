@@ -38,8 +38,12 @@ div.project-list {
 			}
 
 			.project-subsection {
+				a {
+					color: $list-item-title-color;
+				}
+
 				&:hover {
-					background: $background-color-darker;
+					text-decoration: underline;
 				}
 			}
 		}
@@ -88,7 +92,6 @@ div.project-list {
 }
 
 .project-item {
-
 	// styles for box border style
 	.box {
 		@include flexbox();

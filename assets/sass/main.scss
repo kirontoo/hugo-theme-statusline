@@ -9,7 +9,6 @@
 @import 'abstracts/filter';
 @import 'abstracts/media';
 
-// @import 'deepspace';
 @import './colorschemes/{{.Site.Params.theme | default "deepspace" }}';
 
 @import 'variables';

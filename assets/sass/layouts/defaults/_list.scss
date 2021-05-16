@@ -20,7 +20,7 @@ header.list-header {
 .list-item-title {
 	@include flexbox();
 	@include justify-content( space-between );
-	color: $green;
+	color: $list-item-title-color;
 
 	&:hover {
 		font-weight: bold;
@@ -69,7 +69,7 @@ header.list-header {
 		font-weight: bold;
 
 		span:hover {
-			color: $yellow;
+			color: $link-color;
 		}
 	}
 

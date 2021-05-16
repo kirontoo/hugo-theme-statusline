@@ -12,18 +12,18 @@ header.terms-title {
 
 .categories-title {
 	h1 {
-		color: $taxonomy-categories-color;
+		color: $taxonomy-categories-color !important;
 	}
 }
 
 .series-title {
 	h1 {
-		color: $taxonomy-series-color;
+		color: $taxonomy-series-color !important;
 	}
 }
 
 .tags-title {
 	h1 {
-		color: $taxonomy-tags-color;
+		color: $taxonomy-tags-color !important;
 	}
 }

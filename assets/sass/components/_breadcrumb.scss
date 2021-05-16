@@ -37,9 +37,10 @@ ol.bc {
 
 	.bc-active {
 		a {
-			color: $separator-color;
+			color: $breadcrumb-active-color;
 			pointer-events: none;
 			cursor: none;
+			font-weight: bold;
 
 			&:hover {
 				text-decoration: none;

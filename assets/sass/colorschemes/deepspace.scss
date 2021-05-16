@@ -87,12 +87,16 @@ $sidebar-occupation-color: $blue;
 $sidebar-profile-link-color: $pink;
 
 // Taxonomy colors
-$taxonomy-categories-color: $orange !important;
-$taxonomy-series-color: $purple !important;
-$taxonomy-tags-color: $yellow !important;
+$taxonomy-categories-color: $orange;
+$taxonomy-series-color: $purple;
+$taxonomy-tags-color: $yellow;
 
 // 404 Page Not Found
 $not-found-icon-color: $yellow;
+
+
+// Layouts - List item
+$list-item-title-color: $h1-color;
 
 // Layouts - Project Page 
 $project-repo-name-color: $cyan;
@@ -126,4 +130,4 @@ $tv-active-root-color: $yellow;
 $tv-active-color: $pink;
 $tv-border-color: $bc-separator-color;
 
-
+$breadcrumb-active-color: $yellow;

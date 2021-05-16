@@ -50,19 +50,19 @@ a.taxonomy-tagname {
 }
 
 .categories {
-	color: $taxonomy-categories-color;
+	color: $taxonomy-categories-color !important;
 
 	&:hover {
-		border-color: $taxonomy-categories-color;
+		border-color: $taxonomy-categories-color !important;
 		color: $text-color;
 	}
 }
 
 .series {
-	color: $taxonomy-series-color;
+	color: $taxonomy-series-color !important;
 
 	&:hover {
-		border-color: $taxonomy-series-color;
+		border-color: $taxonomy-series-color !important;
 		color: $text-color;
 	}
 }
@@ -71,7 +71,7 @@ a.taxonomy-tagname {
 	color: $taxonomy-tags-color;
 
 	&:hover {
-		border-color: $taxonomy-tags-color;
+		border-color: $taxonomy-tags-color !important;
 		color: $text-color;
 	}
 }
