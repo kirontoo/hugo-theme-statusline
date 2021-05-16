@@ -30,7 +30,7 @@ header.archive-header {
 
 	.archive-date-box {
 		width: 8rem;
-		color: $pink;
+		color: $archive-date-box-color;
 		.bracket {
 			@include justify-content( space-between );
 		}
@@ -131,24 +131,24 @@ header.archive-header {
 }
 
 .page-type {
-	color: $blue;
+	color: $archive-page-type-color;
 	margin-right: 0.7rem;
 	font-size: $base-font-size-small * 0.8;
 }
 
 .page-date {
-	color: $yellow;
+	color: $archive-date-color;
 	font-size: $base-font-size-small * 0.8;
 }
 
 .archive-active {
-	color: $pink;
-	border-color: $pink;
+	color: $tv-active-color;
+	border-color: $tv-active-color;
 }
 
 .archive-parent-active {
-	color: $yellow;
-	border-color: $yellow;
+	color: $tv-active-root-color;
+	border-color: $tv-active-root-color;
 }
 
 aside#archive-dates {

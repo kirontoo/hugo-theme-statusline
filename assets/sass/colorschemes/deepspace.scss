@@ -86,15 +86,24 @@ $sidebar-title-color: $red;
 $sidebar-occupation-color: $blue;
 $sidebar-profile-link-color: $pink;
 
+// Taxonomy colors
+$taxonomy-categories-color: $orange !important;
+$taxonomy-series-color: $purple !important;
+$taxonomy-tags-color: $yellow !important;
+
 // 404 Page Not Found
 $not-found-icon-color: $yellow;
 
-// Project Page 
+// Layouts - Project Page 
 $project-repo-name-color: $cyan;
 $project-repo-icon-color: $gray4;
 
+// Layouts - Archive Page
+$archive-date-color: $yellow;
+$archive-date-box-color: $pink;
+$archive-page-type-color: $blue;
+
 // Components - breadcrumb
-// TODO: match it with the table of contents border color
 $bc-separator-color: $cyan;
 
 // Components - post-info
@@ -107,3 +116,14 @@ $pagination-arrow-color: $separator-color;
 $pagination-arrow-disabled-color: $gray2;
 $pagination-numbers-color: $cyan;
 $pagination-active-color:  $pink;
+
+// Components - post navigation
+$nav-prev-color: $red;
+$nav-next-color: $green;
+
+// Components - tree view (table of contents)
+$tv-active-root-color: $yellow;
+$tv-active-color: $pink;
+$tv-border-color: $bc-separator-color;
+
+

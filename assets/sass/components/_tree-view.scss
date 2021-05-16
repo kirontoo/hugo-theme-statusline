@@ -44,13 +44,13 @@ aside > div.tree-view {
 	}
 	
 	.tv-active {
-		color: $pink;
-		border-color: $pink;
+		color: $tv-active-color;
+		border-color: $tv-active-color;
 	}
 
 	.tv-active-root {
-		color: $yellow;
-		border-color: $yellow;
+		color: $tv-active-root-color;
+		border-color: $tv-active-root-color;
 	}
 
 	.tree-header {

@@ -40,13 +40,13 @@
 	}
 
 	a.previous {
-		color: $red;
+		color: $nav-prev-color;
 		@include align-self( flex-start );
 		text-align: left;
 	}
 
 	a.next {
-		color: $green;
+		color: $nav-next-color;
 		@include align-self( flex-end );
 		text-align: right;
 	}
