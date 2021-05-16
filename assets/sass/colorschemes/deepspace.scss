@@ -1,5 +1,6 @@
 // Deepspace colorscheme
 
+// Main colors
 $gray1     : #1b202a;
 $gray2     : #232936;
 $gray3     : #323c4d;
@@ -17,28 +18,10 @@ $white     : #9aa7bd;
 $gray      : $gray4;
 $gray-dark : $gray2;
 
-// $colors: () !default;
-// $colors: map-merge(
-// 	(
-// 		"red"       : $red,
-// 		"orange"    : $orange,
-// 		"yellow"    : $yellow,
-// 		"green"     : $green,
-// 		"blue"      : $blue,
-// 		"purple"    : $purple,
-// 		"cyan"      : $cyan,
-// 		"pink"      : $pink,
-// 		"white"     : $gray5,
-// 		"gray"      : $gray4,
-// 		"gray-dark" : $gray2
-// 	),
-// 	$colors
-// );
-
 // Separator
 $separator-color: $gray4;
 
-// background
+// Background
 $background-color-darker :  $gray1;
 $background-color-dark   :  $gray2;
 $background-color-light  :  null;
@@ -48,6 +31,7 @@ $text-color-light : $gray3;
 $text-color-dark  : $gray5;
 $text-color       : $text-color-dark;
 
+// Heading Text Colors
 $h1-color: $green;
 $h2-color: $blue;
 $h3-color: $pink;
@@ -56,6 +40,36 @@ $h5-color: $orange;
 $h6-color: $yellow;
 
 $link-color : $yellow;
+
+// Borders
+$border-color-dark  : $gray;
+$border-color       : $border-color-dark;
+
+// Components - breadcrumb
+$bc-separator-color: $cyan;
+
+// Components - post-info
+$post-author-color :  $cyan;
+$post-date-color   :  $blue;
+$post-time-color   :  $orange;
+
+// Components - pagination
+$pagination-arrow-color          :  $separator-color;
+$pagination-arrow-disabled-color :  $gray2;
+$pagination-numbers-color        :  $cyan;
+$pagination-active-color         :  $pink;
+
+// Components - post navigation
+$nav-prev-color: $red;
+$nav-next-color: $green;
+
+// Components - tree view (table of contents)
+$tv-active-root-color :  $yellow;
+$tv-active-color      :  $pink;
+$tv-border-color      :  $bc-separator-color;
+
+// Components - Breadcrumb
+$breadcrumb-active-color: $yellow;
 
 // Markdown - Blockquotes
 $blockquote-background-color :  $background-color-darker;
@@ -73,61 +87,31 @@ $table-heading-color: $cyan;
 // Markdown - Image
 $image-caption-color: $pink;
 
-// Borders
-$border-color-dark  : $gray;
-$border-color       : $border-color-dark;
-
 // Navigation bar
-$navbar-logo-color: $red;
-$navbar-links-color: $pink;
+$navbar-logo-color  :  $red;
+$navbar-links-color :  $pink;
 
 // Sidebar
-$sidebar-title-color: $red;
-$sidebar-occupation-color: $blue;
-$sidebar-profile-link-color: $pink;
+$sidebar-title-color        :  $red;
+$sidebar-occupation-color   :  $blue;
+$sidebar-profile-link-color :  $pink;
 
 // Taxonomy colors
-$taxonomy-categories-color: $orange;
-$taxonomy-series-color: $purple;
-$taxonomy-tags-color: $yellow;
+$taxonomy-categories-color :  $orange;
+$taxonomy-series-color     :  $purple;
+$taxonomy-tags-color       :  $yellow;
 
 // 404 Page Not Found
 $not-found-icon-color: $yellow;
-
 
 // Layouts - List item
 $list-item-title-color: $h1-color;
 
 // Layouts - Project Page 
-$project-repo-name-color: $cyan;
-$project-repo-icon-color: $gray4;
+$project-repo-name-color :  $cyan;
+$project-repo-icon-color :  $gray4;
 
 // Layouts - Archive Page
-$archive-date-color: $yellow;
-$archive-date-box-color: $pink;
-$archive-page-type-color: $blue;
-
-// Components - breadcrumb
-$bc-separator-color: $cyan;
-
-// Components - post-info
-$post-author-color: $cyan;
-$post-date-color: $blue;
-$post-time-color: $orange;
-
-// Components - pagination
-$pagination-arrow-color: $separator-color;
-$pagination-arrow-disabled-color: $gray2;
-$pagination-numbers-color: $cyan;
-$pagination-active-color:  $pink;
-
-// Components - post navigation
-$nav-prev-color: $red;
-$nav-next-color: $green;
-
-// Components - tree view (table of contents)
-$tv-active-root-color: $yellow;
-$tv-active-color: $pink;
-$tv-border-color: $bc-separator-color;
-
-$breadcrumb-active-color: $yellow;
+$archive-date-color      :  $yellow;
+$archive-date-box-color  :  $pink;
+$archive-page-type-color :  $blue;
