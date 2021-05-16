@@ -4,11 +4,11 @@
 		<div class="logo bracket">
 			<div class="bracket-left"></div>
 			<a 
-				class="{{ with $.Site.Params.LogoColor }}{{ . }}{{ end }}"
+				class="{{ with $.Site.Params.TitleColor }}{{ . }}{{ end }}"
 				id="navbar-logo-link"
-				href="{{ if $.Site.Params.LogoHomeLink }}{{ $.Site.Params.LogoHomeLink }}{{ else }}{{ $.Site.BaseURL }}{{ end }}"
+				href="{{ $.Site.BaseURL }}"
 			>
-			{{ with $.Site.Params.LogoText }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}
+				{{.Site.Title}}
 			</a>
 				<div class="bracket-right"></div>
 		</div>
