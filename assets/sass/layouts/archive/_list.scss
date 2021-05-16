@@ -30,11 +30,13 @@ header.archive-header {
 
 	.archive-date-box {
 		width: 8rem;
-		color: $archive-date-box-color;
+
 		.bracket {
 			@include justify-content( space-between );
+			h3 {
+				color: $archive-date-box-color;
+			}
 		}
-
 
 		@include media( ">=phone", "<tablet" ) {
 			width: 100%;
