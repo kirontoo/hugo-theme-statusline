@@ -12,15 +12,15 @@
 	}
 
 	.pagination-numbers {
-		color: $cyan;
+		color: $pagination-numbers-color;
 
 		&:hover {
-			color: $yellow !important;
+			color: $link-color !important;
 		}
 	}
 
 	.pagination-arrow {
-		color: $separator-color;
+		color: $pagination-arrow-color;
 		&:hover {
 			color: $yellow;
 		}
@@ -31,7 +31,7 @@
 	}
 
 	.pagination-disabled {
-		color: $separator-color;
+		color: $pagination-arrow-disabled-color;
 		pointer-events: none;
 
 		&:hover {
@@ -40,6 +40,6 @@
 	}
 
 	.pagination-active {
-		color: $pink;
+		color: $pagination-active-color;
 	}
 }
