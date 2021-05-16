@@ -11,7 +11,7 @@ div .sidebar {
 	}
 
 	.sidebar-title {
-		color: $red;
+		color: $sidebar-title-color;
 	}
 
 	.sidebar-profile {
@@ -19,7 +19,7 @@ div .sidebar {
 
 		#profile-occupation {
 			font-size: $base-font-size-big;
-			color: $h2-color;
+			color: $sidebar-occupation-color;
 			margin-bottom: 0.4rem;
 		}
 
@@ -51,7 +51,6 @@ div .sidebar {
 
 
 			.sidebar-profile-about {
-				color: $pink;
 				margin-bottom: 0.4rem;
 
 				li {
@@ -59,7 +58,7 @@ div .sidebar {
 				}
 
 				a {
-					color: $pink;
+					color: $sidebar-profile-link-color;
 
 					&:hover {
 						text-decoration: underline;

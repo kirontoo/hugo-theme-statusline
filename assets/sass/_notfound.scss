@@ -2,10 +2,14 @@
 	margin-top: 1rem;
 
 	i {
-		color: $yellow;
+		color: $not-found-icon-color;
 	}
 
 	a {
 		color: $link-color;
+	}
+
+	p {
+		font-size: $h6-text-size;
 	}
 }
