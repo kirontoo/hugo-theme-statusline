@@ -11,7 +11,6 @@ header.list-header {
 }
 
 .list-header {
-
 	@include media( ">=phone", "<tablet" ) {
 		margin-top: 1rem;
 	}
@@ -48,6 +47,10 @@ header.list-header {
 	width: 100%;
 	@include flexbox();
 	@include flex-flow( column );
+
+	.list-item-title {
+		font-weight: 600;
+	}
 
 	.list-item-subtitle {
 		font-size: 0.8rem;
