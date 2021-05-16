@@ -1,10 +1,4 @@
 <div class="sidebar">
-	<div class="bracket sidebar-title">
-		<div class="bracket-left"></div>
-			{{ .Site.Title }}
-		<div class="bracket-right"></div>
-	</div>
-
 	<!-- photo -->
 	{{ with $.Site.Params.Profile.image }}
 		{{ partial "components/image" ( dict "link" .link "alt" .alt "title" .title)}}
