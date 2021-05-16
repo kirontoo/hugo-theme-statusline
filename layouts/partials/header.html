@@ -30,11 +30,13 @@
 				{{ end }}
 			{{ end }}
 			{{ range $name, $taxonomy := .Site.Taxonomies }}
+				{{ if gt (len $taxonomy) 0 }}
 				<li class="bracket hidden">
 					<div class="bracket-left"></div>
 					<a class="{{ $name }}" href="{{ $name | absURL }}">{{ $name }}</a>
 					<div class="bracket-right"></div>
 				</li>
+				{{ end }}
 			{{ end }}
 		</ul>
 
