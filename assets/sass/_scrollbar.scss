@@ -4,10 +4,10 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
 	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-	background: $background-color-darker;
+	background: $scroll-track-color;
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: lighten( $background-color, 10%);
+	background-color: lighten( $scroll-thumb-color, 10%);
 	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }

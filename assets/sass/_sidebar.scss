@@ -10,10 +10,6 @@ div .sidebar {
 		}
 	}
 
-	.sidebar-title {
-		color: $sidebar-title-color;
-	}
-
 	.sidebar-profile {
 		font-size: $base-font-size-small;
 		margin-top: 0.5rem;
@@ -22,6 +18,7 @@ div .sidebar {
 			font-size: $base-font-size-big;
 			color: $sidebar-occupation-color;
 			margin-bottom: 0.4rem;
+			font-weight: bold;
 		}
 
 		#profile-bio {

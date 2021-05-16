@@ -39,7 +39,12 @@ $h4-color: $red;
 $h5-color: $orange;
 $h6-color: $yellow;
 
+// Links
 $link-color : $yellow;
+
+// Scrollbar
+$scroll-track-color: $background-color-darker;
+$scroll-thumb-color: $gray3;
 
 // Borders
 $border-color-dark  : $gray;
@@ -60,8 +65,9 @@ $pagination-numbers-color        :  $cyan;
 $pagination-active-color         :  $pink;
 
 // Components - post navigation
-$nav-prev-color: $red;
-$nav-next-color: $green;
+$nav-prev-color  :  $red;
+$nav-next-color  :  $green;
+$nav-arrow-color :  $separator-color;
 
 // Components - tree view (table of contents)
 $tv-active-root-color :  $yellow;
@@ -92,7 +98,6 @@ $navbar-logo-color  :  $red;
 $navbar-links-color :  $pink;
 
 // Sidebar
-$sidebar-title-color        :  $red;
 $sidebar-occupation-color   :  $blue;
 $sidebar-profile-link-color :  $pink;
 
