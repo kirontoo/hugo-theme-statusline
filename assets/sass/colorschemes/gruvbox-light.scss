@@ -1,0 +1,124 @@
+// Gruvbox colorscheme
+
+// Main colors
+$gray1     : #282828;
+$gray2     : #3c3836;
+$gray3     : #d5c4a1;
+$gray4     : #f2e5bc;
+$gray5     : #fbf1c7;
+$gray6     : #f9f5d7;
+$red       : #cc241d;
+$orange    : #d65d0e;
+$yellow    : #b57614;
+$green     : #79740e;
+$cyan      : #076678;
+$blue      : #458588;
+$purple    : #8f3f71;
+$pink      : #b16286;
+$white     : $gray2;
+$gray      : $gray5;
+$gray-dark : $gray1;
+
+// Separator
+$separator-color: $gray4;
+
+// Background
+$background-color-darker :  $gray3;
+$background-color-dark   :  $gray5;
+$background-color-light  :  null;
+$background-color        :  $background-color-dark;
+
+$text-color-light : $gray2;
+$text-color-dark  : $gray1;
+$text-color       : $text-color-dark;
+
+// Heading Text Colors
+$h1-color: $green;
+$h2-color: $blue;
+$h3-color: $pink;
+$h4-color: $red;
+$h5-color: $orange;
+$h6-color: $yellow;
+
+// Links
+$link-color : $yellow;
+
+// Scrollbar
+$scroll-track-color: $background-color-darker;
+$scroll-thumb-color: $gray2;
+
+// Borders
+$border-color-dark  : $gray-dark;
+$border-color       : $border-color-dark;
+
+// Components - breadcrumb
+$bc-separator-color: $blue;
+
+// Components - post-info
+$post-author-color :  $cyan;
+$post-date-color   :  $blue;
+$post-time-color   :  $orange;
+
+// Components - pagination
+$pagination-arrow-color          :  $text-color;
+$pagination-arrow-disabled-color :  $background-color;
+$pagination-numbers-color        :  $cyan;
+$pagination-active-color         :  $pink;
+
+// Components - post navigation
+$nav-prev-color  :  $red;
+$nav-next-color  :  $green;
+$nav-arrow-color :  $text-color;
+
+// Components - tree view (table of contents)
+$tv-active-root-color :  $yellow;
+$tv-active-color      :  $pink;
+$tv-border-color      :  $bc-separator-color;
+
+// Components - Breadcrumb
+$breadcrumb-active-color: $yellow;
+
+// Markdown - Blockquotes
+$blockquote-background-color :  $background-color-darker;
+$blockquote-border-color     :  $cyan;
+
+// Markdown - References
+$reference-text-color: $yellow;
+
+// Markdown - Inline-code
+$inline-code-color: $pink;
+
+// Markdown - Tables
+$table-heading-color: $cyan;
+
+// Markdown - Image
+$image-caption-color: $pink;
+
+// Navigation bar
+$navbar-logo-color      :  $red;
+$navbar-links-color     :  $blue;
+$navbar-media-bar-color :  $text-color;
+
+// Sidebar
+$sidebar-occupation-color   :  $blue;
+$sidebar-profile-link-color :  $purple;
+
+// Taxonomy colors
+$taxonomy-categories-color :  $orange;
+$taxonomy-series-color     :  $purple;
+$taxonomy-tags-color       :  $yellow;
+
+// 404 Page Not Found
+$not-found-icon-color: $yellow;
+
+// Layouts - List item
+$list-item-title-color: $h1-color;
+
+// Layouts - Project Page 
+$project-repo-name-color :  $cyan;
+$project-repo-icon-color :  $gray2;
+
+// Layouts - Archive Page
+$archive-date-color      :  $green;
+$archive-date-box-color  :  $blue;
+$archive-page-type-color :  $orange;
