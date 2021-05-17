@@ -1,26 +1,26 @@
 // Gruvbox-dark colorscheme
 
 // Main colors
-$gray1     : #282828;
-$gray2     : #3c3836;
-$gray3     : #d5c4a1;
-$gray4     : #f2e5bc;
-$gray5     : #fbf1c7;
-$gray6     : #f9f5d7;
-$red       : #cc241d;
-$orange    : #d65d0e;
-$yellow    : #b57614;
-$green     : #79740e;
-$cyan      : #076678;
-$blue      : #458588;
-$purple    : #8f3f71;
-$pink      : #b16286;
+$gray1     : #ebdbb2;
+$gray2     : #fbf1c7;
+$gray3     : #1d2021;
+$gray4     : #3c3836;
+$gray5     : #282828;
+$gray6     : #32302f;
+$red       : #fb4934;
+$orange    : #fe8019;
+$yellow    : #fabd2f;
+$green     : #b8bb26;
+$blue      : #83a598;
+$cyan      : #8ec07c;
+$purple    : #b16286;
+$pink      : #d3869b;
 $white     : $gray2;
 $gray      : $gray5;
 $gray-dark : $gray1;
 
 // Separator
-$separator-color: $gray4;
+$separator-color: $gray6;
 
 // Background
 $background-color-darker :  $gray3;
@@ -44,8 +44,8 @@ $h6-color: $yellow;
 $link-color : $yellow;
 
 // Scrollbar
-$scroll-track-color: $background-color-darker;
-$scroll-thumb-color: $gray2;
+$scroll-track-color: $gray2;
+$scroll-thumb-color: $gray4;
 
 // Borders
 $border-color-dark  : $gray-dark;
