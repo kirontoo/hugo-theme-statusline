@@ -17,12 +17,17 @@ nav {
 		}
 	}
 
+	.logo {
+		margin-bottom: 0;
+	}
+
 	.mobile-nav {
 		cursor: pointer;
 	}
 
 	#navbar-logo-link {
 		color: $navbar-logo-color;
+		white-space: nowrap;
 	}
 
 	a.media-toggle {
