@@ -8,10 +8,10 @@
 
 	<div class="sidebar-layout">
 
-		{{ if and $.Site.Params.archive.enableSidebar $.Site.Params.enableSidebar }}
-			<aside id="archive-dates">
-				{{ partial "sidebar/sidebar-archive" ( dict "pages" $allowedPages ) }}
-			</aside>
+		{{ if $.Site.Params.archive.enableSidebar }}
+		<aside id="archive-dates" >
+			{{ partial "sidebar/sidebar-archive" ( dict "pages" $allowedPages ) }}
+		</aside>
 		{{ end }}
 
 		<section class="sidebar-layout-main">
