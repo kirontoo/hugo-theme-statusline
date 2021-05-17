@@ -1,5 +1,5 @@
 ---
-title: "Markdown Guide"
+title: "Markdown Showcase"
 date: 2020-06-09T16:06:02-07:00
 author: amy dang
 draft: false
@@ -13,7 +13,7 @@ This a sample article that will show how Markdown syntax can be used in Hugo con
 and how basic HTML elements are styled with CSS in this Hugo theme.
 
 # Headings
-This is how headings are rendered. There are six levels of section headings. `<h1>` is the highest while ``<h6>`` is the lowest.
+This is how headings are rendered.
 
 # H1
 ## H2
@@ -56,17 +56,17 @@ Blockquotes can be made with or without citations. Citations can be found at the
 * Item 2
 * Item 3
 
-### Nested
+### Nested Unorderd
 * Item 1
 	* Nested item
 * Un-nested item
 
-## Ordered list
+## Ordered
 1. Item 1
 2. Item 2
 3. Item 3
 
-### Nested list
+### Nested Ordered
 1. Item
 	1. Nested item
 2. Un-nested item
