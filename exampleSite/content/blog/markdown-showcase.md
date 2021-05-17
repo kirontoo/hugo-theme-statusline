@@ -1,7 +1,7 @@
 ---
 title: "Markdown Showcase"
 date: 2020-06-09T16:06:02-07:00
-author: amy dang
+author: kirontoo
 draft: false
 categories: [ "guide" ]
 tags: [ "markdown" ]

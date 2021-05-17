@@ -1,7 +1,7 @@
 ---
 title: "Built-In Shortcodes"
 date: 2020-06-17T10:47:04-07:00
-author: amy dang
+author: kirontoo
 categories: [ "guide" ]
 tags: [ "shortcodes" ]
 series: [ "hugo-guide" ]
