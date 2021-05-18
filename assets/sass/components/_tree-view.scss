@@ -2,7 +2,7 @@ aside > div.tree-view {
 	@include flexbox();
 	@include flex-direction( column );
 
-	@include media( ">tablet" ) {
+	@include media( ">desktop" ) {
 		@include sticky();
 		top: 4rem;
 	}
@@ -15,6 +15,9 @@ aside > div.tree-view {
 	border-radius: 5px;
 	font-size: $base-font-size-small;
 
+	nav {
+		background: $background-color-darker;
+	}
 
 	ul, ol {
 		list-style-type: none;
