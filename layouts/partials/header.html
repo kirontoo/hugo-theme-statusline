@@ -29,9 +29,11 @@
 				</li>
 				{{ end }}
 			{{ end }}
+
+				<!-- taxonomies -->
 			{{ range $name, $taxonomy := .Site.Taxonomies }}
 				{{ if gt (len $taxonomy) 0 }}
-				<li class="bracket hidden">
+				<li class="nav-taxonomies bracket">
 					<div class="bracket-left"></div>
 					<a class="{{ $name }}" href="{{ $name | absURL }}">{{ $name }}</a>
 					<div class="bracket-right"></div>
