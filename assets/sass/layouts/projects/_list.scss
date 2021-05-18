@@ -3,7 +3,7 @@ header.project-header {
 	@include flex-direction( column );
 	@include align-items( center );
 
-	@include media( ">=phone", "<tablet" ) {
+	@include media( ">=phone", "<=desktop" ) {
 		margin-top: 1rem;
 	}
 
@@ -147,7 +147,7 @@ div.project-list {
 			margin-top: auto;
 		}
 
-		@include media( ">=phone", "<=tablet" ) {
+		@include media( ">=phone", "<=desktop" ) {
 			@include grid-template-columns( 1fr );
 			@include grid-template-rows( 1fr );
 		}

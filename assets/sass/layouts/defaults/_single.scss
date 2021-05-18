@@ -27,9 +27,9 @@ article.content {
 			overflow-wrap: break-word;	
 			word-wrap: break-word;
 
-			@include media( ">=phone", "<tablet" ) {
+			@include media( ">=phone", "<=desktop" ) {
 				margin-left: 0;
-				margin-rigth: 0;
+				margin-right: 0;
 				text-align: left;
 			}
 		}

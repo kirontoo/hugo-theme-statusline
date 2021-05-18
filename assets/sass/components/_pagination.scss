@@ -4,7 +4,7 @@
 	@include justify-content( center );
 
 	.pagination-container {
-		max-width: 40%;
+		max-width: 50%;
 
 		@include media( ">=phone", "<tablet" ) {
 			max-width: 100%;

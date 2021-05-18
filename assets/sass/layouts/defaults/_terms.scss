@@ -5,7 +5,7 @@
 header.terms-title {
 	margin-bottom: 1rem;
 
-	@include media( ">=phone", "<tablet" ) {
+	@include media( ">=phone", "<=desktop" ) {
 		margin-top: 1rem;
 	}
 }

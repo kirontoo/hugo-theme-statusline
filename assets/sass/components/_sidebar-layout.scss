@@ -13,7 +13,7 @@
 		margin-left: 0.5rem;
 	}
 
-	@include media( ">=phone", "<=tablet" ) {
+	@include media( ">=phone", "<=desktop" ) {
 		@include flex-flow( column );
 
 		aside {

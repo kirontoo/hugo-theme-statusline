@@ -3,7 +3,7 @@
 	@include justify-content( space-between );
 	text-align: center;
 
-	@include media( ">=phone", "<tablet" ) {
+	@include media( ">=phone", "<desktop" ) {
 		margin-top: 0.5rem;
 	}
 }

@@ -6,7 +6,7 @@
 			color: $inline-code-color;
 			border-radius: 5px;
 
-			@include media( ">=phone", "<tablet" ) {
+			@include media( ">=phone", "<=desktop" ) {
 				border-radius: 2px;
 				font-size: $mobile-font-size-big;
 			}

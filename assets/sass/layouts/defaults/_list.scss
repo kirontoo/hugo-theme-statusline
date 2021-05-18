@@ -11,7 +11,7 @@ header.list-header {
 }
 
 .list-header {
-	@include media( ">=phone", "<tablet" ) {
+	@include media( ">=phone", "<=desktop" ) {
 		margin-top: 1rem;
 	}
 }
@@ -25,7 +25,7 @@ header.list-header {
 		font-weight: bold;
 	}
 
-	@include media( ">=phone", "<tablet" ) {
+	@include media( ">=phone", "<=desktop" ) {
 		overflow-wrap: break-all;
 		word-wrap: break-all;
 		word-break: break-all;
@@ -41,6 +41,10 @@ header.list-header {
 
 .list-group {
 	margin-top: 2rem;
+
+	@include media( ">=phone", "<=desktop" ) {
+		margin-top: 1rem;
+	}
 }
 
 .list-item {
@@ -55,6 +59,11 @@ header.list-header {
 	.list-item-subtitle {
 		font-size: 0.8rem;
 		@include align-items( center );
+
+		@include media( ">=phone", "<tablet" ) {
+			@include justify-content( space-between );
+		}
+		
 	}
 
 	.list-item-content {

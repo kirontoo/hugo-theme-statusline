@@ -12,7 +12,7 @@
 			@include align-items( center );
 			width: 70%;
 
-			@include media( ">=phone", "<tablet" ) {
+			@include media( ">=phone", "<=desktop" ) {
 				width: 100%;
 				margin: 0.2rem 0;
 			}
@@ -27,7 +27,7 @@
 			padding: 0.2rem 0.5rem;
 			font-size: $base-font-size-small * 0.8;
 
-			@include media( ">=phone", "<tablet" ) {
+			@include media( ">=phone", "<=desktop" ) {
 				width: 100%;
 			}
 		}

@@ -11,7 +11,7 @@
 		max-width: 80%;
 		min-width: 60%;
 
-		@include media( ">=phone", "<tablet" ) {
+		@include media( ">=phone", "<=desktop" ) {
 			max-width: 100%;
 			min-width: 85%;
 		}

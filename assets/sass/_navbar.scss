@@ -21,7 +21,7 @@ nav {
 	.logo {
 		margin-bottom: 0;
 
-		@include media( ">=tablet", "<=desktop" ) {
+		@include media( ">=phone", "<=desktop" ) {
 			font-size: 1.3rem;
 		}
 	}
