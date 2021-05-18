@@ -12,7 +12,7 @@ description: "A sample article to showcase basic Markdown syntax and formatting 
 This a sample article that will show how Markdown syntax can be used in Hugo content files
 and how basic HTML elements are styled with CSS in this Hugo theme.
 
-# Headings
+## Headings
 This is how headings are rendered.
 
 # H1
@@ -22,68 +22,68 @@ This is how headings are rendered.
 ##### H5
 ###### H6
 
-# Paragraphs
+## Paragraphs
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus orci et luctus gravida. Nunc luctus condimentum elit nec euismod. Duis eget eros ac massa eleifend feugiat. Morbi finibus odio porttitor nulla mollis, in posuere purus ultrices.
 
 Nunc vitae laoreet lectus. Curabitur viverra venenatis porta. Fusce luctus eros eu purus tristique facilisis. Duis in libero non turpis sodales viverra. Vivamus tempus, metus sit amet consectetur tempor, enim risus venenatis mi, a ornare lorem massa vel dui. Fusce luctus semper euismod. Nullam non efficitur nisl.
 
-# Emphasis
+## Emphasis
 italic: *this text will be italic*
 
 bold: **this text will be bold**
 
-# Inline code
+## Inline code
 Inline code blocks can be used like `this`.
 
-# Blockquotes
+## Blockquotes
 Blockquotes can be made with or without citations. Citations can be found at the bottom of the page.
 
-## Blockquote without citation
+### Blockquote without citation
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 >
 > **Note** you can also use markdown syntax inside a blockquote
 
-## Blockquote with citation
+### Blockquote with citation
 
 >“Lesser, greater, middling, it's all the same. Proportions are negotiated, boundaries blurred. I'm not a pious hermit, I haven't done only good in my life. But if I'm to choose between one evil and another, then I prefer not to choose at all.”</p>
 >
 > — <cite>Andrzej Sapkowski, The Last Wish[^1]</cite>
 [^1]: The above quote is excerpted from Adrezei Sapkowski's book "The Last Wish"
 
-# Lists
-## Unorderd
+## Lists
+### Unordered
 * Item 1
 * Item 2
 * Item 3
 
-### Nested Unorderd
+#### Nested Unorderd
 * Item 1
 	* Nested item
 * Un-nested item
 
-## Ordered
+### Ordered
 1. Item 1
 2. Item 2
 3. Item 3
 
-### Nested Ordered
+#### Nested Ordered
 1. Item
 	1. Nested item
 2. Un-nested item
 
-# Images
+## Images
 Image can be linked by a URL or by the image's source path. Images can also be captioned.
 
-## Image without caption
+### Image without caption
 ![hammer head keycaps](/images/hammerhead.jpg)
-## Image with caption
+### Image with caption
 ![hammer head keycaps](/images/hammerhead.jpg "This is a image caption")
 
-# Links
+## Links
 this is how a [link](https://www.gohugo.io "Title") works.
 Any URL like this http://www.github.com/ will automatically be turned into a link.
 
-# Tables
+## Tables
 Markdown does not natively support tables but Hugo does.
 
 First Header | Second Header
@@ -91,21 +91,21 @@ First Header | Second Header
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 
-## Tables with Inline Markdown
+### Tables with Inline Markdown
 First Header | Second Header
 ------------ | -------------
 *italic*     | **bold text**
 ~~strikethrough~~ | ``code``
 
-# Task Lists
+## Task Lists
 - [x] list syntax is required. Any unordered or ordered list are supported
 - [ ] task lists are disabled when rendered
 - [x] this is a complete item
 - [ ] this is an incomplete item
 
-# Code Blocks and Syntax Highlighting
+## Code Blocks and Syntax Highlighting
 
-## Code block with backticks
+### Code block with backticks
 ```javascript
 function fancyAlert(arg) {
   if(arg) {
@@ -114,14 +114,14 @@ function fancyAlert(arg) {
 }
 ```
 
-## Code block Using indentation
+### Code block Using indentation
 		function fancyAlert(arg) {
 			if(arg) {
 				$.facebox({div:'#foo'})
 			}
 		}
 
-## Code block with Hugo's built-in highlight shortcode
+### Code block with Hugo's built-in highlight shortcode
 {{< highlight javascript >}}
 function fancyAlert(arg) {
   if(arg) {
@@ -131,7 +131,7 @@ function fancyAlert(arg) {
 {{< /highlight >}}
 
 
-# Miscellaneous
+## Miscellaneous
 Subscripts, superscripts, abbreviations, keyboard commands, marks ( highlight ) can be used only if `markup.goldmark.renderer.unsafe` is enabled.
 You can change the text color by adding `class="your-color" `to the HTML tags.
 
@@ -149,17 +149,17 @@ Colors available:
 * <span class="cyan">cyan</span>
 * <span class="white">white</span>
 
-## Abbreviations
+### Abbreviations
 <abbr class="green" title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
 
-## Subscript
+### Subscript
 H<sub>2</sub>O
 
-## Superscript
+### Superscript
 X<sup>n</sup> + Y<sup>n</sup>: Z<sup>n</sup>
 
-## Keyboard commands
+### Keyboard commands
 Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
-## Marks
+### Marks
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
