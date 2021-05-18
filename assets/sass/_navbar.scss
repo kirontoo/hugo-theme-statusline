@@ -11,9 +11,10 @@ nav {
 
 
 		// mobile view
-		@include media( ">=phone", "<=tablet" ) {
+		@include media( ">=phone", "<=desktop" ) {
 			@include flex-direction( column );
 			@include align-items( flex-start );
+			margin-bottom: 1rem;
 		}
 	}
 
@@ -48,13 +49,19 @@ nav {
 		margin: 0;
 
 		// mobile view
-		@include media( ">=phone", "<=tablet" ) {
+		@include media( ">=phone", "<=desktop" ) {
 			@include flexbox();
 		}
 
-		@include media( ">=tablet" ) {
+		@include media( ">desktop" ) {
 			top: 2rem;
 			right: 1rem;
+		}
+
+
+		@include media( ">=tablet", "<=desktop" ) {
+			top: 2rem;
+			right: 6.3rem;
 		}
 	}
 
@@ -82,14 +89,21 @@ nav {
 		a {
 			color: $navbar-links-color;
 		}
+
+		&:hover {
+			font-weight: bold;
+		}
 	}
 
-	li:hover {
-		font-weight: bold;
+	li+.nav-taxonomies {
+		display: none;
+		@include media( ">=phone", "<=desktop" ) {
+			@include flexbox();
+		}
 	}
 
 	// mobile view
-	@include media( ">phone", "<=tablet" ) {
+	@include media( ">=phone", "<=desktop" ) {
 		display: none;
 		@include flex-direction( column );
 		width: 100%;
@@ -111,7 +125,3 @@ nav {
 		}
 	}
 }
-
-
-
-
