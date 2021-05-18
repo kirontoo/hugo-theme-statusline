@@ -1,5 +1,5 @@
 <script>
-	const SIDEBAR_ID =  '#' + JSON.parse( {{ .sidebarId |jsonify }} );
+	const SIDEBAR_ID = '#' + JSON.parse( {{ .sidebarId |jsonify }} );
 	const ACTIVE_CLASS = 'tv-active';
 	const ACTIVE_PARENT_CLASS = 'tv-active-root';
 	const PARENT_CLASS = 'tv-parent-heading';
@@ -33,7 +33,8 @@
 	if ( treeElem ) {
 
 		// collapse all nested headings
-		collapseHeading( treeElem.querySelector( 'ul' ) );
+		let headings = treeElem.querySelectorAll( 'ul' );
+		headings.forEach( ( element ) => collapseHeading( element ) )
 
 		// add a class to all top-level headings
 		let treeChildren = treeElem.children;
