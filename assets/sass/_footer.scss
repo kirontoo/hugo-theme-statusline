@@ -17,7 +17,7 @@ footer {
 			@include justify-content( space-between );
 			margin-top: 0.5rem;
 
-			@include media( ">=phone", "<tablet" ) {
+			@include media( ">=phone", "<desktop" ) {
 				@include flex-direction( column );
 				text-align: center;	
 			}
@@ -25,7 +25,7 @@ footer {
 	}
 
 	.copyright {
-		@include media( ">=phone", "<tablet" ) {
+		@include media( ">=phone", "<desktop" ) {
 			@include justify-content( space-between );
 		}
 

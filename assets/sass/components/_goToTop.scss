@@ -1,8 +1,11 @@
 .go-to-top {
 	@include align-self( center );
 
-	@include media( ">=phone", "<tablet" ) {
-		display: none;
+	@include media( ">=phone", "<desktop" ) {
+		width: 100%;
+		height: 2rem;
+		@include justify-content( space-between );
+		@include align-items( center );
 	}
 
 	&:hover {
@@ -37,7 +40,7 @@
 		border-color: $link-color;
 	}
 
-	@include media( ">=phone", "<tablet" ) {
+	@include media( ">=phone", "<=desktop" ) {
 		display: none;
 	}
 }
