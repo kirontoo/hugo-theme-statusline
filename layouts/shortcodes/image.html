@@ -3,7 +3,7 @@
 {{ $title := .Get "caption"}}
 
 {{ $style := "" }}
-{{ if eq ( .Get "style" )  "border"}}
+{{ if eq ( .Get "style" )  "square"}}
 {{ $style = "image-border" }}
 {{ else }}
 {{ $style = .Get "style" }}
