@@ -2,7 +2,7 @@ baseURL = "http://localhost:1313"
 languageCode = "en-us"
 defaultContentLanguage ="en"
 title = "hugo-statusline-theme"
-paginate = 10
+paginate = 6
 theme="statusline"
 
 [taxonomies]
@@ -25,7 +25,7 @@ theme="statusline"
 	[markup.tableOfContents]
 		endLevel = 6
 		ordered = false
-		startLevel = 1
+		startLevel = 2
 
 	[markup.goldmark]
 		[markup.goldmark.extensions]
@@ -48,10 +48,11 @@ theme="statusline"
 			xhtml = false
 
 [params]
-	logoText = "statusline"
-	logoHomeLink = "/"
-	logoColor = "red"
-	author = "amy dang"
+	# colorscheme="gruvbox-dark"
+	# colorscheme="gruvbox-light"
+	colorscheme="deepspace"
+	titleColor = "cyan"
+	author = "kirontoo"
 	enableGoToTop = true
 	enableParagraphIndent = false
 	enableTOC = true
@@ -65,22 +66,29 @@ theme="statusline"
 		name = "kirontoo"
 		location = "los angeles, CA"
 		email = "example@email.com"
+		website = "https://github.com/kirontoo/hugo-statusline-theme"
 		bio = "A short bio you can write. It will be limited to 200 characters to prevent long paragraphs."
 		occupation = "Web Developer"
 
 		[params.profile.image]
-			link = "images/starship.png"
-			alt = "starship"
-			title = "starship"
+			# to link your own image, place them in the static/image folder:
+			# link = "images/your-image.png"
+			link = "https://loremflickr.com/320/240"
+			alt = "placeholder cat image"
+			# title = "placeholder cat image"
 
 		[params.profile.links]
+			[params.profile.links.instagram]
+				link = "https://example.com"
+				color = "white"
+
 			[params.profile.links.facebook]
 				link = "https://example.com"
 				color = "blue"
 
 			[params.profile.links.twitter]
 				link = "https://example.com"
-				color = "purple"
+				color = "cyan"
 
 			[params.profile.links.linkedin]
 				link = "https://example.com"
@@ -92,7 +100,7 @@ theme="statusline"
 
 	[params.projects]
 		enableSidebar = true
-		borderStyle = "box"
+		borderStyle = "box" # Round or box
 		listStyle = "grid"
 
 	[params.archive]
@@ -110,48 +118,39 @@ theme="statusline"
 		pageColor = "cyan"
 		activePageColor = "pink"
 
-[languages]
-	[languages.en]
-		title = "statusline"
-		[languages.en.menu]
-			[[languages.en.menu.main]]
-				identifier = "about"
-				name = "about"
-				url = "/about"
-				pre = "purple"
-				weight = 1
+[menu]
+	[[menu.main]]
+		identifier = "about"
+		name = "about"
+		url = "/about"
+		pre = "purple"
+		weight = 1
 
-			[[languages.en.menu.main]]
-				identifier = "projects"
-				name = "projects"
-				url = "/projects"
-				pre = "cyan"
-				weight = 2
+	[[menu.main]]
+		identifier = "projects"
+		name = "projects"
+		url = "/projects"
+		pre = "cyan"
+		weight = 2
 
-			[[languages.en.menu.main]]
-				parent = "projects"
-				name = "python"
-				url = "/projects/python"
-				pre = "cyan"
+	[[menu.main]]
+		parent = "projects"
+		name = "bots"
+		url = "/projects/web-app"
+		pre = "cyan"
 
-			[[languages.en.menu.main]]
-				parent = "projects"
-				name = "bots"
-				url = "/projects/web-app"
-				pre = "cyan"
+	[[menu.main]]
+		identifier = "blog"
+		name = "blog"
+		url = "/blog"
+		pre = "yellow"
+		weight = 3
 
-			[[languages.en.menu.main]]
-				identifier = "blog"
-				name = "blog"
-				url = "/blog"
-				pre = "yellow"
-				weight = 3
-
-			[[languages.en.menu.main]]
-				identifier = "archive"
-				name = "archive"
-				url = "/archive"
-				weight = 6
+	[[menu.main]]
+		identifier = "archive"
+		name = "archive"
+		url = "/archive"
+		weight = 6
 
 [privacy]
   [privacy.disqus]
