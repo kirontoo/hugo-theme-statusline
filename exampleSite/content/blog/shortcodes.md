@@ -34,13 +34,13 @@ Here are a few custom shortcodes I created for your use!
 Will work with local files and image src links.
 
 ### Image with no border style
-{{< image src="https://loremflickr.com/500/300?random=1" alt="text" caption="title" color="cyan">}}
+{{< image src="https://loremflickr.com/500/320" alt="text" caption="title" color="cyan">}}
 
 ### Image with bracket style
-{{< image src="https://loremflickr.com/500/300?random=2" caption="my caption" style="bracket">}}
+{{< image src="https://loremflickr.com/500/320" caption="my caption" style="bracket">}}
 
 ### Image with square style
-{{< image src="https://loremflickr.com/500/300?random=3" caption="my caption" style="square" color="orange" >}}
+{{< image src="https://loremflickr.com/500/320" caption="my caption" style="square" color="orange" >}}
 
 
 ## Colors
