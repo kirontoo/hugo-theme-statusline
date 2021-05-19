@@ -75,9 +75,9 @@ Blockquotes can be made with or without citations. Citations can be found at the
 Image can be linked by a URL or by the image's source path. Images can also be captioned.
 
 ### Image without caption
-![hammer head keycaps](/images/hammerhead.jpg)
+![Cat image 1](https://loremflickr.com/320/240?random=1)
 ### Image with caption
-![hammer head keycaps](/images/hammerhead.jpg "This is a image caption")
+![Cat image 2](https://loremflickr.com/320/240?random=2 "This is a cat image caption")
 
 ## Links
 this is how a [link](https://www.gohugo.io "Title") works.

@@ -32,12 +32,15 @@ Here are a few custom shortcodes I created for your use!
 
 ## Images With Custom border style
 Will work with local files and image src links.
+
 ### Image with no border style
-{{< image src="https://i.redd.it/tgpnsvzmui651.jpg" alt="text" caption="title" color="cyan">}}
+{{< image src="https://loremflickr.com/500/240?random=1" alt="text" caption="title" color="cyan">}}
+
 ### Image with bracket style
-{{< image src="https://i.redd.it/tgpnsvzmui651.jpg" caption="my caption" style="bracket">}}
-### Image with border style
-{{< image src="images/hammerhead.jpg" caption="my caption" style="border" color="orange" >}}
+{{< image src="https://loremflickr.com/500/240?random=2" caption="my caption" style="bracket">}}
+
+### Image with square style
+{{< image src="https://loremflickr.com/500/240?random=3" caption="my caption" style="square" color="orange" >}}
 
 
 ## Colors
