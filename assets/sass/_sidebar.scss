@@ -28,6 +28,10 @@ div .sidebar {
 			font-size: $base-font-size-small;
 		}
 
+		#profile-website {
+			overflow-wrap: break-word;
+		}
+
 		.social-links {
 			@include justify-content( space-evenly );
 			li {

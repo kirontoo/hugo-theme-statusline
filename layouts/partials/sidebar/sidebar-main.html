@@ -21,10 +21,10 @@
 					<li class="capitalize"><i class="fas fa-map-marker-alt"></i>{{ . }}</li>
 					{{ end }}
 					{{ with $.Site.Params.Profile.email }}
-					<li><a href="mailto:{{ . }}"><i class="fas fa-envelope"></i>{{ . }}</a></li>
+				<li><a title="{{ . }}"href="mailto:{{ . }}"><i class="fas fa-envelope"></i>{{ . }}</a></li>
 					{{ end }}
 					{{ with $.Site.Params.Profile.website }}
-					<li><a href="{{ . }}" target="_blank"><i class="fas fa-link"></i>{{ . }}</a></li>
+				<li><a id="profile-website" title="{{ . }}" href="{{ . }}" target="_blank"><i class="fas fa-link"></i>{{ . | truncate 20 }}</a></li>
 					{{ else }}
 						{{ $url := urls.Parse $.Site.BaseURL }}
 						<li><a href="{{ $.Site.BaseURL }}"><i class="fas fa-link"></i>{{ $url.Host }}</a></li>
