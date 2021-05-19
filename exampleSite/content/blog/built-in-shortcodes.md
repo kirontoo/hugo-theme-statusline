@@ -13,9 +13,9 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 <!--more-->
 ---
 
-## Instagram Simple Shortcode
+## Gists
 
-{{< instagram_simple BGvuInzyFAe hidecaption >}}
+{{< gist spf13 7896402 "img.html" >}}
 
 <br>
 
@@ -23,15 +23,14 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 ## YouTube Privacy Enhanced Shortcode
 
-{{< youtube ZJthWmvUzzc >}}
+{{< youtube id="w7Ft2ymGmfc" title="A New Hugo Site in Under Two Minutes" >}}
 
 <br>
 
 ---
 
 ## Twitter Simple Shortcode
-
-{{< twitter_simple 1085870671291310081 >}}
+{{< tweet 877500564405444608 >}}
 
 <br>
 
@@ -39,4 +38,4 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 ## Vimeo Simple Shortcode
 
-{{< vimeo_simple 48912912 >}}
+{{< vimeo 146022717 >}}
