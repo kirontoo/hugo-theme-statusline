@@ -61,12 +61,6 @@ nav {
 			top: 2rem;
 			right: 1rem;
 		}
-
-
-		@include media( ">tablet", "<=desktop" ) {
-			top: 2rem;
-			right: 6.3rem;
-		}
 	}
 
 	.media-toggle .bar {
