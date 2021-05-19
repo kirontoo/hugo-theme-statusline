@@ -1,0 +1,4 @@
+Your images can go here.
+
+Then in your markdown file, you can link to them by using:
+[your title](/images/image-name.jpg)
