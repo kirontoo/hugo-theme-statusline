@@ -1,7 +1,14 @@
 [build]
-  command = "hugo --source=exampleSite --themesDir=../.."
-  publish = "./exampleSite/public"
+  publish = "exampleSite/public"
+  command = "cd exampleSite && hugo"
 
-[build.environment]
-  HUGO_VERSION = "0.71.0"
+[context.production]
+  [context.production.environment]
+    HUGO_VERSION = "0.71.0"
+    HUGO_BASEURL = "https://hugo-statuslinet-theme.netlify.com/"
 
+# PR previews
+[context.deploy-preview]
+  command = "cd exampleSite && hugo -b ${DEPLOY_PRIME_URL}"
+  [context.deploy-preview.environment]
+    HUGO_VERSION = "0.71.0"
