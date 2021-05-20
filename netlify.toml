@@ -1,8 +1,7 @@
 [build]
   command = "hugo --source=exampleSite --themesDir=../.."
-  publish = "./exmapleSite/public"
+  publish = "./exampleSite/public"
 
 [build.environment]
   HUGO_VERSION = "0.71.0"
-
 
