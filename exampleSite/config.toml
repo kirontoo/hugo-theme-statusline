@@ -1,7 +1,7 @@
 baseURL = "http://localhost:1313"
 languageCode = "en-us"
 defaultContentLanguage ="en"
-title = "hugo-statusline-theme"
+title = "hugo-theme-statusline"
 paginate = 6
 theme="statusline"
 
@@ -67,7 +67,7 @@ theme="statusline"
 		name = "kirontoo"
 		location = "los angeles, CA"
 		email = "example@email.com"
-		website = "https://github.com/kirontoo/hugo-statusline-theme"
+		website = "https://github.com/kirontoo/hugo-theme-statusline"
 		bio = "A short bio you can write. It will be limited to 200 characters to prevent long paragraphs."
 		occupation = "Web Developer"
 
