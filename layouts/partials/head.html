@@ -38,8 +38,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
 
 		<!-- add css styles -->
-		{{ $sass := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.main.scss"
-		. | toCSS | minify | fingerprint }}
+		{{ $sass := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS | minify | fingerprint }}
 		{{ $style := $sass | resources.ToCSS }}
 	<link rel="stylesheet" href="{{ $style.Permalink }}">
 
