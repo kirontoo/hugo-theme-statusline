@@ -4,7 +4,7 @@
 
 A simple theme for Hugo based on a custom VIM statusline I created.
 
-[Demo](https://hugo-theme-statusline.netlify.app)  
+[Demo](https://hugo-statusline-theme.netlify.app)  
 
 ## Screenshots
 
