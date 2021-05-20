@@ -1,30 +1,38 @@
 # hugo-theme-statusline
 
-[![GitHub contributors](https://img.shields.io/github/contributors/kirontoo/hugo-theme-statusline.svg?colorB=red)](https://github.com/kirontoo/hugo-theme-statusline/contributors)
-[![GitHub release](https://img.shields.io/github/release/kirontoo/hugo-theme-statusline.svg?colorB=red)](https://github.com/kirontoo/hugo-theme-statusline/releases)
-[![GitHub commits (since latest release)](https://img.shields.io/github/commits-since/kirontoo/hugo-theme-statusline/latest.svg?colorB=red)](https://github.com/kirontoo/hugo-theme-statusline/compare)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/kirontoo/hugo-theme-statusline/blob/master/LICENSE)
 
 A simple theme for Hugo based on a custom VIM statusline I created.
 
-[comment]: # (TODO: add link to demo)
-[Demo]()  
+[Demo](https://hugo-theme-statusline.netlify.app)  
 
 ## Screenshots
 
-![statusline-showcase](https://raw.githubusercontent.com/kirontoo/hugo-theme-statusline/master/images/)
+![statusline-showcase](images/statusline-deepspace.png)
 
 ## Installation
 Clone this repo into your `themes` folder.
 
+If you're using git:
 ```bash
-$ git clone https://github.com/kirontoo/hugo-theme-statusline themes/statusline
+$ git submodule add https://github.com/kirontoo/hugo-theme-statusline.git themes/statusline
+```
+
+Otherwise, you can download the `.zip` file and extract it into your `themes` folder.
+
+Remember to add the theme to your config file
+```bash
+$ echo theme = \"statusline\" >> config.toml
 ```
 
 **Important:** Take a look inside the [`exampleSite`](https://github.com/kirontoo/hugo-theme-statusline/tree/master/exampleSite) folder of this theme. 
 You'll find a file called [`config.toml`](https://github.com/kirontoo/hugo-theme-statusline/blob/master/exampleSite/config.toml). 
 This is an example config of parameters  you can set.
+
 **To use it, copy the [`config.toml`](https://github.com/kirontoo/hugo-theme-statusline/blob/master/exampleSite/config.toml) in the root folder of your Hugo site.**
+```bash
+$ cp ./themes/statusline/exampleSite/config.toml ./config.toml
+```
 
 ## Front Matter
 
@@ -37,8 +45,7 @@ $ cp ./themes/statusline/archetypes/default.md ./archetypes/default.md
 
 ## Shortcodes
 
-[comment]: # (TODO: provide link to see all available shortcodes)
-This theme provides various shortcodes for your markdown. See all of the available shortcodes [here]().
+This theme provides various shortcodes for your markdown. See all of the available shortcodes [here](https://github.com/kirontoo/hugo-theme-statusline/blob/master/exampleSite/content/blog/shortcodes.md).
 
 ## Update The Theme
 
