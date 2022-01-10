@@ -18,14 +18,7 @@
 				{{ if ( eq .Title ( $.Site.Params.logoText | default .Site.Title )) }}
 					{{ $pages = (.Paginate ( where $.Site.RegularPages.ByDate.Reverse "Type" "in" $.Site.Params.mainSections )).Pages }}
 				{{ else }}
-
-					<!-- paginate sections -->
-					{{ if in $.Site.Params .Section }}
-						{{ $pages = ( .Paginate ( where .Pages.ByDate.Reverse "Section" .Section )).Pages }}
-					{{ else }}
-						<!-- paginate taxonomy pages -->
-						{{ $pages = .Pages.ByDate.Reverse }}
-					{{ end }}
+					{{ $pages = (.Paginate .RegularPagesRecursive.ByDate.Reverse).Pages}}
 				{{ end }}
 
 			{{ else }}
