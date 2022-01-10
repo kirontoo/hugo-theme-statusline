@@ -60,7 +60,7 @@ theme="statusline"
 	enableSidebar = true
 	listDateFormat = "01-02-2006"
 	singleDateFormat = "Jan 02, 2006"
-	mainSections = [ "blog", "org", "cpp" ]
+	mainSections = [ "blog" ]
 	description = "The statusline theme for Hugo example site."
 
 	[params.profile]
